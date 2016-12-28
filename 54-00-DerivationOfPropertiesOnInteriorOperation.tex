@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfPropertiesOnInteriorOperation}
+\pmcreated{2013-03-22 17:55:28}
+\pmmodified{2013-03-22 17:55:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{derivation of properties on interior operation}
+\pmrecord{9}{40418}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54-00}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\def\int{\operatorname{int}}
+\def\emptyset{\varnothing}
+\begin{document}
+Let $X$ be a topological space and $A$ a subset of $X$.  Then
+
+\begin{enumerate}
+\item $\int(A)\subseteq A$.
+\begin{proof} If $a\in \int(A)$, then $a\in U$ for some open set $U\subseteq A$.  So $a\in A$.
+\end{proof}
+\item $\int(A)$ is open.
+\begin{proof} Since $\int(A)$ is a union of open sets, $\int(A)$ is open.
+\end{proof}
+\item $\int(A)$ is the largest open set contained in $A$.
+\begin{proof}
+If $U$ is open set with $\int(A)\subseteq U\subseteq A$, then $U\subseteq\bigcup \lbrace V\subseteq A\mid V\mbox{ open }\rbrace = \int(A)$, so $U=\int(A)$.  
+\end{proof}
+\item $A$ is open if and only if $A=\int(A)$.
+\begin{proof}
+If $A$ is open, then $A$ is the largest open set contained in $A$, and so $\int(A)=A$ by property 3 above.  On the other hand, if $\int(A)=A$, then $A$ is open, since $\int(A)$ is, by property 2 above. 
+\end{proof}
+\item $\int(\int(A))=\int(A)$.
+\begin{proof} Since $\int(A)$ is open by property 2, $\int(A)=\int(\int(A))$ by property 4.
+\end{proof}
+\item $\int(X)=X$ and $\int(\emptyset)=\emptyset$.
+\begin{proof}  This is so because both $X$ and $\emptyset$ are open sets.
+\end{proof}
+\item $\overline{A^\complement}=(\int(A))^\complement$.
+\begin{proof}  (LHS $\subseteq$ RHS).  If $a\in \overline{A^\complement}$, then $a\in B$ for every closed set $B$ such that $A^\complement \subseteq B$.  In particular, $a\in (\int(A))^\complement$, for $(\int(A))^\complement$ is the complement of an open set by property 2, and $A^\complement \subseteq (\int(A))^\complement$ by taking the complement of property 1.
+
+(RHS $\subseteq$ LHS).  If $a\in (\int(A))^\complement$, then $a\notin \int(A)$.  If $B$ is a closed set such that $A^\complement \subseteq B$, then $B^\complement \subseteq A$.  Since $B^\complement$ is open, $B^\complement \subseteq \int(A)$ by property 3, so $a\notin B^\complement$, and thus $a\in B$.  Since $B$ is arbitrary, $a\in \overline{A^\complement}$ as desired.
+\end{proof}
+\item $\overline{A}^\complement = \int(A^\complement)$.
+\begin{proof}  Set $B=A^\complement$, and apply property 7.  So $\overline{A}^\complement = \overline{B^\complement}^\complement = (\int(B))^{\complement\complement}=\int(B)=\int(A^\complement)$.
+\end{proof}
+\item $A\subseteq B$ implies that $\int(A)\subseteq \int(B)$.
+\begin{proof}  This is so because $\int(A)$ is open (property 2), contained in $A$ (and therefore contained in $B$), so contained in $\int(B)$, as $\int(B)$ is the largest open set contained in $B$ (property 3).
+\end{proof}
+\item $\int(A)=A\setminus \partial A$, where $\partial A$ is the boundary of $A$.
+\begin{proof}  Recall that $\partial A=\overline{A}\cap \overline{A^\complement}$.  So $\partial A = \overline{A}\cap (\int(A))^\complement$ by property 7.  By direct computation, we have $A\setminus \partial A = A \setminus (\overline{A}\cap (\int(A))^\complement) = (A\setminus \overline{A})\cup (A\setminus (\int(A))^\complement)$.  Since $A\setminus \overline{A}=\varnothing$ and $A\setminus (\int(A))^\complement = A\cap (\int(A))^{\complement\complement}= A\cap \int(A)$, which is $\int(A)$ by property 2.
+\end{proof}
+\item $\overline{A} = \int(A)\cup \partial A$.
+\begin{proof} Again, by direct computation:
+\begin{alignat*}{2}
+\int(A)\cup \partial A &= \int(A)\cup (\overline{A}\cap (\int(A))^\complement)& \qquad\mbox{because } \partial A = \overline{A}\cap (\int(A))^\complement \\
+ &= (\int(A)\cup \overline{A})\cap (\int(A)\cup (\int(A))^\complement) & \qquad \cap\mbox{ distributes over }\cup \\
+&=\overline{A}\cap X=\overline{A}.& \qquad \int(A)\subseteq A\subseteq \overline{A}
+\end{alignat*}
+\end{proof}
+\item $X=\int(A)\cup \partial A \cup \int(A^\complement)$.
+\begin{proof}  By property 11, $\int(A)\cup \partial A \cup \int(A^\complement) = \overline{A} \cup \int(A^\complement)$, which, by property 8, is $\overline{A} \cup \overline{A}^\complement$, and the last expression is just $X$.
+\end{proof}
+\item $\int(A\cap B)=\int(A)\cap \int(B)$.
+\begin{proof}  (LHS $\subseteq$ RHS).  Let $C=\int(A\cap B)$.  Since $C$ is open and contained in both $A$ and $B$, $C$ is contained in both $\int(A)$ and $\int(B)$, since $\int(A)$ and $\int(B)$ are the largest open sets in $A$ and $B$ respectively.  (RHS $\subseteq$ LHS).  Let $D=\int(A)\cap \int(B)$.  So $D$ is open and is a subset of both $A$ and $B$, hence a subset of $A\cap B$, and therefore a subset of $\int(A\cap B)$, since it is the largest open set contained in $A\cap B$.
+\end{proof}
+\end{enumerate}
+
+\textbf{Remark}.  Using property 7, we see that an alternative definition of interior can be given: $$\int(A)=\overline{A^\complement}^\complement.$$
+%%%%%
+%%%%%
+\end{document}

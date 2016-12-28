@@ -1,0 +1,472 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NearOperators}
+\pmcreated{2013-03-22 14:03:21}
+\pmmodified{2013-03-22 14:03:21}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{near operators}
+\pmrecord{13}{35411}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E40}
+\pmsynonym{Campanato theory of near operators}{NearOperators}
+%\pmkeywords{nearness}
+%\pmkeywords{Lax-Milgram}
+%\pmkeywords{Banach}
+%\pmkeywords{fixed point}
+%\pmkeywords{Riesz}
+\pmdefines{perturbation}
+\pmdefines{small perturbation}
+\pmdefines{near operator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\headstyle}{\bfseries}
+\newlength\thindent
+%\settowidth\thindent{{\headstyle No}}
+\thindent=\parindent
+
+\newlength\thtopskip
+\setlength\thtopskip{4pt plus 2pt minus 2pt}
+\newlength\thbotskip
+\setlength\thbotskip{4pt plus 2pt minus 2pt}
+\newtheoremstyle{normale}{\thtopskip}{\thbotskip}{\slshape}{-\thindent}{\headstyle}{}{.5em}{}
+\newtheoremstyle{liscio}{\thtopskip}{\thbotskip}{\upshape}{-\thindent}{\headstyle}{}{.5em}{}
+
+\theoremstyle{normale}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{liscio}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\begin{document}
+\tableofcontents
+
+\section{Perturbations and small perturbations: definitions and
+some results}
+
+We start our discussion on the Campanato theory of near operators
+with some preliminary tools.
+
+Let $X, Y$ be two sets and let a metric $d$ be defined on $Y$. If
+$F\colon X\to Y$ is an injective map, we can define a metric on $X$ by
+putting
+\[
+d_F(x', x'') = d(F(x'),F(x'')).
+\]
+
+Indeed, $d_F$ is zero if and only if $x'=x''$ (since $F$ is
+injective); $d_F$ is obviously symmetric and the triangle
+inequality follows from the triangle inequality of $d$.
+
+Moreover, if $F(X)$ is a complete subspace of $Y$, then $X$ is
+complete with respect to the metric $d_F$.
+
+Indeed, let $(u_n)$ be a Cauchy sequence in $X$. By definition of
+$d$, then $(F(u_n))$ is a Cauchy sequence in $Y$, and in
+particular in $F(X)$, which is complete. Thus, there exists $y_0
+= F(x_0) \in F(X)$ which is limit of the sequence $(F(u_n))$.
+$x_0$ is the limit of $(x_n)$ in $(X, d_F)$, which completes the
+proof.
+
+A particular case of the previous statement is when $F$ is onto
+(and thus a bijection) and $(Y,d)$ is complete.
+
+Similarly, if $F(X)$ is compact in $Y$, then $X$ is compact with
+the metric $d_F$.
+
+\begin{definition}
+Let $X$ be a set and $Y$ be a metric space. Let $F, G$ be two maps
+from $X$ to $Y$. We say that $G$ is a perturbation of $F$ if there
+exist a constant $k>0$ such that for each $x', x'' \in X$ one has:
+\[
+d(G(x'), G(x'')) \le k d(F(x'), F(x''))
+\]
+\end{definition}
+
+\begin{remark}\label{gcont}
+In particular, if $F$ is injective then $G$ is a perturbation of
+$F$ if $G$ is uniformly continuous with respect to the metric induced on
+$X$ by $F$.
+\end{remark}
+
+\begin{definition}
+In the same hypothesis as in the previous definition, we say that
+$G$ is a small perturbation of $F$ if it is a perturbation of
+constant $k<1$.
+\end{definition}
+
+We can now prove this generalization of the Banach-Caccioppoli
+fixed point theorem:
+
+\begin{theorem}\label{fixptgen}
+Let $X$ be a set and $(Y, d)$ be a complete metric space. Let $F,
+G$ be two mappings from $X$ to $Y$ such that:
+\begin{enumerate}
+\item \label{bij} $F$ is bijective;
+\item \label{smp} $G$ is a small perturbation of $F$.
+\end{enumerate}
+
+Then, there exists a unique $u \in X$ such that $G(u)=F(u)$
+\begin{proof}
+The hypothesis (\ref{bij}) ensures that the metric space $(X,
+d_F)$ is complete. If we now consider the function $T:X \to X$
+defined by
+\[
+T(x) = F^{-1}(G(x))
+\]
+we note that, by (\ref{smp}), we have
+\[
+d(G(x'), G(x'')) \le k d(F(x'), F(x''))
+\]
+where $k \in (0,1)$ is the constant of the small perturbation;
+note that, by the definition of $d_F$ and applying $F \circ
+F^{-1}$ to the first side, the last equation can be rewritten as
+\[
+d_F(T(x'), T(x'')) \le k d_F(x', x'');
+\]
+in other words, since $k < 1$, $T$ is a contraction in the
+complete metric space $(X, d_F)$; therefore (by the classical
+Banach-Caccioppoli fixed point theorem) $T$ has a unique fixed
+point: there exist $u \in X$ such that $T(u) = u$; by definition
+of $T$ this is equivalent to $G(u) = F(u)$, and the proof is hence
+complete.
+\end{proof}
+\end{theorem}
+
+\begin{remark}
+The hypothesis of the theorem can be generalized as such: let $X$
+be a set and $Y$ a metric space (not necessarily complete); let
+$F, G$ be two mappings from $X$ to $Y$ such that $F$ is injective,
+$F(X)$ is complete and $G(X) \subseteq F(X)$; then there exists $u
+\in X$ such that $G(u) = F(u)$.
+
+(Apply the theorem using $F(X)$ instead of $Y$ as target space.)
+\end{remark}
+
+\begin{remark}
+The Banach-Caccioppoli fixed point theorem is obtained when
+$X=Y$ and $F$ is the identity.
+\end{remark}
+
+We can use theorem~\ref{fixptgen} to prove a result that applies
+to perturbations which are not necessarily small (i.e. for which
+the constant $k$ can be greater than one). To prove it, we must
+assume some supplemental structure on the metric of $Y$: in
+particular, we have to assume that the metric $d$ is invariant by
+dilations, that is that $d(\alpha y', \alpha y'') = \alpha d (y',
+y'')$ for each $y', y'' \in Y$. The most common case of such
+a metric is when the metric is deduced from a norm (i.e. when $Y$
+is a normed space, and in particular a Banach space). The result
+follows immediately:
+
+\begin{corollary}\label{fixm}
+Let $X$ be a set and $(Y, d)$ be a complete metric space with
+a metric $d$ invariant by dilations. Let $F, G$ be two mappings
+from $X$ to $Y$ such that $F$ is bijective and $G$ is
+a perturbation of $F$, with constant $K > 0$.
+
+Then, for each $M > K$ there exists a unique $u_M \in X$ such that
+$G(u)=M F(u)$
+\begin{proof}
+The proof is an immediate consequence of theorem~\ref{fixptgen}
+given that the map $\tilde G(u) = G(u)/M$ is a small perturbation
+of $F$ (a property which is ensured by the dilation invariance of
+the metric $d$).
+\end{proof}
+\end{corollary}
+
+We also have the following
+\begin{corollary}\label{fixk}
+Let $X$ be a set and $(Y, d)$ be a complete, compact metric space
+with a metric $d$ invariant by dilations. Let $F, G$ be two
+mappings from $X$ to $Y$ such that $F$ is bijective and $G$ is
+a perturbation of $F$, with constant $K > 0$.
+
+Then there exists at least one $u_K \in X$ such that
+$G(u_\infty)=K F(u_\infty)$
+\begin{proof}
+Let $(a_n)$ be a decreasing sequence of real numbers greater than
+one, converging to one ($a_n \downarrow 1$) and let $M_n = a_n K$
+for each $n \in \mathbb{N}$. We can apply corollary~\ref{fixm} to
+each $M_n$, obtaining a sequence $u_n$ of elements of $X$ for
+which one has
+\begin{equation}\label{gmf}
+G(u_n) = M_n F(u_n).
+\end{equation}
+
+Since $(X, d_F)$ is compact, there exist a subsequence of $u_n$
+which converges to some $u_\infty$; by continuity of $G$ and $F$
+we can pass to the limit in \eqref{gmf}, obtaining
+\[
+G(u_\infty) = K F(u_\infty)
+\]
+which completes the proof.
+\end{proof}
+\end{corollary}
+
+\begin{remark}
+For theorem~\ref{fixk} we cannot ensure uniqueness of $u_\infty$,
+since in general the sequence $u_n$ may change with the choice of
+$a_n$, and the limit might be different. So the corollary can only
+be applied as an existence theorem.
+\end{remark}
+
+\section{Near operators}
+
+We can now introduce the concept of near operators and discuss
+some of their properties.
+
+A historical remark: Campanato initially introduced the concept in
+Hilbert spaces; subsequently, it was remarked that most of the
+theory could more generally be applied to Banach spaces; indeed,
+it was also proven that the basic definition can be generalized to
+make part of the theory available in the more general environment
+of metric vector spaces.
+
+We will here discuss the theory in the case of Banach spaces,
+with only a couple of exceptions: to see some of the extra
+properties that are available in Hilbert spaces and to discuss
+a generalization of the Lax-Milgram theorem to metric vector spaces.
+
+\subsection{Basic definitions and properties}
+
+\begin{definition}
+Let $X$ be a set and $Y$ a Banach space. Let $A, B$ be two
+operators from $X$ to $Y$. We say that $A$ is near $B$ if and only
+if there exist two constants $\alpha > 0$ and $k \in (0, 1)$ such
+that, for each $x', x'' \in X$ one has
+\[
+\norm{B(x') - B(x'') - \alpha ( A(x') - A(x'') ) } \leq
+k \norm{B(x') - B(x'')}
+\]
+\end{definition}
+
+In other words, $A$ is near $B$ if $B - \alpha A$ is a small
+perturbation of $B$ for an appropriate value of $\alpha$.
+
+Observe that in general the property is not symmetric: if $A$ is
+near $B$, it is not necessarily true that $B$ is near $A$; as we
+will briefly see, this can only be proven if $\alpha < 1/2$, or in
+the case that $Y$ is a Hilbert space, by using an equivalent
+condition that will be discussed later on. Yet it is possible to
+define a topology with some interesting properties on the space of
+operators, by using the concept of nearness to form a base.
+
+The core point of the nearness between operators is that it allows
+us to ``transfer'' many important properties from $B$ to $A$; in
+other words, if $B$ satisfies certain properties, and $A$ is near
+$B$, then $A$ satisfies the same properties. To prove this, and to
+enumerate some of these ``nearness-invariant'' properties, we will
+emerge a few important facts.
+
+In what follows, unless differently specified, we will always
+assume that $X$ is a set, $Y$ is a Banach space and $A, B$ are two
+operators from $X$ to $Y$.
+
+\begin{lemma}\label{control}
+If $A$ is near $B$ then there exist two positive constants $M_1,
+M_2$ such that
+\begin{gather*}
+\norm{B(x') - B(x'')} \leq M_1 \norm{A(x') - A(x'')} \\
+\norm{A(x') - A(x'')} \leq M_2 \norm{B(x') - B(x'')} \\
+\end{gather*}
+\begin{proof}
+We have:
+\begin{multline*}
+\norm{B(x')- B(x'')} \leq \\
+\leq \norm{B(x') - B(x'') - \alpha ( A(x') - A(x'') ) } +
+\alpha \norm{A(x') - A(x'')} \leq \\
+\leq k \norm{B(x')- B(x'')} + \alpha \norm{A(x') - A(x'')}
+\end{multline*}
+and hence
+\[
+\norm{B(x') - B(x'')} \leq \frac{\alpha}{1-k} \norm{A(x') - A(x'')}
+\]
+which is the first inequality with $M_1 = \alpha/(1-k)$ (which is
+positive since $k < 1$).
+
+But also
+\begin{multline*}
+\norm{A(x')- A(x'')} \leq \\
+\leq \frac{1}{\alpha}\norm{B(x') - B(x'') - \alpha ( A(x') - A(x'') ) } +
+\frac{1}{\alpha} \norm{B(x') - B(x'')} \leq \\
+\leq \frac{k}{\alpha} \norm{B(x')- B(x'')} + 
+\frac{1}{\alpha} \norm{B(x') - B(x'')}
+\end{multline*}
+and hence
+\[
+\norm{A(x') - A(x'')} \leq \frac{1+k}{\alpha} \norm{B(x') - B(x'')}
+\]
+which is the second inequality with $M_2 = (1+k)/\alpha$.
+\end{proof}
+\end{lemma}
+
+The most important corollary of the previous lemma is the
+following
+\begin{corollary}
+If $A$ is near $B$ then two points of $X$ have the same image
+under $A$ if and only if the have the same image under $B$.
+\end{corollary}
+
+We can express the previous concept in the following formal way:
+for each $y$ in $B(X)$ there exist $z$ in $Y$ such that
+$A(B^{-1}(y)) = \{z\}$ and conversely. In yet other words: each
+fiber of $A$ is a fiber (for a different point) of $B$, and
+conversely.
+
+It is therefore possible to define a map $T_A:B(X) \to Y$ by
+putting $T_A(y) = z$; the range of $T_A$ is $A(X)$. Conversely, it
+is possible to define $T_B:A(X) \to Y$, by putting $T_B(z) = y$;
+the range of $T_B$ is $B(X)$. Both maps are injective and, if
+restricted to their respective ranges, one is the inverse of the
+other.
+
+Also observe that $T_B$ and $T_A$ are continuous. This follows
+from the fact that for each $x \in X$ one has
+\[
+T_A(B(x)) = A(x), \qquad T_B(A(x)) = B(x)
+\]
+and that the lemma ensures that given a sequence $(x_n)$ in $X$,
+the sequence $(B(x_n))$ converges to $B(x_0)$ if and only if
+$(A(x_n))$ converges to $A(x_0)$.
+
+We can now list some invariant properties of operators with
+respect to nearness. The properties are given in the form ``if
+and only if'' because each operator is near itself (therefore
+ensuring the ``only if'' part).
+
+\begin{enumerate}
+\item\label{inj} a map is injective if and only if it is near an
+injective operator;
+\item\label{surj} a map is surjective if and only if it is near a surjective
+operator;
+\item\label{open} a map is open if and only if it is near an open map;
+\item\label{dense} a map has dense range if and only if it is near a map with
+dense range.
+\end{enumerate}
+
+To prove (\ref{surj}) it is necessary to use
+theorem~\ref{fixptgen}.
+
+Another important property that follows from the lemma is that if
+there exist $y \in Y$ such that $A^{-1}(y) \cap B^{-1}(y) \ne
+\varnothing$, then it is $A^{-1}(y) = B^{-1}(y)$: intersecting
+fibers are equal. (Campanato only stated this property for the
+case $y = 0$ and called it ```the kernel property''; I prefer to
+call it the ``fiber persistence'' property.)
+
+\subsubsection{A topology based on nearness}
+
+In this section we will show that the concept of nearness between
+operator can indeed be connected to a topological understanding of
+the set of maps from $X$ to $Y$.
+
+\def\M{\mathcal{M}}%
+\def\U{\mathcal{U}}%
+\def\H{\mathcal{H}}%
+
+Let $\M$ be the set of maps between $X$ and $Y$. For each
+$F \in \M$ and for each $k \in (0,1)$ we let $U_k(F)$ the set of
+all maps $G \in \M$ such that $F-G$ is a small perturbation of $F$
+with constant $k$. In other words, $G \in U_k(F)$ if and only if $G$ is near
+$F$ with constants $1, k$.
+
+The set $\U(F) = \{ U_k(F) \mid 0<k<1 \}$ satisfies the axioms of
+the set of fundamental neighbourhoods. Indeed:
+\begin{enumerate}
+\item $F$ belongs to each $U_k(F)$;
+\item $U_k(F) \subset U_h(F)$ if and only if $k < h$, and thus the
+intersection property of neighbourhoods is trivial;
+\item for each $U_k(F)$ there exist $U_h(F)$ such that for each $G
+\in U_h(F)$ there exist $U_j(G) \subseteq U_k(F)$.
+\end{enumerate}
+
+This last property (permanence of neighbourhoods) is somewhat less
+trivial, so we shall now prove it.
+\begin{proof}
+Let $U_k(F)$ be given.
+
+ Let $U_h(F)$ be another arbitrary neighbourhood of $F$ and let
+$G$ be an arbitrary element in it. We then have:
+\begin{equation}\label{g}
+\norm{F(x') - F(x'') - (G(x')-G(x''))} \le h \norm{F(x') - F(x'')}.
+\end{equation}
+but also (lemma~\ref{control})
+\begin{equation}\label{g}
+\norm{(G(x')-G(x''))} \le (1+h) \norm{F(x') - F(x'')}.
+\end{equation}
+
+Let also $U_j(G)$ be an arbitrary neighbourhood of $G$ and $H$ an
+arbitrary element in it. We then have:
+\begin{equation}\label{h}
+\norm{G(x') - G(x'') - (H(x')-H(x''))} \le j \norm{G(x') - G(x'')}.
+\end{equation}
+
+The nearness between $F$ and $H$ is calculated as such:
+\begin{multline}\label{h}
+\norm{F(x') - F(x'') - (H(x')-H(x''))} \le \\
+\norm{F(x') - F(x'') - (G(x')-G(x''))} +
+\norm{G(x') - G(x'') - (H(x')-H(x''))} \le \\
+h \norm{F(x') - F(x'')} + j \norm{G(x') - G(x'')} \le
+(h + j (1+h)) \norm{F(x') - F(x'')}.
+\end{multline}
+We then want $h + j (1 + h) \le k$, that is $j \le (k-h)/(1+h)$;
+the condition $0<j<1$ is always satisfied on the right side, and
+the left side gives us $h<k$.
+\end{proof}
+
+It is important to observe that the topology generated this way is
+not a Hausdorff topology: indeed, it is not possible to separate
+$F$ and $F+y$ (where $F\in\M$ and $y$ is a constant element of~$Y$).
+On the other hand, the subset of all maps with with a fixed valued
+at a fixed point ($F(x_0) = y_0$) is a Hausdorff subspace.
+
+Another important characteristic of the topology is that the set
+$\H$ of invertible operators from $X$ to $Y$ is open in $\M$
+(because a map is invertible if and only if it is near an invertible map).
+This is not true in the topology of uniform convergence, as is
+easily seen by choosing $X = Y = \mathbb{R}$ and the sequence with
+generic element $F_n(x) = x^3 - x/n$: the sequence converges (in
+the uniform convergence topology) to $F(x) = x^3$, which is
+invertible, but none of the $F_n$ is invertible. Hence $F$ is an
+element of $\H$ which is not inside $\H$, and $\H$ is not open.
+
+\subsection{Some applications}
+
+As we mentioned in the introduction, the Campanato theory of near
+operators allows us to generalize some important theorems; we will
+now present some generalizations of the Lax-Milgram theorem, and
+a generalization of the Riesz representation theorem.
+
+[TODO]
+%%%%%
+%%%%%
+\end{document}

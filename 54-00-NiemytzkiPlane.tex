@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NiemytzkiPlane}
+\pmcreated{2013-03-22 13:36:53}
+\pmmodified{2013-03-22 13:36:53}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Niemytzki plane}
+\pmrecord{7}{34247}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54-00}
+\pmclassification{msc}{54G99}
+\pmsynonym{Niemytzki space}{NiemytzkiPlane}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\R{\mathbb{R}}
+\begin{document}
+Let $\Gamma$ be the Euclidean half plane $\Gamma =\{(x,y)\mid y\ge0\}\sse\R^2$,
+with the usual subspace topology. We enrich the topology on $\Gamma$ by throwing
+in open sets of the form $\{(x,0)\}\cup B_r(x,r)$, that is an open ball of radius
+$r$ around $(x,r)$ together with its point tangent to $\R\times\{0\}$
+(Fig.~\ref{nbhd}).
+\begin{figure}[h]
+\begin{center}
+  \includegraphics{nbhd}
+  \caption{A new open set in $\Gamma$. It consists of an open
+    disc and the point tangent to $y=0$.\label{nbhd}}
+\end{center}
+\end{figure}
+The space $\Gamma$ endowed with the enriched topology is called the
+\emph{Niemytzki plane}.
+
+Some miscellaneous properties of the Niemytzki plane are
+\begin{itemize}
+\item the subspace $\R\times\{0\}$ of $\Gamma$ is discrete, hence
+  the only convergent sequences in this subspace are constant ones;
+\item it is Hausdorff;
+\item it is completely regular;
+\item it is not normal.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

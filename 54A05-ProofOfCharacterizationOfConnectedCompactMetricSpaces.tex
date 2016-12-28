@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCharacterizationOfConnectedCompactMetricSpaces}
+\pmcreated{2013-03-22 14:17:06}
+\pmmodified{2013-03-22 14:17:06}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of characterization of connected compact metric spaces.}
+\pmrecord{4}{35739}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First we prove the right-hand arrow: if $X$ is connected then the property stated in the Theorem holds. This implication is true in every metric space $X$, without additional conditions.
+
+Let us denote with $A_\varepsilon$ the set of all points $z\in X$ which can be joined to $x$ with a sequence of points $p_1,\ldots,p_n$ with $p_1=x$, $p_n=z$ and $d(p_i,p_{i+1})<\varepsilon$. If $z\in A_\varepsilon$ then also $B_\varepsilon(z)\subset A_\varepsilon$ since given $w\in B_\varepsilon(z)$ we can simply add the point $p_{n+1}=w$ to the sequence $p_1,\ldots,p_n$.
+This immediately shows that $A_\varepsilon$ is an open subset of $X$. On the other hand we can show that $A_\varepsilon$ is also closed. In fact suppose that $x_n\in A_\varepsilon$ and $x_n \to \bar x\in X$. Then there exists $k$ such that $\bar x\in B_\varepsilon(x_k)$ and hence $\bar x\in A_\varepsilon$ by the property stated above. Since both $A_\varepsilon$ and its complementary set are open then, 
+being $X$ connected, we conclude that $A_\varepsilon$ is either empty or its complementary set is empty. Clearly $x\in A_\varepsilon$ so we conclude that $A_\varepsilon=X$. Since this is true for all $\varepsilon>0$ the first implication is proven.
+
+Let us prove the reverse implication. Suppose by contradiction that $X$ is not connected. This means that two non-empty open sets $A,B$ exist such that 
+$A\cup B=X$ and $A\cap B = \emptyset$. Since $A$ is the complementary set of $B$ and vice-versa, we know that $A$ and $B$ are closed too. Being $X$ compact we conclude that both $A$ and $B$ are compact sets.
+We now claim that 
+\[
+   \delta:= \inf_{a\in A, b\in B} d(a,b) > 0. 
+\]
+Suppose by contradiction that $\delta=0$.
+In this case by definition of infimum, there exist two sequences 
+$a_k\in A$ and $b_k\in B$ such that $d(a_k,b_k)\to 0$. Since $A$ and $B$ are compact, up to a subsequence we may and shall suppose that $a_k \to a \in A$ and $b_k \to b \in B$. By the continuity of the distance function we conclude that $d(a,b)=0$ i.e.\ $a=b$ which is in contradiction with the condition $A\cap B=\emptyset$. So the claim is proven.
+
+As a consequence, given $\varepsilon<\delta$ it is not possible to join a point of $A$ with a point of $B$. In fact in the sequence $p_1,\ldots,p_n$ there should exists two consecutive points $p_i$ and $p_{i+1}$ with $p_i\in A$ and $p_{i+1}\in B$. By the previous observation we would conclude that $d(p_i,p_{i+1})\ge \delta > \varepsilon$.
+%%%%%
+%%%%%
+\end{document}

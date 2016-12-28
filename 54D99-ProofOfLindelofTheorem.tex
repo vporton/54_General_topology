@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLindelofTheorem}
+\pmcreated{2013-03-22 12:56:31}
+\pmmodified{2013-03-22 12:56:31}
+\pmowner{Evandar}{27}
+\pmmodifier{Evandar}{27}
+\pmtitle{proof of Lindel\"of theorem}
+\pmrecord{5}{33299}
+\pmprivacy{1}
+\pmauthor{Evandar}{27}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\begin{document}
+Let $X$ be a second countable topological space, $A\subseteq X$
+any subset and $\mathcal{U}$ an open cover of $A$.  Let
+$\mathcal{B}$ be a countable basis for $X$; then $\mathcal{B}' =
+\{B\cap A\colon B\in\mathcal{B}\}$ is a countable basis of the
+subspace topology on A.  Then for each $a\in A$ there is some
+$U_a\in\mathcal{U}$ with $a\in U_a$, and so there is
+$B_a\in\mathcal{B}'$ such that $a\in B_a\subseteq U_a$.
+
+Then $\{B_a\in\mathcal{B}'\colon a\in A\}\subseteq\mathcal{B}$ is
+a countable open cover of $A$.  For each $B_a$, choose
+$U_{B_a}\in\mathcal{U}$ such that $B_a\subseteq U_{B_a}$.  Then
+$\{ U_{B_a}\colon a\in A\}$ is a countable subcover of $A$ from
+$\mathcal{U}$.$\square$
+%%%%%
+%%%%%
+\end{document}

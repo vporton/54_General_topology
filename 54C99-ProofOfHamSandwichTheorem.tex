@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHamSandwichTheorem}
+\pmcreated{2013-03-22 16:40:29}
+\pmmodified{2013-03-22 16:40:29}
+\pmowner{Statusx}{15142}
+\pmmodifier{Statusx}{15142}
+\pmtitle{proof of ham sandwich theorem}
+\pmrecord{5}{38882}
+\pmprivacy{1}
+\pmauthor{Statusx}{15142}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+This proof uses the Borsuk-Ulam theorem, which states that any continuous function from $S^n$ to $\mathbb{R}^n$ maps some pair of antipodal points to the same point.
+
+Let $A$ be a measurable bounded subset of $\mathbb{R}^n$.  Given any unit vector $\hat n \in S^{n-1}$ and $s \in \mathbb{R}$, there is a unique $n-1$ dimensional hyperplane normal to $\hat n$ and containing $s \hat n$.  
+
+Define $f:S^{n-1} \times \mathbb{R} \rightarrow [0,\infty)$ by sending  $(\hat n,s)$ to the measure of the subset of $A$ lying on the side of the plane corresponding to $(\hat n,s)$ in the direction in which $\hat n$ points.  Note that $(\hat n,s)$ and $(-\hat n,-s)$ correspond to the same plane, but to different sides of the plane, so that $f(\hat n,s)+f(-\hat n,-s)=m(A)$.
+
+Since $A$ is bounded, there is an $r>0$ such that $A$ is contained in $\overline{B_r}$, the closed ball of  radius $r$ centered at the origin.  For sufficiently small changes in $(\hat n,s)$, the measure of the portion of $\overline{B_r}$ between the different corresponding planes can be made arbitrarily small, and this bounds the change in $f(\hat n,s)$, so that $f$ is a continuous function.
+
+Finally, it's easy to see that, for fixed $\hat n$, $f(\hat n,s)$ is monotonically decreasing in $s$, with $f(\hat n,-s)=m(A)$ and $f(\hat n,s)=0$  for $s$ sufficiently large.
+
+Given these properties of $f$, we see by the intermediate value theorem that, for fixed $\hat n$, there is an interval $[a,b]$ such that the set of $s$ with $f(\hat n,s)=m(A)/2$ is $[a,b]$.  If we define $g(\hat n)$ to be the midpoint of this interval, then, since $f$ is continuous, we see $g$ is a continuous function from $S^{n-1}$ to $\mathbb{R}$.  Also, since $f(\hat n,s)+f(-\hat n,-s)=m(A)$, if $[a,b]$ is the interval corresponding to $\hat n$, then $[-b,-a]$ is the interval corresponding to $-\hat n$, and so $g(\hat n)=-g(-\hat n)$.
+
+Now let $A_1,A_2,...,A_n$ be measurable bounded subsets of $\mathbb{R}^n$, and let $f_i,g_i$ be the maps constructed above for $A_i$.  Then we can define $h:S^{n-1} \rightarrow R^{n-1}$ by:
+
+\[ h(\hat n) = (f_1(\hat n,g_n(\hat n)),f_2(\hat n,g_n(\hat n)),...f_{n-1}(\hat n,g_n(\hat n))) \]
+
+This is continuous, since each coordinate function is the composition of continuous functions.  Thus we can apply the Borsuk-Ulam theorem to see there is some $\hat n \in S^{n-1}$ with $h(\hat n)=h(-\hat n)$, ie, with:
+
+\[ f_i(\hat n,g_n(\hat n))=f_i(-\hat n,g_n(-\hat n))=f_i(-\hat n,-g_n(\hat n)) \]
+
+where we've used the property of $g$ mentioned above.  But this just means that for each $A_i$ with $1 \leq i \leq n-1$, the measure of the subset of $A_i$ lying on one side of the plane corresponding to $(\hat n,g_n(\hat n))$, which is $f_i(\hat n,g_n(\hat n))$, is the same as the measure of the subset of $A_i$ lying on the other side of the plane, which is $f_i(-\hat n,-g_n(\hat n))$.  In other words, the plane corresponding to $(\hat n,g_n(\hat n))$ bisects each $A_i$ with $1 \leq i \leq n-1$.  Finally, by the definition of $g_n$, this plane also bisects $A_n$, and so it bisects each of the $A_i$ as claimed.
+%%%%%
+%%%%%
+\end{document}

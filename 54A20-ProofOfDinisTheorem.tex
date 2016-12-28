@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDinisTheorem}
+\pmcreated{2013-03-22 12:44:13}
+\pmmodified{2013-03-22 12:44:13}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Dini's theorem}
+\pmrecord{5}{33038}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Without loss of generality we will assume that $X$ is compact and, by replacing
+$f_n$ with $f-f_n$, that the net converges monotonically to 0. 
+
+Let $\epsilon > 0$.
+For each $x\in X$, we can choose an $n_x$, such that $f_{n_x}(x) <
+\epsilon/2$. Since $f_{n_x}$ is continuous, 
+there is an open
+neighbourhood $U_x$ of $x$, such that for each $y\in U_x$, we have $f_{n_x}(y)
+< \epsilon/2$. The open sets $U_x$ cover $X$, which is compact, so we can choose
+finitely many $x_1, \ldots, x_k$ such that the $U_{x_i}$ also cover $X$. Then,
+if $N\geq n_{x_1}, \ldots, n_{x_k}$, we have $f_n(x) < \epsilon$ for each
+$n\geq N$ and $x\in X$, since the sequence $f_n$ is monotonically decreasing.
+Thus, $\{f_n\}$ converges to 0 uniformly on $X$, which was to be proven.
+%%%%%
+%%%%%
+\end{document}

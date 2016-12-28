@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfCompactSpaces}
+\pmcreated{2013-03-22 12:48:47}
+\pmmodified{2013-03-22 12:48:47}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{examples of compact spaces}
+\pmrecord{16}{33133}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D30}
+\pmrelated{TopologicalSpace}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{compactification}
+\PMlinkescapeword{one-point compactification}
+\PMlinkescapeword{dimensions}
+\PMlinkescapeword{index}
+\PMlinkescapeword{unit}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{natural}
+
+Here are some examples of \PMlinkname{compact spaces}{Compact}:
+
+\begin{itemize}
+
+\item The unit interval [0,1] is compact. This follows from the Heine-Borel Theorem. Proving that theorem is about as hard as proving directly that [0,1] is compact. The half-open interval (0,1] is not compact: the open cover $(1/n, 1]$ for $n=1,2,...$ does not have a finite subcover.
+
+\item Again from the Heine-Borel Theorem, we see that the closed unit ball of any finite-dimensional normed vector space is compact. This is not true for infinite dimensions; in fact, a normed vector space is finite-dimensional if and only if its closed unit ball is compact.
+
+\item Any finite topological space is compact.
+
+\item Consider the set $2^\Bbb{N}$ of all infinite sequences with entries in $\{0,1\}$. We can turn it into a metric space by defining $d((x_n),(y_n)) = 1/k$, where $k$ is the smallest index such that $x_k \not = y_k$ (if there is no such index, then the two sequences are the same, and we define their distance to be zero). Then $2^\Bbb{N}$ is a compact space, a consequence of Tychonoff's theorem. In fact, $2^\Bbb{N}$ is homeomorphic to the Cantor set (which is compact by Heine-Borel). This construction can be performed for any finite set, not just \{0,1\}.
+
+\item Consider the set $K$ of all functions $f : \Bbb{R} \rightarrow [0,1]$ and defined a topology on $K$ so that a sequence $(f_n)$ in $K$ converges towards $f\in K$ if and only if $(f_n(x))$ converges towards $f(x)$ for all $x\in\Bbb{R}$.
+(There is only one such topology; it is called the topology of pointwise convergence). Then $K$ is a compact topological space, again a consequence of Tychonoff's theorem.
+
+\item Take any set $X$, and define the cofinite topology on $X$ by declaring a subset of $X$ to be open if and only if it is empty or its complement is finite. Then $X$ is a compact topological space.
+
+\item The prime spectrum of any commutative ring with the Zariski topology is a compact space important in algebraic geometry. These prime spectra are almost never Hausdorff spaces.
+
+\item If $H$ is a Hilbert space and $A : H \rightarrow H$ is a continuous linear operator, then the spectrum of $A$ is a compact subset of $\Bbb{C}$. If $H$ is infinite-dimensional, then any compact subset of $\Bbb{C}$ arises in this manner from some continuous linear operator $A$ on $H$.
+
+\item If $\cal{A}$ is a complex C*-algebra which is commutative and contains a one, then the set $X$ of all non-zero algebra homomorphisms $\phi : \cal{A} \rightarrow \Bbb{C}$ carries a natural topology (the weak-* topology) which turns it into a compact Hausdorff space. $\cal{A}$ is isomorphic to the C*-algebra of continuous complex-valued functions on $X$ with the supremum norm.
+
+\item Any profinite group is compact Hausdorff: finite discrete spaces are compact Hausdorff, therefore their product is compact Hausdorff, and a profinite group is a closed subset of such a product.
+
+\item Any locally compact Hausdorff space can be turned into a compact space by adding a single point to it (\PMlinkname{Alexandroff one-point compactification}{AlexandrovOnePointCompactification}). The one-point compactification of $\Bbb{R}$ is homeomorphic to the circle $S^1$; the one-point compactification of $\Bbb{R}^2$ is homeomorphic to the sphere $S^2$. Using the one-point compactification, one can also easily construct compact spaces which are not Hausdorff, by starting with a non-Hausdorff space.
+
+\item Other non-Hausdorff compact spaces are given by the left order topology (or right order topology) on bounded totally ordered sets.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

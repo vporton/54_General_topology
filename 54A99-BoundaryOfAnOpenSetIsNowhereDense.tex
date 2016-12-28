@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundaryOfAnOpenSetIsNowhereDense}
+\pmcreated{2013-03-22 17:55:41}
+\pmmodified{2013-03-22 17:55:41}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{boundary of an open set is nowhere dense}
+\pmrecord{8}{40422}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\def\int{\operatorname{int}}
+\begin{document}
+This entry provides another example of a nowhere dense set.
+
+\begin{prop}  If $A$ is an open set in a topological space $X$, then $\partial A$, the boundary of $A$ is nowhere dense.
+\end{prop}
+
+\begin{proof}  Let $B=\partial A$.  Since $B = \overline{A}\cap \overline{A^\complement}$, it is closed, so all we need to show is that $B$ has empty interior $\int(B)=\varnothing$.  First notice that $B= \overline{A}\cap A^\complement$, since $A$ is open.  Now, we invoke one of the interior axioms, namely $\int(U\cap V)=\int(U)\cap \int(V)$.  So, by direct computation, we have 
+$$\int(B)=\int(\overline{A})\cap \int(A^\complement) = \int(\overline{A})\cap \overline{A}^\complement \subseteq \overline{A}\cap \overline{A}^\complement =\varnothing.$$
+The second equality and the inclusion follow from the general properties of the interior operation, the proofs of which can be found \PMlinkname{here}{DerivationOfPropertiesOnInteriorOperation}.
+\end{proof}
+
+\textbf{Remark}.  The fact that $A$ is open is essential.  Otherwise, the proposition fails in general.  For example, the rationals $\mathbb{Q}$, as a subset of the reals $\mathbb{R}$ under the usual order topology, is not open, and its boundary is not nowhere dense, as $\overline{\mathbb{Q}}\cap \overline{\mathbb{Q}^\complement} = \mathbb{R}\cap \mathbb{R}=\mathbb{R}$, whose interior is $\mathbb{R}$ itself, and thus not empty.
+%%%%%
+%%%%%
+\end{document}

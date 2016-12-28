@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HausdorffSpaceNotCompletelyHausdorff}
+\pmcreated{2013-03-22 14:16:05}
+\pmmodified{2013-03-22 14:16:05}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Hausdorff space not completely Hausdorff}
+\pmrecord{21}{35718}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D10}
+\pmsynonym{$T_2$ space not $T_{2\frac12}$}{HausdorffSpaceNotCompletelyHausdorff}
+\pmsynonym{example of a Hausdorff space that is not completely Hausdorff}{HausdorffSpaceNotCompletelyHausdorff}
+\pmrelated{CompletelyHausdorff}
+\pmrelated{SeparationAxioms}
+\pmrelated{FrechetSpace}
+\pmrelated{RegularSpace}
+\pmrelated{FurstenbergsProofOfTheInfinitudeOfPrimes}
+\pmrelated{SeparationAxioms}
+\pmrelated{T2Space}
+
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\B}{\mathbbmss{B}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+On the set $\Z^+$ of strictly 
+positive integers, let $a$ and $b$ be two different integers $b\neq0$ and consider the set
+\[ S(a,b)=\{a+kb\in \Z^+ \colon k\in \Z\}\]
+such set is the infinite arithmetic progression of positive integers with difference $b$ and containing $a$.
+The collection of all $S(a,b)$ sets is a basis for a topology on $\Z^+$. We will use a coarser topology induced by the following basis:
+\[\mathbb{B}=\{S(a,b): \gcd(a,b)=1\}\]
+
+\subsubsection*{The collection $\B$ is basis for a topology on $\Z^+$}
+We first prove such collection is a basis. 
+Suppose $x\in S(a,b)\cap S(c,d)$. By Euclid's algorithm we have $S(a,b)=S(x,b)$ and $S(c,d)=S(x,d)$ and 
+\[ 
+x\in S(x,bd)\subset S(x,d)\cap S(c,d)
+\]
+besides, since $\gcd(x,b)=1$ and $\gcd(x,d)=1$ then $\gcd(x,bd)=1$ so $x$ and $bd$ are coprimes and $S(x,bd)\in \mathbb{B}$. This concludes the proof that $\B$ is indeed a basis for a topology on $\Z^+$.
+
+\subsubsection*{The topology on $\Z^+$ induced by $\B$ is Hausdorff}
+Let $m,n$ integers two different integers.
+We need to show that there are open disjoint neighborhoods $U_m$ and $U_n$ such that $m\in U_m$ and $n\in U_n$, but it suffices to show the existence of disjoint basic open sets containing $m$ and $n$.
+
+Taking $d=|m-n|$,  we can find an integer $t$ such that $t>d$ and such that
+$\gcd(m,t)=\gcd(n,t)=1$. A way to accomplish this is to take any multiple of $mn$ greater than $d$ and add $1$.
+
+The basic open sets $S(m,t)$ and $S(n,t)$ are disjoint, because they have common elements if and only if the diophantine equation $m+tx = n+ty$ has solutions. But it cannot have since $t(x-y) = n-m$ implies that $t$ divides $n-m$ but $t>|n-m|$ makes it impossible.
+
+We conclude that $S(m,t)\cap S(n,t)=\emptyset$ and this means that $\Z^+$ becomes a Hausdorff space with the given topology.
+
+\subsubsection*{Some properties of $\overline{S(a,b)}$}
+We need to determine first some facts about $\overline{S(a,b)}$. in order to take an example, consider $S(3,5)$ first. Notice that if we had considered the former topology (where in $S(a,b)$, $a$ and $b$ didn't have to be coprime) the complement of $S(3,5)$ would have been $S(4,5)\cup S(5,5)\cup S(6,5)\cup S(7,5)$ which is open, and so $S(3,5)$ would have been closed. In general, in the finer topology, all basic sets were both open and closed. However, this is not true in our coarser topology (for instance $S(5,5)$ is not open). 
+
+The key fact to prove $\Z^+$ is not a completely Hausdorff space is: given any $S(a,b)$, then $b\Z^+ = \{n \in \Z^+ : b \mbox{ divides }n \}$ is a subset of $\overline{S(a,b)}$.
+
+Indeed, any basic open set containing $bk$ is of the form $S(bk,t)$ with $t,bk$ coprimes. This means $\gcd(t,b)=1$. Now $S(bk,t)$ and $S(a,b)$ have common terms if an only if $bk+tx = a+by$ for some integers $x,y$. But that diophantine equation can be rewritten as
+\[ tx - by = a-bk\]
+and it always has solutions because $1=\gcd(t,b)$ divides $a-bk$.
+
+This also proves  $S(a,b)\neq \overline{S(a,b)}$, because $b$ is not in $S(a,b)$ but it is on the closure.
+
+\subsubsection*{The topology on $\Z^+$ induced by $\B$ is not completely Hausdorff}
+We will use the closed-neighborhood sense for completely Hausdorff, which will also imply the topology is not completely Hausdorff in the functional sense.
+
+Let $m,n$ different positive integers. Since $\B$ is a basis, for any two disjoint neighborhoods $U_m, U_n$ we can find basic sets $S(m,a)$ and $S(n,b)$ such that
+\[m\in S(m,a)\subseteq U_m,\qquad n\in S(n,b)\subseteq U_n\]
+and thus 
+\[S(m,a)\cap S(n,b)=\emptyset.\]
+
+But then $g=ab$ is both a multiple of $a$ and $b$ so it must be in $\overline{S(m,a)}$ and $\overline{S(n,b)}$. This means
+\[\overline{S(m,a)}\cap\overline{S(n,b)}\neq\emptyset\]
+and thus $\overline{U_m}\cap \overline{U_n}\neq\emptyset$.
+
+This proves the topology under consideration is not completely 
+Hausdorff (under both usual meanings).
+%%%%%
+%%%%%
+\end{document}

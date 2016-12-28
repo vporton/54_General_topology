@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCauchyConditionForLimitOfFunction}
+\pmcreated{2013-03-22 18:59:08}
+\pmmodified{2013-03-22 18:59:08}
+\pmowner{puff}{4175}
+\pmmodifier{puff}{4175}
+\pmtitle{proof of Cauchy condition for limit of function}
+\pmrecord{8}{41851}
+\pmprivacy{1}
+\pmauthor{puff}{4175}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E35}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26B12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The forward direction is \PMlinkescapetext{simple}. Assume that $\lim_{x \to x_0}f(x) =
+L$. Then given $\epsilon$ there is a $\delta$ such that
+\begin{equation*}
+  |f(u)- L| < \epsilon/2 \text{ when } 0 < |u-x_0| < \delta.
+\end{equation*}
+
+Now for $0 < |u - x_0 | < \delta$ and $ 0< |v- x_0 | < \delta$ we have
+\begin{equation*}
+   |f(u)- L| < \epsilon/2 \text{ and }  |f(v)-L| < \epsilon/2
+\end{equation*}
+and so
+
+\begin{equation*}
+  |f(u)-f(v)| = | f(u)- L -(f(v)-L)| \leq
+  |f(u)-L|+|f(v)-L| < \epsilon/2+\epsilon/2 = \epsilon.
+\end{equation*}
+
+We prove the reverse by contradiction.
+Assume that the condition holds.
+Now suppose  that $\lim_{x \to x_0}f(x)$ does not exist. This means that for
+any $l$ 
+and any $\epsilon$ sufficiently small then for any $\delta>0$ there is
+$x_l$ such that $0<|xl-x_0|< \delta~\text{and}~|f(x_l)-l| \geq \epsilon$.
+For any such $\epsilon$ choose $u$ such that $0 < |u-x_0| < \delta $ and
+put $l=f(v)$ then substituting in  the condition with $u=x_l$ we get
+$|f(x_l)-l| < \epsilon$. A contradiction. 
+
+%%%%%
+%%%%%
+\end{document}

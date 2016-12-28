@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRieszLemma}
+\pmcreated{2013-03-22 14:56:14}
+\pmmodified{2013-03-22 14:56:14}
+\pmowner{gumau}{3545}
+\pmmodifier{gumau}{3545}
+\pmtitle{proof of Riesz' Lemma}
+\pmrecord{6}{36627}
+\pmprivacy{1}
+\pmauthor{gumau}{3545}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E35}
+\pmclassification{msc}{15A03}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let's consider $x \in E-S$ and let $r = d(x, S)$. Recall that $r$ is the distance between $x$ and $S$: $d(x,S) = \textrm{inf}\{d(x, s) \textrm{ such that } s \in S\}$. Now, $r > 0$ because $S$ is closed. Next, we consider $b \in S$ such that 
+$$\|x - b\| < \frac{r}{\alpha}$$
+This vector $b$ exists: as $0 < \alpha < 1$ then $$\frac{r}{\alpha} > r$$
+But then the definition of infimum implies there is $b \in S$ such that $$\|x - b\| < \frac{r}{\alpha}$$
+
+Now, define $$x_{\alpha} = \frac{x - b}{\|x - b\|}$$
+Trivially, $$ \|x_{\alpha}\| = 1 $$
+Notice that $x_{\alpha} \in E-S$, because if $x_{\alpha} \in S$ then $x - b \in S$, and so $(x - b) + b = x \in S$, an absurd.
+Plus, for every $s \in S$ we have 
+$$ \|s - x_{\alpha}\| = \|s - \frac{x - b}{\|x - b\|}\| = \frac{1}{\|x - b\|} \cdot \| \|x - b\| \cdot s + b - x \| \geq \frac{r}{\|x - b\|}$$ 
+because $$\|x -b\| \cdot s + b \in S$$
+But $$\frac{r}{\|x - b\|} > \frac{\alpha}{r} \cdot r = \alpha $$ QED.
+%%%%%
+%%%%%
+\end{document}

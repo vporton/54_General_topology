@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTychonoffsTheorem}
+\pmcreated{2013-03-22 17:25:24}
+\pmmodified{2013-03-22 17:25:24}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proof of Tychonoff's theorem}
+\pmrecord{8}{39797}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+This is a proof in \PMlinkescapetext{terms} of nets. Recall the following facts:
+
+{\bf \PMlinkescapetext{Lemma} 1 -} A net $(x_{\alpha})_{\alpha \in \mathcal{A}}$ in $\prod_{i \in I}X_i$ converges to
+ $x \in \prod_{i \in I}X_i$ if and only if each coordinate $(x_{\alpha}^i)_{\alpha \in \mathcal{A}}$ converges to $x^i \in X_i$
+
+{\bf \PMlinkescapetext{Lemma} 2 -} A topological space $X$ is compact if and only if every net in $X$ has a convergent subnet.
+
+{\bf \PMlinkescapetext{Lemma} 3 -} Every net has a universal subnet.
+
+{\bf \PMlinkescapetext{Lemma} 4 -} A \PMlinkname{universal net}{Ultranet} $(x_{\alpha})_{\alpha \in \mathcal{A}}$ in a compact space $X$ is convergent. (see this \PMlinkname{entry}{UniversalNetsInCompactSpacesAreConvergent})
+
+We now prove Tychonoff's theorem.
+
+{\bf Proof (Tychonoff's theorem) :} Let $(x_{\alpha})_{\alpha \in \mathcal{A}}$ be a net in $\prod_{i \in I}X_i$.
+
+ Using Lemma 3 we can find a \PMlinkescapetext{universal} subnet $(y_{\beta})_{\beta \in \mathcal{B}}$ of $(x_{\alpha})_{\alpha \in \mathcal{A}}$.
+
+It is easily seen that each coordinate net $(y_{\beta}^i)_{\beta \in \mathcal{B}}$ is a \PMlinkescapetext{universal} net in $X_i$.
+
+Using Lemma 4 we see that each coordinate net converges, because $X_i$ is compact.
+
+Using Lemma 1 we see that the whole net $(y_{\beta})_{\beta \in \mathcal{B}}$ converges in $\prod_{i \in I}X_i$.
+
+We conclude that every net in $\prod_{i \in I}X_i$ has a convergent subnet, so, by Lemma 2, $\prod_{i \in I}X_i$ must be compact. $\square$
+%%%%%
+%%%%%
+\end{document}

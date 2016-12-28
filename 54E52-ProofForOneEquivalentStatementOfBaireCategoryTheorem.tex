@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofForOneEquivalentStatementOfBaireCategoryTheorem}
+\pmcreated{2013-03-22 14:04:52}
+\pmmodified{2013-03-22 14:04:52}
+\pmowner{gumau}{3545}
+\pmmodifier{gumau}{3545}
+\pmtitle{proof for one equivalent statement of Baire category theorem}
+\pmrecord{8}{35442}
+\pmprivacy{1}
+\pmauthor{gumau}{3545}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E52}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First, let's assume Baire's category theorem and prove the alternative statement.\newline
+We have $B=\bigcup_{n=1}^\infty B_n$, with $\textrm{int}(\overline{B_k}) = \emptyset \; \forall k \in \mathbf{N}$.\newline
+Then \[
+    X=X-\textrm{int}(\overline{B_k})=\overline{X-\overline{B_k}}\;\forall k \in \mathbf{N}\]
+    Then $X-\overline{B_k}$ is dense in $X$ for every $k$. Besides, $X-\overline{B_k}$ is open because $X$ is open and
+    $\overline{B_k}$ closed. So, by Baire's Category Theorem, we have that
+    \[
+    \bigcap_{n=1}^\infty (X-\overline{B_n})=X-\bigcup_{n=1}^\infty \overline{B_n}
+    \] is dense in $X$.
+    But $B\subset\bigcup_{n=1}^\infty \overline{B_n} \Longrightarrow X-\bigcup_{n=1}^\infty \overline{B_n} \subset X-B$, and then
+    $X=\overline{X-\bigcup_{n=1}^\infty \overline{B_n}} \subset \overline{X-B}=X-\textrm{int}(B) \Longrightarrow \textrm{int}(B)=\emptyset$.
+\newline
+\newline
+Now, let's assume our alternative statement as the hypothesis, and let $(B_k)_{k\in N}$ be a collection of open dense sets in
+a complete metric space $X$.
+Then $\textrm{int}(\overline{X-B_k})=\textrm{int}(X-\textrm{int}(B_k))=\textrm{int}(X-B_k)=X-\overline{B_k}=\emptyset$ and so
+$X-B_k$ is nowhere dense for every $k$.\newline
+
+Then $X-\overline{\bigcap_{n=1}^\infty B_n} =
+\textrm{int}(X-\bigcap_{n=1}^\infty B_n) =
+\textrm{int}(\bigcup_{n=1}^\infty X-B_n) = \emptyset$ due to our hypothesis. Hence Baire's category theorem holds.
+\newline
+QED
+%%%%%
+%%%%%
+\end{document}

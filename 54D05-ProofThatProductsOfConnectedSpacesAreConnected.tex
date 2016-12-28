@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatProductsOfConnectedSpacesAreConnected}
+\pmcreated{2013-03-22 14:10:05}
+\pmmodified{2013-03-22 14:10:05}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{proof that products of connected spaces are connected}
+\pmrecord{13}{35592}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{place}
+\PMlinkescapeword{places}
+
+Let $\{X_\alpha\text{ for }\alpha\in A\}$ be topological spaces, and let $X=\prod X_\alpha$ be the product, with projection maps $\pi_\alpha$.  
+
+Using the Axiom of Choice, one can straightforwardly show that each $\pi_\alpha$ is surjective; they are continuous by definition, and the continuous image of a connected space is connected, so if $X$ is connected, then all $X_\alpha$ are.
+
+Let $\{X_\alpha\text{ for }\alpha\in A\}$ be connected topological spaces, and let $X=\prod X_\alpha$ be the product, with projection maps $\pi_\alpha$. 
+
+First note that each $\pi_\alpha$ is an open map: If $U$ is open, then it is the union of open sets of the form $\bigcap_{\beta\in F} \pi_\beta^{-1} U_\beta$ where $F$ is a finite subset of $A$ and $U_\beta$ is an open set in $X_\beta$. But $\pi_\alpha(U_\beta)$ is always open, and the image of a union is the union of the images.
+
+Suppose the product is the disjoint union of open sets $U$ and $V$, and suppose $U$ and $V$ are nonempty. Then there is an $\alpha\in A$ and an element $u\in U$ and an element $v\in V$ that differ only in the $\alpha$ place.  To see this, observe that for all but finitely many places $\gamma$, both $\pi_\beta(U)$ and $\pi_\beta(V)$ must be $X_\gamma$, so there are elements $u$ and $v$ that differ in finitely many places. But then since $U$ and $V$ are supposed to cover $X$, if $\pi_\beta(u)\neq\pi_\beta(v)$, changing $u$ in the $\beta$ place lands us in either $U$ or $V$. If it lands us in $V$, we have elements that differ in only one place. Otherwise, we can make a $u'\in U$ such that $\pi_\beta(u')=\pi_\beta(v)$ and which otherwise agrees with $u$.  Then by induction we can obtain elements $u\in U$ and $v\in V$ that differ in only one place. Call that place $\alpha$.
+
+We then have a map $\rho:X_\alpha\to X$ such that $\pi_\alpha \circ \rho$ is the identity map on $X_\alpha$, and $(\rho\circ\pi)(u)=u$. Observe that since $\pi_\alpha$ is open, $\rho$ is continuous.  But $\rho^{-1}(U)$ and $\rho^{-1}(V)$ are disjoint nonempty open sets that cover $X_\alpha$, which is impossible.
+
+Note that if we do not assume the Axiom of Choice, the product may be empty, and hence connected, whether or not the $X_\alpha$ are connected; by taking the discrete topology on some $X_\alpha$ we get a counterexample to one direction of the theorem: we have a connected (empty!) space that is the product of non-connected spaces.
+For the other direction, if the product is empty, it is connected; if it is not empty, then the argument below works unchanged.
+So without the Axiom of Choice, this theorem becomes ``If all $X_\alpha$ are connected, then $X$ is.''  
+
+%%%%%
+%%%%%
+\end{document}

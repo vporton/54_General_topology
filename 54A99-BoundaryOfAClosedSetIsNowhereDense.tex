@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundaryOfAClosedSetIsNowhereDense}
+\pmcreated{2013-03-22 18:34:01}
+\pmmodified{2013-03-22 18:34:01}
+\pmowner{neapol1s}{9480}
+\pmmodifier{neapol1s}{9480}
+\pmtitle{boundary of a closed set is nowhere dense}
+\pmrecord{4}{41290}
+\pmprivacy{1}
+\pmauthor{neapol1s}{9480}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A99}
+%\pmkeywords{nowhere dense}
+%\pmkeywords{boundary}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $A$ be closed. In general, the boundary of a set is closed. So it suffices to show that $\partial A$ has empty interior. 
+
+Let $U\subset\partial A$ be open. Since $\partial A\subset \overline{A}=A$, this implies that $U\subset A$. Since $\operatorname{int}(A)$ is the largest open subset of $A$, we must have $U\subset\operatorname{int}(A)$. Therefore $U\subset \partial A \cap \operatorname{int}(A)$. But $\partial A \cap \operatorname{int}(A)=(\overline{A}-\operatorname{int}(A))\cap\operatorname{int}(A)=\emptyset$, so $U=\emptyset$.
+%%%%%
+%%%%%
+\end{document}

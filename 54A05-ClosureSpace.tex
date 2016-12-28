@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosureSpace}
+\pmcreated{2013-03-22 16:48:08}
+\pmmodified{2013-03-22 16:48:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{closure space}
+\pmrecord{12}{39036}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A05}
+\pmdefines{closure topology}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\cl}{\operatorname{cl}}
+\begin{document}
+Call a set $X$ with a closure operator defined on it a \emph{closure space}.  
+
+Every topological space is a closure space, if we define the closure operator of the space as a function that takes any subset to its closure.  The converse is also true:
+
+\begin{prop} Let $X$ be a closure space with $c$ the associated closure operator.  Define a ``closed set'' of $X$ as a subset $A$ of $X$ such that $A^c=A$, and an ``open set'' of $X$ as the complement of some closed set of $X$.  Then the collection $\mathcal{T}$ of all open sets of $X$ is a topology on $X$. \end{prop}
+
+\begin{proof}
+Since $\varnothing^c=\varnothing$, $\varnothing$ is closed.  Also, $X\subseteq X^c$ and $X^c\subseteq X$ imply that $X^c=X$, or $X$ is closed.  If $A,B\subseteq X$ are closed, then $(A\cup B)^c=A^c\cup B^c=A\cup B$ is closed as well.  Finally, suppose $A_i$ are closed.  Let $B=\bigcap A_i$.  For each $i$, $A_i=B\cup A_i$, so $A_i=A_i^c=(B\cup A_i)^c=B^c\cup A_i^c=B^c\cup A_i$.  This means $B^c\subseteq A_i$, or $B^c\subseteq \bigcap A_i=B$.  But $B\subseteq B^c$ by definition, so $B=B^c$, or that $\bigcap A_i$ is closed.
+\end{proof}
+
+$\mathcal{T}$ so defined is called the \emph{closure topology} of $X$ with respect to the closure operator $c$.
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item
+A closure space can be more generally defined as a set $X$ together with an operator $\cl:P(X)\to P(X)$ such that $\cl$ satisfies all of the Kuratowski's closure axioms where the equal sign ``$=$'' is replaced with set inclusion ``$\subseteq$'', and the preservation of $\varnothing$ is no longer assumed.
+\item
+Even more generally, a closure space can be defined as a set $X$ and an operator $\cl$ on $P(X)$ such that 
+\begin{itemize}
+\item $A\subseteq \cl(A)$,
+\item $\cl(\cl(A))\subseteq \cl(A)$, and
+\item $\cl$ is order-preserving, i.e., if $A\subseteq B$, then $\cl(A)\subseteq \cl(B)$.
+\end{itemize}
+It can be easily deduced that $\cl(A)\cup \cl(B)\subseteq \cl(A\cup B)$.  In general however, the equality fails.  The three axioms above can be shown to be equivalent to a single axiom:
+$$A\subseteq \cl(B)\quad\mbox{ iff }\quad\cl(A)\subseteq \cl(B).$$
+\item
+In a closure space $X$, a subset $A$ of $X$ is said to be closed if $\cl(A)=A$.  Let $C(X)$ be the set of all closed sets of $X$.  It is not hard to see that if $C(X)$ is closed under $\cup$, then $\cl$ ``distributes over'' $\cup$, that is, we have the equality $\cl(A)\cup \cl(B)= \cl(A\cup B)$.
+\item
+Also, $\cl(\varnothing)$ is the smallest closed set in $X$; it is the bottom element in $C(X)$.  This means that if there are two disjoint closed sets in $X$, then $\cl(\varnothing)=\varnothing$.  This is equivalent to saying that $\varnothing$ is closed whenever there exist $A,B\subseteq X$ such that $\cl(A)\cap\cl(B)=\varnothing$.
+\item
+Since the distributivity of $\cl$ over $\cup$ does not hold in general, and there is no guarantee that $\cl(\varnothing)=\varnothing$, a closure space under these generalized versions is a more general system than a topological space.
+\end{enumerate}
+
+\begin{thebibliography}{7}
+\bibitem{mp} N. M. Martin, S. Pollard: {\em Closure Spaces and Logic}, Springer, (1996).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

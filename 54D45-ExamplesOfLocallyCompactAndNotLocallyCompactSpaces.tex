@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfLocallyCompactAndNotLocallyCompactSpaces}
+\pmcreated{2013-03-22 12:48:36}
+\pmmodified{2013-03-22 12:48:36}
+\pmowner{AxelBoldt}{56}
+\pmmodifier{AxelBoldt}{56}
+\pmtitle{examples of locally compact and not locally compact spaces}
+\pmrecord{18}{33129}
+\pmprivacy{1}
+\pmauthor{AxelBoldt}{56}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D45}
+\pmrelated{TopologicalSpace}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{rationals}
+\PMlinkescapeword{unit}
+
+Examples of locally compact spaces include:
+
+\begin{itemize}
+
+\item The Euclidean spaces $\Bbb{R}^n$ with the standard topology: their local compactness follows from the Heine-Borel theorem. The \PMlinkname{complex plane}{Complex} $\Bbb{C}$ carries the same topology as $\Bbb{R}^2$ and is therefore also locally compact. 
+
+\item All topological manifolds are locally compact since locally they look like Euclidean space.
+
+\item Any closed or open subset of a locally compact space is locally compact. In fact, a subset of a locally compact Hausdorff space $X$ is locally compact if and only if it is the \PMlinkname{difference}{SetDifference} of two closed subsets of $X$ (equivalently: the intersection of an open and a closed subset of $X$).
+
+\item The space of \PMlinkname{$p$-adic rationals}{PAdicIntegers} is homeomorphic to the Cantor set minus one point, and since the Cantor set is compact as a closed bounded subset of $\Bbb{R}$, we see that the $p$-adic rationals are locally compact.
+
+\item Any discrete space is locally compact, since the singletons can serve as compact neighborhoods.
+
+\item The long line is a locally compact topological space.
+
+\item If you take any unbounded totally ordered set and equip it with the left order topology (or right order topology), you get a locally compact space. This space, unlike all the others we have looked at, is not Hausdorff.
+
+\end{itemize}
+
+Examples of spaces which are \emph{not} locally compact include:
+
+\begin{itemize}
+
+\item The rational numbers $\Bbb{Q}$ with the standard topology inherited from $\Bbb{R}$: each of its compact subsets has empty interior.
+
+\item All infinite-dimensional normed vector spaces: a normed vector space is finite-dimensional if and only if its closed unit ball is compact.
+
+\item The subset $X=\{(0,0)\}\cup\{(x,y)\mid x>0\}$ of $\Bbb{R}^2$: no compact 
+subset of $X$ contains a neighborhood of $(0,0)$.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

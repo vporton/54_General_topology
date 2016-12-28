@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BijectionBetweenClosedAndOpenInterval}
+\pmcreated{2013-03-22 19:36:06}
+\pmmodified{2013-03-22 19:36:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{bijection between closed and open interval}
+\pmrecord{10}{42593}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54C30}
+\pmclassification{msc}{26A30}
+\pmrelated{BijectionBetweenUnitIntervalAndUnitSquare}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{means}
+For mapping the end points of the closed unit interval\, $[0,\,1]$\, and its inner points bijectively onto the corresponding open unit interval\, $(0,\,1)$,\, one has to discern suitable denumerable subsets in both sets:
+\begin{align*}
+& [0,\,1]\, \;=\; \{0,\,1,\,1/2,\,1/3,\,1/4,\,\ldots\}\cup S,\\
+&(0,\,1) \;=\; \{1/2,\,1/3,\,1/4,\,\ldots\}\cup S,
+\end{align*}
+where
+$$S \;:=\; [0,\,1]\smallsetminus\{0,\,1,\,1/2,\,1/3,\,1/4,\,\ldots\}.$$
+Then the mapping $f$ from\, $[0,\,1]$\, to\, $(0,\,1)$\, defined by
+$$f(x) \;:=\;
+\begin{cases}
+ 1/2 \quad \mbox{for}\quad x = 0,\\
+ 1/(n\!+\!2) \quad \mbox{for} \quad x = 1/n \quad (n = 1,\,2,\,3,\,\ldots),\\
+ x \qquad \mbox{for} \quad x \in S
+\end{cases}$$
+is apparently a bijection.\, This means the equicardinality of both intervals.\\
+
+Note that the bijection is neither monotonic (e.g. $0 \mapsto \frac{1}{2}$,\; $\frac{1}{2}\mapsto \frac{1}{4}$,\; 
+$1 \mapsto \frac{1}{3}$) nor continuous.\, Generally, there does not exist any continuous surjective mapping\, 
+$[0,\,1] \to (0,\,1)$,\, since by the intermediate value theorem a continuous function maps a closed interval to a closed interval.
+
+\begin{thebibliography}{8}
+\bibitem{L}{\sc S. Lipschutz}: {\em Set theory}.\, Schaum Publishing Co., New York (1964).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

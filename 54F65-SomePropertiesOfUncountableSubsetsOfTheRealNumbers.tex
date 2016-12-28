@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SomePropertiesOfUncountableSubsetsOfTheRealNumbers}
+\pmcreated{2013-03-22 16:40:42}
+\pmmodified{2013-03-22 16:40:42}
+\pmowner{sauravbhaumik}{15615}
+\pmmodifier{sauravbhaumik}{15615}
+\pmtitle{some properties of uncountable subsets of the real numbers}
+\pmrecord{21}{38886}
+\pmprivacy{1}
+\pmauthor{sauravbhaumik}{15615}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54F65}
+\pmclassification{msc}{54F05}
+\pmclassification{msc}{12J15}
+\pmclassification{msc}{54E35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $S$ be an uncountable subset of $\mathbb R$.
+Let $\mathscr A:=\{(x,y):(x,y)\cap S \mbox{ is countable}\}$. For $\mathbb R$ is hereditarily Lindel\"{o}ff, there is a countable subfamily $\mathscr A'$ of $\mathscr A$ such that $\bigcup\mathscr A'=\bigcup\mathscr A$. For the reason that each of members of $\mathscr A'$ has a countable intersection with $S$, we have that $(\bigcup\mathscr A')\cap S$ is countable. As the open set $\bigcup\mathscr A'$ can be expressed uniquely as the union of its components, and the components are countably many, we label the components as $\{(a_n,b_n):n\in\mathbb N\}$. 
+
+
+See that $(\bigcup\mathscr A')\cap S$ is precisely the set of the elements of $S$ that are NOT the condensation points of $S$.
+
+Now we'd propose to show that $\{a_n,b_n:n\in\mathbb N\}$ is precisely the set of the points which are {\em unilateral} condensation points of $S$.
+
+Let $x$ be a unilateral (left, say) condensation point of $S$. So, there is some $r>0$ with $(x,x+r)\cap S$ countable. So, there is some $(a_n,b_n)$ such that $(x,x+r)\subseteq (a_n,b_n)$. See, if $x\in (a_n,b_n)$, then $x$ is NOT a condensation point, for $x$ has a neighbourhood $(a_n,b_n)$ which has a countable intersection with $S$. But $x$ is a condensation point; so, $x=a_n$. Similarly, if $x$ is a right condensation point, then $x=b_n$.
+
+Conversely, each $a_n(b_n,\mbox{ resp})$ is a left (right, resp) condensation point. Because, for each $\epsilon\in (0,b_n-a_n)$, we have $(a_n,a_n+\epsilon)\cap S$ countable. And as no $a_n,b_n$ is in $\bigcup\mathscr A'$, $a_n,b_n$ are condensation points.
+
+So, $\bigcup\mathscr A'$ is the set of non-condensation points - it is countable; and $\{a_n,b_n\}$ are precisely the unilateral condensation points. So, all the rest are bilateral condensation points. Now we see, all but a countable number of points of $S$ are the bilateral condensation points of $S$. 
+
+Call $T$ the set of all the bilateral condensation points that are IN $S$. Now, take two $x<y$ in $T$. As $x$ is a bilateral condensation point of $S$, $(x,y)\cap S$ is uncountable; and as $T$ misses atmost countably many points of $S$, $(x,y)\cap T$ is uncountable. So, $T$ is a subset of $S$ with in-between property.
+
+We summarize the moral of the story: If $S$ is an uncountable subset of $\mathbb R$, then
+\begin{enumerate}
+\item The points of $S$ which are NOT condensation points of $S$, are at most countable.
+\item The set of points in $S$ which are unilateral condensation points of $S$, is, again, countable.
+\item The bilateral condensation points of $S$, that are in $S$, are uncountable; even, all but countably many points of $S$ are bilateral condensation points of $S$. 
+\item The set $T\subseteq S$ of all the bilateral condensation points of $S$ has got the property: if $\exists x<y\in T$, then there is also $z\in T$ with $x<z<y$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

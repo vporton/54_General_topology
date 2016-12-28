@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosedSetInACompactSpaceIsCompact}
+\pmcreated{2013-03-22 13:34:02}
+\pmmodified{2013-03-22 13:34:02}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{closed set in a compact space is compact}
+\pmrecord{9}{34177}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D30}
+\pmrelated{ClosedSubsetsOfACompactSetAreCompact}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\emph{Proof.} Let $A$ be a closed set in a compact space $X$. 
+To show that $A$ is compact, we show that an arbitrary open cover has
+a finite subcover. For this purpose, suppose
+$\{U_i\}_{i\in I}$ be an arbitrary open cover for $A$. 
+Since $A$ is closed, the complement of $A$, 
+which we denote by $A^c$, is open. 
+Hence
+$A^c$ and $\{U_i\}_{i\in I}$ together form an open cover for $X$. 
+Since $X$ is compact, this cover has a finite subcover that
+covers $X$. Let $D$ be this subcover. 
+Either $A^c$ is part of $D$ or $A^c$ is not. 
+In any case, $D\backslash\{A^c\}$ is a finite open cover
+for $A$, and $D\backslash\{A^c\}$
+is a subcover of $\{U_i\}_{i\in I}$. The claim follows. $\Box$
+%%%%%
+%%%%%
+\end{document}

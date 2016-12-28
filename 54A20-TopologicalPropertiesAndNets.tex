@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalPropertiesAndNets}
+\pmcreated{2013-03-22 18:38:04}
+\pmmodified{2013-03-22 18:38:04}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{topological properties and nets}
+\pmrecord{6}{41374}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{Theorem}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{converge}
+\PMlinkescapeword{converges}
+\PMlinkescapeword{convergent}
+\PMlinkescapephrase{locally compact Hausdorff space}
+
+Many topological properties and concepts can be translated in \PMlinkescapetext{terms} of convergence of nets. In this entry we give a list of this correspondence of properties. For detailed proofs please follow the \PMlinkescapetext{links}.
+
+\section{Closure}
+
+Let $X$ be a topological space and $Y \subseteq X$ a subset. A point $x \in X$ is in the closure of $Y$ if and only there exists a net in $Y$ \PMlinkname{converging}{Net} to $x$.
+
+\begin{itemize}
+\item For a detailed proof, \PMlinkname{click here}{NetsAndClosuresOfSubspaces}.
+\end{itemize}
+
+\section{Closed}
+
+Let $X$ be a topological space. A subset $Y \subseteq X$ is closed if and only if every convergent net in $Y$ converges to a point in $Y$.
+
+\section{Limit point}
+
+Let $X$ be a topological space and $Y \subseteq X$ a subset. A point $x \in X$ is a limit point of $Y$ if and only if there is a net in $Y$ converging to $x$ that is not eventually constant.
+
+\section{Hausdorff}
+
+A topological space $X$ is Hausdorff if and only if every convergent net in $X$ has a unique limit.
+
+\section{Compact}
+
+A topological space $X$ is compact if and only if every net in $X$ has a convergent subnet.
+
+\begin{itemize}
+\item For a detailed proof, \PMlinkname{click here}{CompactnessAndConvergentSubnets}.
+\end{itemize}
+
+\section{Continuous}
+
+Let $X$ and $Y$ be topological spaces. A function $f:X \to Y$ is continuous at a point $x \in X$ if and only if for every net $(x_i)_{i \in I}$ in $X$ converging to $x$, the net $(f(x_i))_{i \in I}$ converges to $f(x)$.
+
+\begin{itemize}
+\item For a detailed proof, \PMlinkname{click here}{ContinuityAndConvergentNets}.
+\end{itemize}
+
+\section{Open map}
+
+Let $f:X \longrightarrow Y$ be a surjective map between the topological spaces $X$ and $Y$. Then $f$ is an open mapping if and only if given a net $\{y_i\}_{i \in I} \subset Y$ such that $y_i \longrightarrow y$, then for every $x \in f^{-1}(\{y\})$ there exists a subnet $\{y_{i_j}\}_{j \in J}$ that \PMlinkescapetext{lifts} to a net $\{x_{i_j}\}_{j \in J} \subset X$ such that $x_{i_j} \longrightarrow x$. By "\PMlinkescapetext{lift}" we \PMlinkescapetext{mean} that $\{x_{i_j}\}_{j \in J}$ is such that $ f(x_{i_j}) = y_{i_j}$.
+
+\begin{itemize}
+\item For a detailed proof, \PMlinkname{click here}{ContinuousSurjectiveOpenMapsInTermsOfNets}.
+\end{itemize}
+
+\section{Initial topology}
+
+Let $X$ be a set, $\{X_{\alpha}\}_{\alpha \in \mathcal{A}}$ a family of topological spaces and $f_{\alpha}: X \to X_{\alpha}$ a family of functions. 
+
+A net $(x_i)_{i \in I}$ in $X$ converges to a point $x$ in the initial topology of $X$ (relatively to the mappings $f_{\alpha}$) if and only if for each $\alpha \in \mathcal{A}$, $(f_{\alpha}(x_i))_{i \in I}$ converges to $f_{\alpha}(x)$.
+
+\subsubsection{Particular case: subspace topology}
+
+Let $X$ be a toplogical space and $Y \subseteq X$ a subset. A net $(y_i)_{i \in I}$ in $Y$ converges to $y \in Y$ in the subspace topology if and only if $(y_i)_{i \in I}$ converges to $y$ in the topology of $X$.
+
+\subsubsection{Particular case: product topology}
+
+Let $\{X_{\alpha}\}_{\alpha \in \mathcal{A}}$ be a collection of topological spaces and $X := \prod_{\alpha} X_{\alpha}$ their Cartesian product. A net $(x_i)_{i \in I}$ in $X$ converges to $x$ in the product topology if and only if every coordinate $(x_i^{\alpha})_{i \in I}$ converges to $x^{\alpha}$.
+
+\section{Compact-open topology}
+
+Let $X$ be a locally compact Hausdorff space, $Y$ a topological space and $C(X, Y)$ the set of continuous functions from $X$ to $Y$. A net $(f_i)_{i \in I}$ in $C(X, Y)$ converges to $f$ in the compact-open topology if and only if whenever a net $(x_i)_{i \in I}$ in $X$, indexed by the same directed set $I$, converges to $x \in X$, we also have that $(f_i(x_i))_{i \in I}$ converges to $f(x)$.
+
+%%%%%
+%%%%%
+\end{document}

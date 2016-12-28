@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatACompactSetInAHausdorffSpaceIsClosed}
+\pmcreated{2013-03-22 13:34:54}
+\pmmodified{2013-03-22 13:34:54}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{proof that a compact set in a Hausdorff space is closed}
+\pmrecord{7}{34203}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D10}
+\pmclassification{msc}{54D30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\fkm}{\mathfrak{m}}
+\newcommand{\fkp}{\mathfrak{p}}
+\newcommand{\Gal}{\mathrm{Gal}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\ov}[1]{\overline{#1}}
+\newcommand{\ur}{\mathrm{ur}}
+\newcommand{\vp}{\varphi}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\smashedleftarrow}{\setbox0=\hbox{$\longleftarrow$}\ht0=1pt\box0}
+\newcommand{\smashedrightarrow}{\setbox0=\hbox{$\longrightarrow$}\ht0=1pt\box0}
+\newcommand{\lisom}{\buildrel{\hskip+0.04cm\sim}\over{\smashedleftarrow}}
+\newcommand{\risom}{\buildrel{\hskip-0.04cm\sim}\over{\smashedrightarrow}}
+\begin{document}
+Let $X$ be a Hausdorff space, and $C \subseteq X$ a compact subset.
+We are to show that $C$ is closed.
+We will do so, by showing that the complement $U = X \setminus C$ is open.
+To prove that $U$ is open, it suffices to demonstrate that,
+for each $x \in U$,
+there exists an open set $V$ with $x \in V$ and $V \subseteq U$.
+
+Fix $x \in U$.
+For each $y \in C$, using the Hausdorff assumption,
+choose disjoint open sets $A_y$ and $B_y$ with $x \in A_y$ and $y \in B_y$.
+
+Since every $y \in C$ is an element of $B_y$,
+the collection $\{B_y \mid y \in C\}$ is an open covering of $C$.
+Since $C$ is compact, this open cover admits a finite subcover.
+So choose $y_1, \ldots, y_n \in C$ such that
+$C \subseteq B_{y_1} \cup \cdots \cup B_{y_n}$.
+
+Notice that $A_{y_1} \cap \cdots \cap A_{y_n}$,
+being a finite intersection of open sets, is open, and contains $x$.
+Call this neighborhood of $x$ by the name $V$.
+All we need to do is show that $V \subseteq U$.
+
+For any point $z \in C$, we have $z \in B_{y_1} \cup \cdots \cup B_{y_n}$,
+and therefore $z \in B_{y_k}$ for some $k$.
+Since $A_{y_k}$ and $B_{y_k}$ are disjoint, $z \notin A_{y_k}$,
+and therefore $z \notin A_{y_1} \cap \cdots \cap A_{y_n} = V$.
+Thus $C$ is disjoint from $V$, and $V$ is contained in $U$.
+%%%%%
+%%%%%
+\end{document}

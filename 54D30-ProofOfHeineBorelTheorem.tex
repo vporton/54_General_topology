@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHeineBorelTheorem}
+\pmcreated{2013-03-22 12:57:40}
+\pmmodified{2013-03-22 12:57:40}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{proof of Heine-Borel theorem}
+\pmrecord{23}{33328}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\begin{document}
+To shorten the proofs, we will be using certain concepts and facts from general 
+point-set topology, such as the very first assertion below.
+Even if you are not familiar with them, 
+these assertions are all easily proven from the definitions (left as an exercise). 
+
+\begin{proof}[Compact implies closed and bounded]
+Since $\real^n$ is a Hausdorff space, any compact subset $A$ has to be closed as well.
+That $A$ is also bounded is very easily seen by taking
+the open cover $\{ (-k, k)^n \}_{k \in \nat}$.
+Passing to a finite cover, we see that $A$ is contained
+in a bounded set.
+\end{proof}
+
+\begin{proof}[Reduction for closed and bounded implies compact]
+To prove that if $A$ is closed and bounded implies it is compact,
+it is only necessary to prove that the rectangle $[a,b]^n$ is compact.
+For general $A$, since $A$ is bounded, it is contained in some such compact 
+rectangle $[a, b]^n$.
+Since $A$ is closed and contained in a compact set, $A$ is also compact.
+\end{proof}
+
+\begin{proof}[The case $n=1$: the closed interval is compact.]
+Let $\mathcal{C}$ be an arbitrary cover of $[a, b]$ by open sets in $\real^1$.
+Define 
+\[
+ S = \{ x \in [a,b] : \textrm{some finite subcollection of $\mathcal{C}$ covers $[a, x]$} \}\,.
+\]
+Set $t = \sup S$; then $a \leq t \leq b < \infty$.
+
+We first note that the supremum $t$ is attained:
+that is, there is a finite subcollection of $\mathcal{C}$ that covers $[a,t]$.
+Obviously we can choose one open set $U$ from $\mathcal{C}$ that covers the point $t$.
+This $U$ must also cover the open interval $(t-\epsilon, t+\epsilon)$ for some $\epsilon > 0$.
+But by the definition of $t$, the interval $[a, t-\epsilon]$ has a finite subcover.
+When this finite subcover is put together with $U$, we obtain a finite subcover for $[a, t]$.
+
+It is easy to see that $t$ cannot be less than $b$.
+For the same open set $U$ above covers the interval $(t, t+\epsilon)$, 
+so we have a finite subcover for $[a, t+\epsilon/2]$.
+If $t$ is the supremum then it has go to be at the right endpoint of the interval $[a, b]$, i.e.
+$t = b$.
+\end{proof}
+
+For the case $n > 1$, apply 
+\PMlinkname{Tychonoff's Theorem, in the finite case}{ProofOfTychonoffsTheoremInFiniteCase}, which states:
+\begin{quote}
+If $X_1, \dotsc, X_n$ are each compact,
+then $X_1 \times \dotsm \times X_n$ in the product topology is compact.
+\end{quote}
+Here we set $X_i$ to be the closed intervals; then the general closed rectangle in $\real^n$
+is compact.  It is not hard to see that the product topology for the closed rectangle is the same
+as its subspace topology in the product topology $\real^n = \real \times \dotsm \times \real$.
+And it is again a standard exercise to show that the product topology on $\real^n$ is the 
+same as the norm topology on $\real^n$ as a vector space.
+
+This completes the proof of the Heine-Borel theorem.
+
+\section*{Proof by a bisection argument}
+There is another proof of the Heine-Borel theorem for $\real^n$ without
+resorting to Tychonoff's Theorem.  It goes by bisecting the rectangle along each of its sides.
+At the first stage, we divide up the rectangle $A$ into $2^n$ subrectangles.
+Suppose the open cover $\mathcal{C}$ of $A$ has no finite subcover.
+Then one of the subrectangles --- call it $A_1$ ---
+must have no finite subcover by $\mathcal{C}$.  We can subdivide $A_1$ into $2^n$ pieces; since $A_1$
+has no finite subcover, one of the new subrectangles of $A_1$ also has no finite subcover.  And continue
+dividing to get a nested sequence of rectangles $A \supset A_1 \supset A_2 \supset \dotsb$
+whose side lengths approach zero, and possessing no finite subcover.
+
+By the nested interval theorem, the ``limit rectangle'' 
+$\bigcap_{i=1}^\infty A_i$ must consist of a sole point $x$,
+and this obviously has a finite subcover by an open set $U \in \mathcal{C}$.
+But $U$ must contain a small rectangle with centre $x$, which 
+for $i$ large enough, contradicts $A_i$ having no finite subcover.
+
+Of course, in both proofs of the Heine-Borel theorem, the completeness of the reals (the least upper bound property)
+enters in an essential way.
+%%%%%
+%%%%%
+\end{document}

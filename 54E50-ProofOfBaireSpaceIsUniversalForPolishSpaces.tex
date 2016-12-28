@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBaireSpaceIsUniversalForPolishSpaces}
+\pmcreated{2013-03-22 18:46:57}
+\pmmodified{2013-03-22 18:46:57}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of Baire space is universal for Polish spaces}
+\pmrecord{4}{41577}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E50}
+%\pmkeywords{Baire space}
+%\pmkeywords{Polish space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{map}
+\PMlinkescapeword{integers}
+\PMlinkescapeword{induction}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{empty sets}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{function}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{contain}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{equation}
+\PMlinkescapeword{term}
+\PMlinkescapeword{closed}
+
+Let $X$ be a nonempty Polish space. We construct a continuous onto map $f\colon \mathcal{N}\rightarrow X$, where $\mathcal{N}$ is Baire space.
+
+Let $d$ be a complete metric on $X$.
+We choose nonempty closed subsets $C(n_1,\ldots,n_k)\subseteq X$ for all integers $k\ge 0$ and $n_1,\ldots,n_k\in\mathbb{N}$ satisfying the following.
+\begin{enumerate}
+\item $C()=X$.
+\item $C(n_1,\ldots,n_k)$ has diameter no more than $2^{-k}$.
+\item For any $k\ge 0$ and $n_1,\ldots n_k\in\mathbb{N}$ then
+\begin{equation}\label{eq:1}
+C(n_1,\ldots,n_k)=\bigcup_{m=1}^\infty C(n_1,\ldots,n_k,m).
+\end{equation}
+\end{enumerate}
+This can be done by induction. Suppose that the set $S=C(n_1,\ldots,n_k)$ has already been chosen for some $k\ge 0$. As $X$ is separable, $S$ can be covered by a sequence of closed sets $S_1,S_2,\ldots$. Replacing $S_j$ by $S_j\cap S$, we suppose that $S_j\subseteq S$. Then, remove any empty sets from the sequence. If the resulting sequence is finite, then it can be extended to an infinite sequence by repeating the last term.
+We can then set $C(n_1,\ldots,n_k,n_{k+1})=S_{n_{k+1}}$.
+
+We now define the function $f\colon\mathcal{N}\rightarrow X$. For any $n\in\mathbb{N}$ choose a sequence $x_k\in C(n_1,\ldots,n_k)$. Since this has diameter no more than $2^{-k}$ it follows that $d(x_j,x_k)\le 2^{-k}$ for $j\ge k$. So, the sequence is \PMlinkname{Cauchy}{CauchySequence} and has a limit $x$. As the sets $C(n_1,\ldots,n_k)$ are closed, they contain $x$ and,
+\begin{equation}\label{eq:2}
+\bigcap_{k=1}^\infty C(n_1,\ldots,n_k)\not=\emptyset.
+\end{equation}
+In fact, this has diameter zero, and must contain a single element, which we define to be $f(n)$.
+
+This defines the function $f\colon\mathcal{N}\rightarrow X$. We show that it is continuous. If $m,n\in\mathcal{N}$ satisfy $m_j=n_j$ for $j\le k$ then $f(m),f(n)$ are in $C(m_1,\ldots,m_k)$ which, having diameter no more than $2^{-k}$, gives $d(f(m),f(n))\le 2^{-k}$. So, $f$ is indeed continuous.
+
+Finally, choose any $x\in X$. Then $x\in C()$ and equation (\ref{eq:1}) allows us to choose $n_1,n_2,\ldots$ such that $x\in C(n_1,\ldots,n_k)$ for all $k\ge 0$. If $n=(n_1,n_2,\ldots)$ then $x$ and $f(n)$ are both in the set in equation (\ref{eq:2}) which, since it is a singleton, gives $f(n)=x$. Hence, $f$ is onto.
+
+%%%%%
+%%%%%
+\end{document}

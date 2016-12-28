@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ASpaceIsT1IfAndOnlyIfEverySingletonIsClosed}
+\pmcreated{2013-03-22 14:20:15}
+\pmmodified{2013-03-22 14:20:15}
+\pmowner{waj}{4416}
+\pmmodifier{waj}{4416}
+\pmtitle{a space is T1 if and only if every singleton is closed}
+\pmrecord{7}{35808}
+\pmprivacy{1}
+\pmauthor{waj}{4416}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D10}
+\pmrelated{ASpaceIsT1IfAndOnlyIfEverySubsetAIsTheIntersectionOfAllOpenSetsContainingA}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{axiom}
+
+Say $X$ is a \PMlinkid{$T_1$}{1852} topological space.  Let's show that $\{x\}$ is closed for every $x\in X$:
+
+The \PMlinkname{$T_1$ axiom}{T1Space} gives us, for every $y$ distinct from $x$, an open $U_y$ that contains $y$ but not $x$.  Since we're in a topological space, we can take the union of all these open sets to get a new open set,
+
+\[U=\bigcup_{y\neq x} U_y .\]
+
+$\{x\}$ is the complement of $U$, closed because $U$ is open: None of the $U_y$ contain $x$, so $U$ doesn't contain $x$.  But any $y\neq x$ is in $U$, since $y\in U_y\subset U$.  That takes care of that.
+
+Now let's say we have a topological space $X$ in which $\{x\}$ is closed for every $x\in X$.  We'd like to show that $T_1$ holds:
+
+Given $x\neq y$, we want to find an open set that contains $x$ but not $y$.  $\{y\}$ is closed by hypothesis, so its complement is open, and our search is over.
+%%%%%
+%%%%%
+\end{document}

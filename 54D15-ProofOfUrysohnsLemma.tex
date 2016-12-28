@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfUrysohnsLemma}
+\pmcreated{2013-03-22 13:09:23}
+\pmmodified{2013-03-22 13:09:23}
+\pmowner{scanez}{1021}
+\pmmodifier{scanez}{1021}
+\pmtitle{proof of Urysohn's lemma}
+\pmrecord{4}{33597}
+\pmprivacy{1}
+\pmauthor{scanez}{1021}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First we construct a family $U_p$ of open sets of $X$ indexed by the
+rationals such that if $ p < q$, then $\bar{U_p} \subseteq U_q$. These
+are the sets we will use to define our continuous function.
+
+Let $P = \mathbb{Q} \cap [0,1]$. Since $P$ is countable, we can use
+induction (or recursive definition if you prefer) to define the sets
+$U_p$. List the elements of $P$ is an infinite sequence in some way;
+let us assume that $1$ and $0$ are the first two elements of this
+sequence. Now, define $U_1 = X \backslash D$ (the complement of $D$ in
+$X$). Since $C$ is a closed set of $X$ contained in $U_1$, by
+normality of $X$ we can choose an open set $U_0$ such that $C
+\subseteq U_0$ and $\bar{U_0} \subseteq U_1$.
+
+In general, let $P_n$ denote the set consisting of the first $n$
+rationals in our sequence. Suppose that $U_p$ is defined for all $p
+\in P_n$ and
+\begin{equation}
+	\textrm{if} \ p < q, \textrm{then} \ \bar{U_p} \subseteq U_q.
+\end{equation}
+Let $r$ be the next rational number in the sequence. Consider $P_{n+1}
+= P_n \cup \{r\}$.  It is a finite subset of $[0,1]$ so it inherits
+the usual ordering $<$ of $\mathbb{R}$. In such a set, every element
+(other than the smallest or largest) has an immediate predecessor and
+successor. We know that $0$ is the smallest element and $1$ the
+largest of $P_{n+1}$ so $r$ cannot be either of these.  Thus $r$ has
+an immediate predecessor $p$ and an immediate successor $q$ in
+$P_{n+1}$. The sets $U_p$ and $U_q$ are already defined by the
+inductive hypothesis so using the normality of $X$, there exists an
+open set $U_r$ of $X$ such that
+\begin{displaymath}
+	\bar{U_p} \subseteq U_r \ \textrm{and} \ \bar{U_r} \subseteq U_q.
+\end{displaymath}We now show that (1) holds for every pair of elements in $P_{n+1}$. If
+both elements are in $P_n$, then (1) is true by the inductive
+hypothesis. If one is $r$ and the other $s \in P_n$, then if $s \le p$
+we have
+\begin{displaymath}
+	\bar{U_s} \subseteq \bar{U_p} \subseteq U_r
+\end{displaymath}
+and if $s \ge q$ we have
+\begin{displaymath}
+	\bar{U_r} \subseteq U_q \subseteq U_s.
+\end{displaymath}
+Thus (1) holds for ever pair of elements in $P_{n+1}$ and therefore by
+induction, $U_p$ is defined for all $p \in P$.
+
+We have defined $U_p$ for all rationals in $[0,1]$. Extend this
+definition to every rational $p \in \mathbb{R}$ by defining
+\begin{displaymath}
+	\begin{array}{ll}
+		U_p = \emptyset & \textrm{if} \ p < 0 \\
+		U_p = X & \textrm{if} \ p > 1.
+	\end{array}
+\end{displaymath}
+Then it is easy to check that (1) still holds.
+
+Now, given $x \in X$, define $\mathbb{Q}(x) = \{p : x \in U_p\}$. This
+set contains no number less than $0$ and contains every number greater
+than $1$ by the definition of $U_p$ for $p < 0$ and $p > 1$. Thus
+$\mathbb{Q}(x)$ is bounded below and its infimum is an element in
+$[0,1]$. Define
+\begin{displaymath}
+	f(x) = \textrm{inf} \ \mathbb{Q}(x).
+\end{displaymath}
+
+Finally we show that this function $f$ we have defined satisfies the
+conditions of lemma.  If $x \in C$, then $x \in U_p$ for all $p \ge 0$
+so $\mathbb{Q}(x)$ equals the set of all nonnegative rationals and
+$f(x) = 0$. If $x \in D$, then $x \notin U_p$ for $p \le 1$ so
+$\mathbb{Q}(x)$ equals all the rationals greater than 1 and $f(x) =
+1$. 
+
+To show that $f$ is continuous, we first prove two smaller results:
+
+\indent (a) $x \in \bar{U_r} \Rightarrow f(x) \le r$
+
+\emph{Proof}. If $x \in \bar{U_r}$, then $x \in U_s$ for all $s > r$
+so $\mathbb{Q}(x)$ contains all rationals greater than $r$. Thus $f(x)
+\le r$ by definition of $f$.
+
+\indent (b) $x \notin U_r \Rightarrow f(x) \ge r$.
+
+\emph{Proof}. If $x \notin U_r$, then $x \notin U_s$ for all $s < r$
+so $\mathbb{Q}(x)$ contains no rational less than $r$. Thus $f(x) \ge
+r$.
+
+Let $x_0 \in X$ and let $(c,d)$ be an open interval of $\mathbb{R}$
+containing $f(x)$.  We will find a neighborhood $U$ of $x_0$ such that
+$f(U) \subseteq (c,d)$. Choose $p,q \in \mathbb{Q}$ such that
+\begin{displaymath}
+	c < p < f(x_0) < q < d.
+\end{displaymath}
+Let $U = U_q \backslash \bar{U_p}$. Then since $f(x_0) < q$, (b)
+implies that $x \in U_q$ and since $f(x_0) > p$, (a) implies that $x_0
+\notin \bar{U_p}$. Hence $x_0 \in U$.
+
+Finally, let $x \in U$. Then $x \in U_q \subseteq \bar{U_q}$, so $f(x)
+\le q$ by (a).  Also, $x \notin \bar{U_p}$ so $x \notin U_p$ and $f(x)
+\ge p$ by (b). Thus
+\begin{displaymath}
+	f(x) \in [p,q] \subseteq (c,d)
+\end{displaymath}
+as desired. Therefore $f$ is continuous and we are done.
+%%%%%
+%%%%%
+\end{document}

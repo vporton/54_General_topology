@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPropertiesOfTheClosureOperator}
+\pmcreated{2013-03-22 14:12:19}
+\pmmodified{2013-03-22 14:12:19}
+\pmowner{archibal}{4430}
+\pmmodifier{archibal}{4430}
+\pmtitle{proof of properties of the closure operator}
+\pmrecord{4}{35638}
+\pmprivacy{1}
+\pmauthor{archibal}{4430}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Recall that the closure of a set $A$ in a topological space $X$ is defined to be the intersection of all closed sets containing it.
+
+\begin{description}
+
+\item[$A\subset \overline{A}$]:  By definition 
+\[
+\overline{A}=\bigcap_{C\supseteq A, \ C\text{ closed}} C,
+\]
+but since for every $C$ we have $A\subseteq C$, we immediately find 
+\[
+A\subseteq \bigcap_{C\supseteq A, \ C\text{ closed}} C.
+\]
+
+\item[$\overline{A}$ is closed]: Recall that the intersection of any number of closed sets is closed, so the closure is itself closed.
+
+\item[$\overline{\emptyset} = \emptyset$, $\overline{X} = X$, and $\overline{\overline{A}} = \overline{A}$]: 
+If $C$ is any closed set, then  
+\[
+\overline{C} = \bigcap_{C'\supseteq C, \ C'\text{ closed}} C' = C \cap \bigcap_{C'\supsetneq C, \ C'\text{ closed}} C' = C.
+\] 
+
+\item[$\overline{A\cup B} = \overline{A} \cup \overline{B}$]: First write down the definition:
+\begin{align*}
+\overline{A} \cup \overline{B} 
+& = \bigcap_{C\supseteq A, \ C\text{ closed}} C \cup \bigcap_{D\supseteq B, 
+\ D\text{ closed}} D, \\
+\intertext{then apply DeMorgan's law to get}
+& = \bigcap_{C\supseteq A, D\supseteq B, \ C, D\text{ closed}}(C\cup D), \\
+\intertext{but for every such pair $C$, $D$, we have that $E = C\cup D$ is a closed set containing $A\cup B$.  Conversely, every closed set $E$ containing $A\cup B$ is obtained from such a pair --- just take $(E,E)$ to be the pair.  Thus}
+& = \bigcap_{E\supseteq A\cup B, \ E\text{ closed}}(E) \\
+& = \overline{A\cup B}.
+\end{align*}
+
+\item[$\overline{A\cap B} \subset \overline{A}\cap \overline{B}$]:
+\begin{align*}
+\overline{A} \cap \overline{B} 
+& = \bigcap_{C\supseteq A, C\text{ closed}} C \cap \bigcap_{D\supseteq B, 
+\ D\text{ closed}} D, \\
+& = \bigcap_{C\supseteq A, D\supseteq B, \ C, D\text{ closed}}(C\cap D), \\
+\intertext{but for every such pair $C$, $D$, we have that $E = C\cap D$ is a closed set containing $A\cap B$.  However, some closed sets may not arise in this way, so we do not have equality.  Thus}
+& \supseteq \bigcap_{E\supseteq A\cap B, \ E\text{ closed}}(E) \\
+& = \overline{A\cap B}.
+\end{align*}
+so we have
+\[
+\overline{A} \cap \overline{B} \supseteq \overline{A\cap B}.
+\]
+
+\item[$\overline{A} = A\cup A'$ where $A'$ is the set of all limit points of $A$]:
+Let $a$ be a limit point of $A$, and let $C$ be a closed set containing $A$.  If $a$ is not in $C$, then $X\setminus C$ is an open set containing $a$ but not meeting $C$, which implies that $X\setminus C$ does not meet $A$, which contradicts the fact that $a$ was a limit point of $A$.  Conversely, suppose that $a$ is not a limit point of $A$, and that $a$ is not in $A$.  Then there is some open neighborhood $U$ of $a$ which does not meet $A$.  But then $X\setminus U$ is a closed set containing $A$ but not containing $a$, so $a\notin\overline{A}$. 
+
+\end{description}
+%%%%%
+%%%%%
+\end{document}

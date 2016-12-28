@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBanachFixedPointTheorem}
+\pmcreated{2013-03-22 13:08:34}
+\pmmodified{2013-03-22 13:08:34}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proof of Banach fixed point theorem}
+\pmrecord{5}{33581}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A20}
+\pmclassification{msc}{47H10}
+\pmclassification{msc}{54H25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $(X,d)$ be a non-empty, complete metric space, and let $T$ be a
+contraction mapping on $(X,d)$ with constant $q$.  Pick an arbitrary
+$x_0 \in X$, and define the sequence $(x_n)_{n=0}^{\infty}$ by
+$x_n:=T^nx_0$.  Let $a:=d(Tx_0,x_0)$.  We first show by induction that
+for any $n\ge 0$,
+$$
+d(T^nx_0,x_0)\le\frac{1-q^n}{1-q} a.
+$$
+For $n=0$, this is obvious.  For any $n\ge 1$, suppose that
+$d(T^{n-1}x_0,x_0)\le\frac{1-q^{n-1}}{1-q}a$. Then
+\begin{eqnarray*}
+d(T^nx_0,x_0)&\le&d(T^nx_0,T^{n-1}x_0)+d(x_0,T^{n-1}x_0)\\
+&\le&q^{n-1}d(Tx_0,x_0)+\frac{1-q^{n-1}}{1-q}a\\
+&=&\frac{q^{n-1}-q^n}{1-q}a+\frac{1-q^{n-1}}{1-q}a\\
+&=&\frac{1-q^n}{1-q}a
+\end{eqnarray*}
+by the triangle inequality and repeated application of the property
+$d(Tx,Ty)\le qd(x,y)$ of $T$.  By induction, the inequality holds for
+all $n \ge 0$.\\
+\\
+Given any $\epsilon>0$, it is possible to choose a natural number $N$
+such that $\frac{q^n}{1-q}a<\epsilon$ for all $n\ge N$, because
+$\frac{q^n}{1-q}a\to 0$ as $n\to\infty$.  Now, for any $m,n\ge N$ (we
+may assume that $m\ge n$),
+\begin{eqnarray*}
+d(x_m,x_n)&=&d(T^mx_0,T^nx_0)\\
+&\le&q^nd(T^{m-n}x_0,x_0)\\
+&\le&q^n\frac{1-q^{m-n}}{1-q}a\\
+&<&\frac{q^n}{1-q}a<\epsilon,
+\end{eqnarray*}
+so the sequence $(x_n)$ is a Cauchy sequence.  Because $(X,d)$ is
+complete, this implies that the sequence has a limit in $(X,d)$;
+define $x^*$ to be this limit.  We now prove that $x^*$ is a fixed
+point of $T$.  Suppose it is not, then $\delta:=d(Tx^*,x^*)>0$.
+However, because $(x_n)$ converges to $x^*$,  there is a natural
+number $N$ such that $d(x_n,x^*)<\delta/2$ for all $n\ge N$.  Then
+\begin{eqnarray*}
+d(Tx^*,x^*)&\le&d(Tx^*,x_{N+1})+d(x^*,x_{N+1})\\
+&\le&qd(x^*,x_N)+d(x^*,x_{N+1})\\
+&<&\delta/2+\delta/2=\delta,
+\end{eqnarray*}
+contradiction.  So $x^*$ is a fixed point of $T$.  It is also unique.
+Suppose there is another fixed point $x'$ of $T$; because $x'\neq
+x^*$, $d(x',x^*)>0$.  But then
+$$
+d(x',x^*)=d(Tx',Tx^*)\le qd(x',x^*)<d(x',x^*),
+$$
+contradiction.  Therefore, $x^*$ is the unique fixed point of $T$.
+%%%%%
+%%%%%
+\end{document}

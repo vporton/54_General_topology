@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfAConnectedSpaceThatIsNotPathconnected}
+\pmcreated{2013-03-22 12:46:33}
+\pmmodified{2013-03-22 12:46:33}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{example of a connected space that is not path-connected}
+\pmrecord{16}{33087}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D05}
+\pmrelated{ConnectedSpace}
+\pmrelated{PathConnected}
+\pmdefines{topologist's sine curve}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{graphicx}
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\begin{document}
+\PMlinkescapeword{contain}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{continuous}
+\PMlinkescapeword{example}
+\PMlinkescapeword{induced}
+\PMlinkescapeword{open}
+
+This standard example shows that
+a connected topological space need not be path-connected
+(the converse is true, however).
+
+Consider the topological spaces
+\begin{eqnarray*}
+X_1 &= \left\{(0,y)\mid y\in[-1,1]\right\}\\
+X_2 &= \left\{(x,\sin\frac{1}{x})\mid x>0\right\}\\
+X &= X_1 \cup X_2\\
+\end{eqnarray*}
+with the topology induced from $\Reals^2$.
+
+$X_2$ is often called the ``\emph{topologist's sine curve}'', and $X$ is its closure.
+
+$X$ is not path-connected.
+Indeed, assume to the contrary that there exists a \PMlinkname{path}{PathConnected}
+$\gamma\colon[0,1]\to X$ with
+$\gamma(0)=(\frac{1}{\pi},0)$ and $\gamma(1)=(0,0)$.
+Let
+\[
+  c = \inf \left\{ t\in[0,1] \mid \gamma(t)\in X_1 \right\}.
+\]
+Then $\gamma([0,c])$ contains at most one point of $X_1$,
+while $\overline{\gamma([0,c])}$ contains all of $X_1$.
+So $\gamma([0,c])$ is not closed, and therefore not compact.
+But $\gamma$ is continuous and $[0,c]$ is compact,
+so $\gamma([0,c])$ must be compact
+(as a continuous image of a compact set is compact),
+which is a contradiction.
+
+But $X$ is connected.
+Since both ``parts'' of the topologist's sine curve are themselves connected,
+neither can be partitioned into two open sets.
+And any open set which contains points of the line segment $X_1$
+must contain points of $X_2$.
+So $X$ is not the disjoint union of two nonempty open sets,
+and is therefore connected.
+%%%%%
+%%%%%
+\end{document}

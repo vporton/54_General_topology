@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSpacesHomeomorphicToBaireSpace}
+\pmcreated{2013-03-22 18:46:51}
+\pmmodified{2013-03-22 18:46:51}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of spaces homeomorphic to Baire space}
+\pmrecord{7}{41575}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E50}
+%\pmkeywords{Baire space}
+%\pmkeywords{Polish space}
+%\pmkeywords{zero dimensional}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{homeomorphism}
+\PMlinkescapeword{subsets}
+\PMlinkescapeword{integers}
+\PMlinkescapeword{ranges}
+\PMlinkescapeword{natural numbers}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{countable}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{covering}
+\PMlinkescapeword{empty sets}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{function}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{converge}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{contain}
+\PMlinkescapeword{contained}
+\PMlinkescapeword{continuous}
+\PMlinkescapeword{inverse}
+\PMlinkescapeword{equation}
+\PMlinkescapeword{disjoint}
+\PMlinkescapeword{property}
+
+We show that a topological space $X$ is homeomorphic to Baire space, $\mathcal{N}$, if and only if the following are satisfied.
+\begin{enumerate}
+\item\label{item:1} It is a nonempty Polish space.
+\item\label{item:2} It is zero dimensional.
+\item\label{item:3} No nonempty and open subsets are compact.
+\end{enumerate}
+As Baire space is easily shown to satisfy these properties, we just need to show that if they are satisfied then there exists a homeomorphism $f\colon\mathcal{N}\rightarrow X$. By property \ref{item:1} there is a complete metric $d$ on $X$.
+
+We choose subsets $C(n_1,\ldots,n_k)$ of $X$ for integers $k\ge 0$ and $n_1,\ldots,n_k$ satisfying the following.
+\begin{enumerate}
+\item[(i)] $C(n_1,\ldots,n_k)$ is a nonempty clopen set with diameter no more than $2^{-k}$.
+\item[(ii)] $C()= X$.
+\item[(iii)] For any $n_1,\ldots,n_k$ then $C(n_1,\ldots,n_k,m)$ are pairwise disjoint as $m$ ranges over the natural numbers and,
+\begin{equation}\label{eq:1}
+\bigcup_{m=1}^\infty C(n_1,\ldots,n_k,m)=C(n_1,\ldots,n_k).
+\end{equation}
+\end{enumerate}
+This can be done inductively. Suppose that $S=C(n_1,\ldots,n_k)$ has already been chosen. As it is open, condition \ref{item:3} says that it is not compact. Therefore, there is a $\delta>0$ such that $S$ has no finite open cover consisting of sets of diameter no more than $\delta$ (see \PMlinkname{here}{ProofThatAMetricSpaceIsCompactIfAndOnlyIfItIsCompleteAndTotallyBounded}).
+However, as Polish spaces are separable, there is a countable sequence $S_1,S_2,\ldots$ of open sets with diameter less than $\delta$ and covering $S$.
+As the space is zero dimensional, these can be taken to be clopen. By replacing $S_j$ by $S_j\cap S$ we can assume that $S_j\subseteq S$. Then, replacing by $S_j\setminus\bigcup_{i<j}S_i$, the sets $S_j$ can be taken to be pairwise disjoint.
+
+By eliminating empty sets we suppose that $S_j\not=\emptyset$ for each $j$, and since $S$ has no finite open cover consisting of sets of diameter less than $\delta$, the sequence $S_j$ will still be infinite. Defining
+\begin{equation*}
+C(n_1,\ldots,n_k,n_{k+1})=S_{n_{k+1}}
+\end{equation*}
+satisfies the required properties.
+
+
+We now define a function $f\colon\mathcal{N}\rightarrow X$ such that $f(n)\in C(n_1,\ldots,n_k)$ for each $n\in\mathcal{N}$ and $k\ge 0$.
+Choose any $n\in\mathcal{N}$ there is a sequence $x_k\in C(n_1,\ldots,n_k)$. This set has diameter bounded by $2^{-k}$ and, so, $d(x_k,x_j)\le 2^{-k}$ for $j\ge k$. This sequence is \PMlinkname{Cauchy}{CauchySequence} and, by completeness of the metric, must converge to a limit $x$. As $C(n_1,\ldots,n_k)$ is closed, it contains $x$ for each $k$ and therefore
+\begin{equation*}
+\bigcap_kC(n_1,\ldots,n_k)\not=\emptyset.
+\end{equation*}
+In fact, as it has zero diameter, this set must contain a single element, which we define to be $f(n)$.
+
+So, we have defined a function $f\colon\mathcal{N}\rightarrow X$. If $m,n\in \mathcal{N}$ satisfy $m_j=n_j$ for $j\le k$ then $f(m),f(n)$ are both contained in $C(m_1,\ldots,m_k)$ and $d(f(m),f(n))\le 2^{-k}$. Therefore, $f$ is continuous.
+
+It only remains to show that $f$ has continuous inverse. Given any $x\in X$ then $x\in C()$ and equation (\ref{eq:1}) allows us to choose a sequence $n_k\in\mathbb{N}$ such that $x\in C(n_1,\ldots,n_k)$ for each $k$. Then, $f(n)=x$ showing that $f$ is onto.
+
+If $m\not=n\in\mathcal{N}$ then, letting $k$ be the first integer for which $m_k\not=n_k$, the sets $C(m_1,\ldots,m_k)$ and $C(n_1,\ldots,n_k)$ are disjoint and, therefore, $f(m)\not=f(n)$ and $f$ is one to one.
+
+Finally, we show that $f$ is an open map, so that its inverse is continuous. Sets of the form
+\begin{equation*}
+\mathcal{N}(n_1,\ldots,n_k)=\left\{m\in\mathcal{N}\colon m_j=n_j\text{ for }j\le k\right\}
+\end{equation*}
+form a basis for the topology on $\mathcal{N}$. Then, $f\left(\mathcal{N}(n_1,\ldots,n_k)\right)=C(n_1,\ldots,n_k)$ is open and, therefore, $f$ is an open map.
+
+%%%%%
+%%%%%
+\end{document}

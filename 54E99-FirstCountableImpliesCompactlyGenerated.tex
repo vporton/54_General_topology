@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FirstCountableImpliesCompactlyGenerated}
+\pmcreated{2013-03-22 19:09:35}
+\pmmodified{2013-03-22 19:09:35}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{first countable implies compactly generated}
+\pmrecord{4}{42065}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{prop} Any first countable topological space is compactly generated. \end{prop}
+\begin{proof}  Suppose $X$ is first countable, and $A\subseteq X$ has the property that, if $C$ is any compact set in $X$, the set $A\cap C$ is closed in $C$.  We want to show tht $A$ is closed in $X$.  Since $X$ is first countable, this is equivalent to showing that any sequence $(x_i)$ in $A$ converging to $x$ implies that $x\in A$.  Let $C=\lbrace x_i \mid i=1,2,\ldots\rbrace \cup \lbrace x\rbrace$.  
+
+\begin{lem} $C$ is compact. \end{lem} 
+\begin{proof} Let $\lbrace U_j\mid j \in J\rbrace$ be a collection of open sets covering $C$.  So $x\in U_j$ for some $j$.  Since $U_j$ is open, there is a positive integer $k$ such that $x_i\in U_j$ for all $i\ge k$.  Now, each $x_i \in U_{d(i)}$ for $i=1,\ldots, k$.  So $C$ is covered by $U_{d(1)}, \ldots, U_{d(k)}$, and $U_j$, showing that $C$ is compact.  
+\end{proof}
+
+In addition, as a subspace of $X$, $C$ is also first countable.  By assumption, $A\cap C$ is closed in $C$.  Since $x_i\in A\cap C$ for all $i\ge 1$, we see that $x\in A\cap C$ as well, since $C$ is first countable.  Hence $x\in A$, and $A$ is closed in $X$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTychonoffsTheoremInFiniteCase}
+\pmcreated{2013-03-22 15:26:27}
+\pmmodified{2013-03-22 15:26:27}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{proof of Tychonoff's theorem in finite case}
+\pmrecord{4}{37288}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\begin{document}
+(The finite case of Tychonoff's Theorem is of course a subset of the infinite case,
+but the proof is substantially easier, so that is why it is presented here.)
+
+To prove that $X_1 \times \dotsm \times X_n$ is compact
+if the $X_i$ are compact, it suffices (by induction) to prove that $X \times Y$ is compact
+when $X$ and $Y$ are.  It also suffices to prove that 
+a finite subcover can be extracted from every open cover of $X \times Y$
+by only the \emph{basis sets} of the form $U \times V$, where $U$ is open in $X$ and $V$ is open in $Y$.
+
+\begin{proof}
+The proof is by the straightforward strategy of composing a finite subcover
+from a lower-dimensional subcover.  Let the open cover $\mathcal{C}$ of $X \times Y$
+by basis sets be given.  
+
+The set $X \times \{ y \}$ is compact, because it is the image of a 
+continuous embedding of the compact set $X$.
+Hence $X \times \{ y \}$ has a finite subcover in $\mathcal{C}$: label the subcover
+by $\mathcal{S}^y = \{ U_1^y \times V_1^y, \dotsc, U_{k_y}^y \times V_{k_y}^y \}$.
+Do this for each $y \in Y$.
+
+To get the desired subcover of $X \times Y$, we need to pick a finite number
+of $y \in Y$.  Consider $V^y = \bigcap_{i=1}^{k_y} V_i^y$.
+This is a finite intersection of open sets, so $V^y$ is open in $Y$.
+The collection $\{ V^y : y \in Y\}$ is an open covering of $Y$, so pick
+a finite subcover $ V^{y_1}, \dotsc, V^{y_l}$.
+Then $\bigcup_{j=1}^l \mathcal{S}^{y_j}$ is a finite subcover
+of $X \times Y$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

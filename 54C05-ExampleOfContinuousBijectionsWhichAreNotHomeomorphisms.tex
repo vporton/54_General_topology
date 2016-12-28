@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfContinuousBijectionsWhichAreNotHomeomorphisms}
+\pmcreated{2013-03-22 18:54:31}
+\pmmodified{2013-03-22 18:54:31}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{example of continuous bijections which are not homeomorphisms}
+\pmrecord{4}{41757}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Example 1.} Assume that $X$ is a topological space, which neither discrete nor antidiscrete. We will show that there are topological spaces $Y$ and $Z$ such that there are continuous bijections $X\to Y$ and $Z\to X$ which are not homeomorphisms.
+
+Let $Y=Z=X$ as a sets but topology on $Y$ is antidiscrete and on $Z$ is discrete. Then obviously identity mappings $\mathrm{id}:X\to Y$ and $\mathrm{id}:Z\to X$ are continuous, but since $X$ is neither discrete nor antidiscrete, these mappings are not homeomorphisms.
+
+\textbf{Example 2.} Consider the function $f:[0,1)\to S^1$ (here $S^1$ denotes the unit circle in a complex plane) defined by the formula $f(t)=e^{2\pi i t}$. It is easy to see that $f$ is a continuous bijection, but $f$ is not a homeomorphism (because $[0,1)$ is not compact).
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAlternativeCharacterizationOfUltrafilter}
+\pmcreated{2013-03-22 14:42:23}
+\pmmodified{2013-03-22 14:42:23}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of alternative characterization of ultrafilter}
+\pmrecord{16}{36325}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\paragraph {Proof that $A \coprod B = X$ implies $A \in \mathcal{U}$ or $B \in \mathcal{U}$}
+Once we show that $A \notin \mathcal{U}$ implies $B \notin \mathcal{U}$, this result will follow immediately.
+
+On the one hand, suppose that $A \notin \mathcal{U}$ and that there exists a $C \in \mathcal{U}$ such that $A \cap C$ is empty.  Then $C \subseteq B$.  Since $\mathcal{U}$ is a filter and $C \in \mathcal{U}$, this implies that $B \in \mathcal{U}$.
+
+On the other hand, suppose that $A \notin \mathcal{U}$ and that $A \cap C$ is not empty for any $C$ in $\mathcal{U}$.  Then $\{A\} \cup \mathcal{U}$ would be a filter subbasis.  The filter which it would generate would be finer than $\mathcal{U}$.  The fact that $\mathcal{U}$ is an ultrafilter means that there exists no filter finer than $\mathcal{U}$.  This contradiction shows that, if $A \notin \mathcal{U}$, then there exists a $C$ such that $A \cap C$ is empty.  But this would imply that $C \subseteq B$ which, in turn would imply that $B \in \mathcal{U}$.
+
+\paragraph{ Proof that $\mathcal{U}$ is an ultrafilter.}
+Assume that $\mathcal{U}$ is a filter, but not an ultrafilter and that $A \coprod B = X$ implies $A \in \mathcal{U}$ or $B \in \mathcal{U}$.  Since $\mathcal{U}$ is not an ultrafilter, there must exist filter $\mathcal{U}'$ which is strictly finer.  Hence there must exist $A \in \mathcal{U}'$ such that $A \notin \mathcal{U}$.  Set $B = X \setminus A$.  Since $A \coprod B = X$ and $A \notin \mathcal{U}$, it follows that $B \in \mathcal{U}$.  Since $\mathcal{U} \subset \mathcal{U}'$, it is also the case that $B \in \mathcal{U}'$.  But $A \in \mathcal{U}'$ as well; since $\mathcal{U}'$ is a filter, $A \cap B \in \mathcal{U}'$.  This is impossible because $A \cap B \in \mathcal{U}'$ is empty.  Therefore, no such filter $\mathcal{U}'$ can exist and $\mathcal{U}$ must be an ultrafilter.
+
+\paragraph{ Proof of generalization to $A \cup B = X$}
+On the one hand, since $A \cup B = X$ implies $A \coprod B = X$, the condition $A \cup B = X \Rightarrow A \in \mathcal{U} \vee B\in \mathcal{U}$ will also imply that $\mathcal{U}$ is an ultrafilter.
+
+On the other hand, if $A \cup B = X$, there must exists $A' \subseteq A$ and $B' \subseteq B$ such that $A' \coprod B' = X$.  If $\mathcal{U}$ is assumed to be a filter, $A' \in \mathcal{U}$ implies that $A \in \mathcal{U}$.  Likewise, $B' \in \mathcal{U}$ implies that $B \in \mathcal{U}$.  Hence, if $\mathcal{U}$ is a filter such that $A \cup B = X$ implies that either $A \in \mathcal{U}$ or $B \in \mathcal{U}$, then $\mathcal{U}$ is an ultrafilter.
+
+\paragraph {Proof of first proposition regarding finite unions}
+Let $B_j = \coprod_{i=1}^j A_i$ and let $C_j = \coprod_{i=j+1}^n A_i$.  For each $i$ between $1$ and $n-1$, we have $B_i \coprod C_i = X$.  Hence, either $B_i \in \mathcal{U}$ or $C_i \in \mathcal{U}$ for each $i$ between $1$ and $n-1$. Next, consider three possibilities:
+\begin{enumerate}
+\item  $B_1 \in \mathcal{U}$:  Since $B_1 = A_1$, it follows that $A_1 \in \mathcal{U}$.
+\item  $B_{n-1} \notin \mathcal{U}$:  Since $B_{n-1} \coprod C_{n-1} = X$, it follows that $C_{n-1} \in \mathcal{U}$.  Because $C_{n-1} = A_n$, it follows that $A_n \in \mathcal{U}$.
+\item  $B_1 \notin \mathcal{U}$ and $B_{n-1} \in \mathcal{U}$:  There must exist an $i \in \{2, \ldots, n-1\}$ such that $B_{i-1} \notin \mathcal{U}$ and $B_i \in \mathcal{U}$.  Since $B_{i-1} \notin \mathcal{U}$, $C_{i-1} \in \mathcal{U}$.  
+Since $\mathcal{U}$ is a filter, $C_{i-1} \cap B_i \in \mathcal{U}$. But also $C_{i-1} \cap B_i = A_i$  which implies that $A_i \in \mathcal{U}$.
+\end{enumerate}
+This examination of cases shows that if $\coprod_{i=1}^n A_i = X$, then there must exist an $i$ such that $A_i \in \mathcal{U}$.  It is also easy to see that this $i$ is unique --- If $A_i \in \mathcal{U}$ and $A_j \in \mathcal{U}$ and $i \ne j$, then $A_i \cap A_j = \emptyset$, but this cannot be the case since $\mathcal{U}$ is a filter.
+
+\paragraph {Proof of second proposition regarding finite unions}
+There exist sets $A'_i$ such that $A'_i \subseteq A_i$ and $\coprod_{i=1}^n A_i = X$.  By the result just proven, there exists an $i$ such that $A'_i \in \mathcal{U}$.  Since $\mathcal{U}$ is a filter, $A'_i \in \mathcal{U}$ implies $A_i \in \mathcal{U}$.  Note that we can no longer assert that $i$ is unique because the $A_i$'s no longer are required to be pairwise disjoint.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPolishSpacesUpToBorelIsomorphism}
+\pmcreated{2013-03-22 18:47:18}
+\pmmodified{2013-03-22 18:47:18}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of Polish spaces up to Borel isomorphism}
+\pmrecord{6}{41584}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E50}
+%\pmkeywords{Baire space}
+%\pmkeywords{Borel isomorphic}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{isomorphic}
+\PMlinkescapeword{inverse}
+\PMlinkescapeword{function}
+
+We show that every uncountable Polish space $X$ is Borel isomorphic to the real numbers.
+First, there exists a continuous one-to-one and injective function $f$ from Baire space $\mathcal{N}$ to $X$ such that $X\setminus f(\mathcal{N})$ is countable, and such that the inverse from $f(\mathcal{N})$ to $\mathcal{N}$ is Borel measurable (see \PMlinkname{here}{InjectiveImagesOfBaireSpace}).
+Letting $S$ be any countably infinite subset of $X$, the same result can be applied to $X\setminus S$, which is also a Polish space.
+So, there is a continuous and one-to-one function $f\colon \mathcal{N}\rightarrow X\setminus S$ such that $S^\prime\equiv X\setminus f(\mathcal{N})$ is countable and such that the inverse defined on $X\setminus S^\prime$ is Borel.
+Then, $S^\prime$ contains $S$ and is countably infinite.
+Hence, there is a invertible function $g$ from $\mathbb{N}=\{1,2,\ldots\}$ to $S^\prime$. Under the discrete topology on $\mathbb{N}$ this is necessarily a continuous function with Borel measurable inverse. By combining the functions $f$ and $g$, this gives a continuous, one-to-one and onto function from the \PMlinkname{disjoint union}{TopologicalSum}
+\begin{equation*}
+u\colon \mathcal{N}\coprod\mathbb{N}\rightarrow X
+\end{equation*}
+with Borel measurable inverse.
+Similarly, the set of real numbers $\mathbb{R}$ with the standard topology is an uncountable Polish space and, therefore, there is a continuous function $v$ from $\mathcal{N}\coprod\mathbb{N}$ to $\mathbb{R}$ with Borel inverse. So, $v\circ u^{-1}$ gives the desired Borel isomorphism from $X$ to $\mathbb{R}$.
+
+%%%%%
+%%%%%
+\end{document}

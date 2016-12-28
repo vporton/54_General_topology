@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheContinuousImageOfACompactSpaceIsCompact}
+\pmcreated{2013-03-22 15:52:48}
+\pmmodified{2013-03-22 15:52:48}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{the continuous image of a compact space is compact}
+\pmrecord{7}{37879}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D30}
+\pmrelated{CompactnessIsPreservedUnderAContinuousMap}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider $f: X \to Y$ a continuous and surjective function and $X$ a compact set. We will prove that $Y$ is also a compact set.
+
+Let $\{V_a\}$ be an open covering of $Y$. By the continuity of $f$ the pre-image by $f$ of any \PMlinkname{open subset}{OpenSubset} of $Y$ will also be an open subset of $X$.
+So we have an open covering $\{U_a\}$ of $X$ where $U_a = f^{-1}(V_a)$.
+
+To see this remember, since the continuity of $f$ implies that each $U_a$ is open, all we need to prove is that $\bigcup_a U_a \supset X$.
+Consider $x \in X$, we know that since $\{V_a\}$ is a covering of $Y$ that there exists $i$ such that $f(x) \in V_i$ but then by construction $x \in U_i$ and $\{U_a\}$ is indeed an open covering of $X$.
+
+Since $X$ is compact we can consider a finite set of indices $\{a_i\}$ such that $\{U_{a_i}\}$ is a finite open covering of $X$, but then $\{V_{a_i}\}$ will be a finite open covering of $Y$ and it will thus be a compact set.
+
+To see that $\{V_{a_i}\}$ is a covering of $Y$ consider $y \in Y$. By the surjectivity of $f$ there must exist (at least) one $x \in X$ such that $f(x) = y$ and since $\{U_{a_i}\}$ is a finite covering of $X$, there exists $k$ such that $x \in U_{a_k}$.
+But then since $f(U_{a_k}) = V_{a_k}$, we must have that $y \in V_{a_k}$ and  $\{V_{a_i}\}$ is indeed a finite open covering of $Y$.
+%%%%%
+%%%%%
+\end{document}

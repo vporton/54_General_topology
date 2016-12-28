@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConditionsForACollectionOfSubsetsToBeABasisForSomeTopology}
+\pmcreated{2013-03-22 14:21:49}
+\pmmodified{2013-03-22 14:21:49}
+\pmowner{waj}{4416}
+\pmmodifier{waj}{4416}
+\pmtitle{conditions for a collection of subsets to be a basis for some topology}
+\pmrecord{4}{35845}
+\pmprivacy{1}
+\pmauthor{waj}{4416}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A99}
+\pmclassification{msc}{54D70}
+%\pmkeywords{teaching proofs}
+%\pmkeywords{characterization of a basis}
+%\pmkeywords{what a basis looks like}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\co{\colon\thinspace}
+\theoremstyle{definition}
+\newtheorem*{thm}{Theorem}
+\begin{document}
+Not just any collection of subsets of $X$ can be a basis for a topology on $X$.  For instance, if we took $\mathcal{C}$ to be all open intervals of length $1$ in $\mathbb{R}$, $\mathcal{C}$ isn't the basis for any topology on $\mathbb{R}$: $(0,1)$ and $(.5, 1.5)$ are unions of elements of $\mathcal{C}$, but their intersection $(.5,1)$ is not.  The collection formed by arbitrary unions of members of $\mathcal{C}$ isn't closed under finite intersections and isn't a topology.
+
+We'd like to know which collections $\mathcal{B}$ of subsets of $X$ could be the basis for some topology on $X$.  Here's the result:
+
+\begin{thm}
+A collection $\mathcal{B}$ of subsets of $X$ is a basis for some topology on $X$ if and only if:
+\begin{enumerate}
+\item
+Every $x\in X$ is contained in some $B_x\in \mathcal{B}$, and
+\item
+If $B_1$ and $B_2$ are two elements of $\mathcal{B}$ containing $x\in X$, then there's a third element $B_3$ of $\mathcal{B}$ such that $x\in B_3\subset B_1\cap B_2$. 
+\end{enumerate}
+
+\end{thm}
+\begin{proof}
+First, we'll show that if $\mathcal{B}$ is the basis for some topology $\mathcal{T}$ on $X$, then it satisfies the two conditions listed.
+
+$\mathcal{T}$ is a topology on $X$, so $X\in \mathcal{T}$.  Since $\mathcal{B}$ is a basis for $\mathcal{T}$, that means $X$ can be written as a union of members of $\mathcal{B}$: since every $x\in X$ is in this union, every $x\in X$ is contained in some member of $\mathcal{B}$.  That takes care of the first condition.
+
+For the second condition: if $B_1$ and $B_2$ are elements of $\mathcal{B}$, they're also in $\mathcal{T}$.  $\mathcal{T}$ is closed under intersection, so $B_1\cap B_2$ is open in $\mathcal{T}$.  Then $B_1\cap B_2$ can be written as a union of members of $\mathcal{B}$, and any $x\in B_1\cap B_2$ is contained by some basis element in this union.
+
+Second, we'll show that if a collection $\mathcal{B}$ of subsets of $X$ satisfies the two conditions, then the collection $\mathcal{T}$ of unions of members of $\mathcal{B}$ is a topology on $X$.
+
+\begin{itemize}
+\item
+$\emptyset \in \mathcal{T}$: $\emptyset$ is the null union of zero elements of $\mathcal{B}$.
+
+\item
+$X\in \mathcal{T}$: by the first condition, every $X$ is contained in some member of $\mathcal{B}$.  The union of all the members of $\mathcal{B}$ is then all of $X$.
+
+\item
+$\mathcal{T}$ is closed under arbitrary unions: Say we have a union of sets $T_{\alpha}\in \mathcal{T}$...
+
+\begin{align*}
+\bigcup_{\alpha \in I} T_{\alpha} &= \bigcup_{\alpha \in I} \bigcup_{\beta \in J_{\alpha}} B_{\beta} \\
+\intertext{(since each $T_{\alpha}$ is a union of sets in $\mathcal{B}$)}
+&= \bigcup_{\beta \in \bigcup_{\alpha \in I} J_{\alpha}} B_{\beta}
+\end{align*}
+
+Since that's a union of elements of $\mathcal{B}$, it's also a member of $\mathcal{T}$.
+
+\item
+$\mathcal{T}$ is closed under finite intersections: since a collection of sets is closed under finite intersections if and only if it is closed under pairwise intersections, we need only check that the intersection of two members $T_1, T_2$ of $\mathcal{T}$ is in $\mathcal{T}$.
+
+Any $x\in T_1\cap T_2$ is contained in some $B_x^1\subset T_1$ and $B_x^2\subset T_2$.  By the second condition, $x\in B_x^1\cap B_x^2$ gets us a $B_x^3$ with $x\in B_x^3 \subset B_x^1\cap B_x^2 \subset T_1\cap T_2$.  Then
+
+\[ T_1\cap T_2 = \bigcup_{x\in T_1\cap T_2} B_x^3 \]
+
+which is in $\mathcal{T}$.
+\end{itemize}
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

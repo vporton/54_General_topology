@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatComponentsOfOpenSetsInALocallyConnectedSpaceAreOpen}
+\pmcreated{2013-03-22 17:06:07}
+\pmmodified{2013-03-22 17:06:07}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof that components of open sets in a locally connected space are open}
+\pmrecord{6}{39399}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+\begin{thm} A topological space $X$ is locally connected if and only if each component of an open set 
+is open.
+\end{thm}
+\begin{proof}
+First, suppose that $X$ is locally connected and that $U$ is an open set of $X$.
+Let $p \in C$, where $C$ is a component of $U$.
+Since $X$ is locally connected there is an open connected set, say $V$ with
+$p \in V \subset U$. Since $C$ is a component of $U$ it must be that $V \subset C$.
+Hence, $C$ is open.
+For the converse, suppose that each component of each  open set is open. Let $p \in X$.
+Let $U$ be an open set containing $p$. Let $C$ be the component of $U$ which
+contains $p$. Then $C$ is open and connected, so $X$ is locally connected.
+
+\end{proof}
+
+As a corollary, we have that the components of a locally connected space are both
+open and closed.
+
+%%%%%
+%%%%%
+\end{document}

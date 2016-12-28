@@ -1,0 +1,200 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FunctionSpace}
+\pmcreated{2013-03-22 14:08:31}
+\pmmodified{2013-03-22 14:08:31}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{function space}
+\pmrecord{38}{35556}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54C35}
+\pmclassification{msc}{26-00}
+\pmclassification{msc}{46-00}
+\pmclassification{msc}{30H05}
+\pmsynonym{space of functions}{FunctionSpace}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,euscript}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Generally speaking, a \textit{function space} is a collection of functions satisfying certain properties.  Typically, these properties are topological in nature, and hence the word ``space''.  Usually, functions in a function space have a common \PMlinkname{domain}{Function} and codomain.  Thus, a function space $\EuScript{F}$, which contains functions acting from set $X$ to set $Y$, is denoted by $\EuScript{F}(X,Y)$.  Evidently, $\EuScript{F}(X,Y)\subseteq Y^X$.  In the case when $Y=\mathbb{R}$ one usually writes only $\EuScript{F}(X)$.
+
+If the codomain $Y$ is a vector space over field $K$, then it is easy to define
+operations of the vector space on functions acting to $Y$ in the following way:
+\begin{equation}
+    \begin{array}{rcl}
+        (\alpha\cdot f)\, (x) & = & \alpha\cdot f(x) \\
+        (f+g)\,(x) & = & f(x)+g(x)
+    \end{array}
+\label{op}
+\end{equation}
+where $\alpha$ is an element of the field $K$, and $x$ is an element of the \PMlinkname{domain}{Function} of functions.
+One usually consider function spaces which are closed under operations (\ref{op}) and thus
+are vector spaces. Function spaces are also often equipped with some topology.
+
+Below is a list of function spaces, \PMlinkescapetext{links} to entries where they are defined, and notation for these.
+
+The main purpose of this entry is to give a list
+of function spaces that already have been 
+defined on PlanetMath (or should be), a gallery of function
+spaces if you like. 
+
+\subsubsection*{Restrictions on smoothness}
+\begin{itemize}
+\item $C$; continuous functions
+\item $C^k$; $k$ times continuously differentiable functions
+\item $C^{k,\alpha}$; H\"older continuous functions
+\item $\mathrm{Lip}$; Lipschitz continuous functions
+\item $C^\infty$; smooth functions
+\item $C^\omega$; analytic functions
+\item $\mathcal{O}(G)$; holomorphic functions
+\item $C_c^\infty$ or $\mathcal{D}$; smooth functions with compact support 
+\end{itemize}
+
+\subsubsection*{Restrictions on integrability}
+\begin{itemize}
+\item $L^0$; measurable functions
+\item $L^1$; integrable functions
+\item $L^2$; square integrable functions
+\item $L^p$ \PMlinkname{functions}{LpSpace}
+\item $L^\infty$; essentially bounded functions
+\item $L^1_{\scriptsize{\mbox{loc}}}(U)$; locally integrable function 
+\end{itemize}
+\subsubsection*{Integrability of derivatives}
+\begin{itemize}
+\item $BV$; functions of bounded variation, i.e.\ functions whose derivative is a measure
+\item $W^{m,p}(\Omega)$; Sobolev space of $p$-integrable functions which have $p$-integrable derivatives of $m$-th order. Space $W^{m,2}(\Omega)$ is a Hilbert space and is usually denoted by $W^{m}(\Omega)$ or $H^{m}(\Omega)$.
+\item $BMO$; functions with bounded mean oscillation. $VMO$ functions with vanishing mean oscillation
+\end{itemize}
+
+\subsubsection*{Restriction on growth}
+\begin{itemize}
+\item $B$; bounded functions
+\item Functions with polynomial growth
+\item $\mathscr{S}$; rapidly decreasing functions (Schwartz space)
+\end{itemize}
+
+\subsubsection*{Test function spaces}
+\begin{itemize}
+\item $\mathscr{S}$; rapidly decreasing functions (Schwartz space)
+\item $\mathscr{D}$; smooth functions with compact support
+\end{itemize}
+
+\subsubsection*{Distribution spaces}
+\begin{itemize}
+\item $\mathscr{S}'$; tempered distributions
+\item $\mathscr{D}'$; distributions
+\item $\mathscr{E}'$; distributions with compact support
+\item $\mathscr{M}$; Radon measures
+\end{itemize}
+
+\subsubsection*{Piecewise properties}
+\begin{itemize}
+\item $PC$; piecewise continuous functions
+\item $PC^k$; piecewise k times continuous differentiable functions
+\item $PC^{\infty}$; \PMlinkname{piecewise smooth functions}{PiecewiseSmooth}
+\item piecewise linear functions
+\item simple functions
+\end{itemize}
+
+It is possible to attach a number which we call
+\emph{regularity index}, to many of these spaces. 
+If a space $X$ has a regularity index which is strictly less than the regularity index of $Y$, then (under some hypothesis on the domain of the functions) $X$ contains $Y$. 
+
+Here is a list of regularity indices ($n$ is the dimension of the domain):
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+$C$ & $0$\\
+\hline
+$C^k$ & $k$\\
+\hline
+$C^\infty$ & $\infty$\\
+\hline
+$C^\omega$ & $\infty$\\
+\hline
+$C^{k,\alpha}$ & $k+\alpha$\\
+\hline
+$\mathrm{Lip}$ & $1$\\
+\hline
+$L^p$ & $-n/p$\\
+\hline
+$L^\infty$ & $0$\\
+\hline
+$W^{k,p}$ & $k-n/p$\\
+\hline
+$W^{k,\infty}$ & $k$\\
+\hline
+$BV$ & $0$\\
+\hline
+$\mathscr D'$ & $-\infty$\\
+\hline
+$\mathscr M$ & $-n$\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Selected links}
+
+\begin{itemize}
+\item The entry \htmladdnormallink{Function space}{http://en.wikipedia.org/wiki/Function_space}
+at the \htmladdnormallink{Wikipedia}{http://en.wikipedia.org/}.
+
+\item Chapter \htmladdnormallink{Function spaces}{http://www.math.uiowa.edu/~dstewart/classes/22m176/dfs-notes/node2.html}
+from the
+\htmladdnormallink{Notes on distributions and function spaces}{http://www.math.uiowa.edu/~dstewart/classes/22m176/dfs-notes/}
+by
+\htmladdnormallink{D.~Stewart}{http://www.math.uiowa.edu/~dstewart/}.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

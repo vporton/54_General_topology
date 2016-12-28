@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TychonoffsTheoremImpliesAC}
+\pmcreated{2013-03-22 18:45:38}
+\pmmodified{2013-03-22 18:45:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Tychonoff's theorem implies AC}
+\pmrecord{7}{41540}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D30}
+\pmclassification{msc}{03E25}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we prove that Tychonoff's theorem implies that product of non-empty set of non-empty sets is non-empty, which is equivalent to the axiom of choice (AC).  This fact, together with the fact that AC implies Tychonoff's theorem, shows that Tychonoff's theorem is equivalent to AC (under ZF).  The proof was first discovered by John Kelley in 1950, and is now an exercise in axiomatic set theory.
+
+\begin{proof}  Let $C$ be a non-empty collection of non-empty sets.  Let $Y$ be the generalized cartesian product of all the elements in $C$.  Our objective is show that $Y$ is non-empty.
+
+First, some notations: for each $A\in C$, set $X_A:=A\cup \lbrace A\rbrace$, $D:=\lbrace X_A\mid A\in C\rbrace$, $X$ the generalized cartesian product of all the $X_A$'s, and $p_A$ the projection from $X$ onto $X_A$.
+
+We break down the proof into several steps:
+
+\begin{enumerate}
+\item
+$Y$ is equipollent to $Z:=\bigcap \lbrace p_A^{-1}(A)\mid A\in C\rbrace$.
+
+An element of $X$ is a function $f: D\to \bigcup D$, such that $f(X_A)\in X_A$ for each $A\in C$.  In other words, either $f(X_A)\in A$, or $f(X_A)=A$.  An element of $Y$ is a function $g:C\to \bigcup C$ such that $g(A)\in A$ for each $A\in C$.  Finally, $h\in p_A^{-1}(A)$ iff $h(X_A)\in A$.  
+
+Given $g\in Y$, define $g^*\in X$ by $g^*(X_A):=g(A)\in A$.  Since $A$ is arbitrary, $g^*\in Z$.  Conversely, given $h\in Z$, define $h'\in Y$ by $h'(A):=h(X_A)$, which is well-defined, since $h(X_A)\in A$.  Now, it is easy to see that the function $\phi:Y\to Z$ given by $\phi(g)=g^*$ is a bijection, whose inverse $\phi^{-1}:Z\to Y$ is given by $\phi^{-1}(h)=h'$.  This shows that $Y$ and $Z$ are equipollent.
+\item
+Next, we topologize each $X_A$ in such a way that $X_A$ is compact.
+
+Let $\mathcal{T}_A$ be the coarsest topology containing the cofinite topology on $X_A$ and the singleton $\lbrace A\rbrace$.  A typical open set of $X_A$ is either the empty set, or has the form $S\cup \lbrace A\rbrace$, where $S$ is cofinite in $A$.  
+
+To show that $X_A$ is compact under $\mathcal{T}_A$, let $\mathcal{D}$ be an open cover for $X_A$.  We want to show that there is a finite subset of $\mathcal{D}$ covering $X_A$.  If $X_A\in \mathcal{D}$, then we are done.  Otherwise, pick a non-empty element $S\cup \lbrace A\rbrace$ in $\mathcal{D}$, so that $A-S\ne \varnothing$, and is finite.  By assumption, each element in $A-S$ belongs to some open set in $\mathcal{D}$.  So to cover $A-S$, only a finite number of open sets in $\mathcal{D}$ are needed.  These open sets, together with $S\cup\lbrace A\rbrace$, cover $X_A$.  Hence $X_A$ is compact.
+\item
+Finally, we prove that $Z$, and therefore $Y$, is non-empty.
+
+Apply Tychonoff's theorem, $X$ is compact under the product topology.  Furthermore, $\pi_A$ is continuous for each $A\in C$.  Since $\lbrace A\rbrace$ is open in $X_A$, and $A=X_A-\lbrace A\rbrace$, $A$ is closed in $X_A$, and thus so is $p_A^{-1}(A)$ closed in $X$.
+
+To show that $Z$ is non-empty, we employ a characterization of compact space: \PMlinkname{$X$ is compact iff every collection of closed sets in $X$ having FIP has non-empty intersection}{ASpaceIsCompactIfAndOnlyIfTheSpaceHasTheFiniteIntersectionProperty}.  Let us look at the collection $\mathcal{S}:=\lbrace p_A^{-1}(A)\mid A\in C\rbrace$.  Given $A_1,\ldots, A_n\in C$, pick an element $a_i\in A_i$, since $A_i\ne \varnothing$ by assumption.  Note that this is possible, since there are only a finite number of sets.  Define $f:D\to \bigcup D$ as follows: 
+\begin{displaymath}
+f(X_A):= \left\{
+\begin{array}{ll}
+a_i & \textrm{if }A=A_i\textrm{ for some }i=1,\ldots, n,\\
+A & \textrm{otherwise.}
+\end{array}
+\right.
+\end{displaymath}
+Since $f(X_{A_i})=a_i \in A_i$, $f\in p_{A_i}^{-1}(A_i)$ for each $i=1,\ldots, n$.  Therefore, $$f\in p_{A_1}^{-1}(A_1) \cap \cdots \cap p_{A_n}^{-1}(A_n).$$  Since $p_{A_1}^{-1}(A_1), \ldots, p_{A_n}^{-1}(A_n)$ are arbitrarily picked from $\mathcal{S}$, the collection $\mathcal{S}$ has finite intersection property, and since $X$ is compact, $Z=\bigcap S$ must be non-empty.
+\end{enumerate}
+This completes the proof.
+\end{proof}
+
+\textbf{Remark}.  In the proof, we see that the trick is to adjoin the set $\lbrace A\rbrace$ to each set $A\in C$.  Instead of $\lbrace A\rbrace$, we could have picked some arbitrary, but fixed singleton $\lbrace B\rbrace$, as long as $B\notin A$ for each $A\in C$, and the proof follows essentially the same way.
+
+
+\begin{thebibliography}{9}
+\bibitem{TJJ}
+T. J. Jech, \emph{The Axiom of Choice}. North-Holland Pub. Co., Amsterdam, 1973.
+\bibitem{JK}
+J. L. Kelley, \emph{The Tychonoff's product theorem implies the axiom of choice}. Fund. Math. 37, pp. 75-76, 1950.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformitiesOnASetFormACompleteLattice}
+\pmcreated{2013-03-22 16:30:46}
+\pmmodified{2013-03-22 16:30:46}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{uniformities on a set form a complete lattice}
+\pmrecord{4}{38690}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E15}
+\pmclassification{msc}{06B23}
+\pmdefines{discrete uniformity}
+\pmdefines{initial uniformity}
+\pmdefines{weak uniformity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
+
+
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\BB}{\mathcal{B}}
+\begin{document}
+\begin{theorem*}
+The collection of uniformities on a given set ordered by set inclusion forms a complete lattice.
+\end{theorem*}
+
+\begin{proof}
+Let $X$ be a set.  Let $\mathfrak{U}(X)$ denote the collection of uniformities on $X$.  The coarsest uniformity on $X$ is $\{X\times X\}$, and the finest is the \emph{discrete uniformity}:
+\[
+\{S\subset X\times X\colon \Delta(X)\subseteq S\}.
+\]
+Hence $\mathfrak{U}(X)$ is bounded.  To show that $\mathfrak{U}(X)$ is complete, we must prove that it has the least upper bound property.  
+
+Suppose $\{\UU_{\alpha}\}_{\alpha\in I}$ is a nonempty family of uniformities on $X$.  Let $\BB$ consist of all finite intersections of elements of the $\UU_{\alpha}$.  Let us check that $\BB$ is a fundamental system of entourages for a uniformity on $X$.
+
+(B1) Let $S$, $T\in\BB$.  Each of $S$ and $T$ is a finite intersection of elements of the $\UU_{\alpha}$, so their intersection is as well.  Hence $S\cap T\in\BB$.
+
+(B2) Every element of $\BB$ is a finite intersection of subsets of $X\times X$ containing $\Delta(X)$.  So every element of $\BB$ contains the diagonal.
+
+(B3) Let $S\in\BB$.  Without loss of generality, $S=S_{\alpha}\cap S_{\beta}$, where $S_{\alpha}\in\UU_{\alpha}$ and $S_{\beta}\in\UU_{\beta}$.  Since $S_{\alpha}\in\UU_{\alpha}$, $S_{\alpha}^{-1}\in\UU_{\alpha}$.  Similarly, $S_{\beta}^{-1}\in\UU_{\beta}$.  Since the process of taking the inverse of a relation commutes with taking finite intersections, $(S_{\alpha}\cap S_{\beta})^{-1}\in\BB$.
+
+(B4) Let $S\in\BB$.  Again suppose $S=S_{\alpha}\cap S_{\beta}$ with $S_{\alpha}\in\UU_{\alpha}$ and $S_{\beta}\in\UU_{\beta}$.  Then there exist $T_{\alpha}\in\UU_{\alpha}$ and $T_{\beta}\in\UU_{\beta}$ such that 
+$T_{\alpha}\circ T_{\alpha}\subseteq S_{\alpha}$ and $T_{\beta}\circ T_{\beta}\subseteq S_{\beta}$.  The set $T=T_{\alpha}\cap T_{\beta}$ is in $\UU$, and since $T\circ T$ is a subset of both $S_{\alpha}$ and $S_{\beta}$, it is a subset of $S$.
+
+The fundamental system $\BB$ generates a uniformity $\UU$.  By construction, $\UU$ is an upper bound of the $\UU_{\alpha}$.  But any upper bound of the $\UU_{\alpha}$ would have to contain all finite intersections of elements of the $\UU_{\alpha}$.  So $\UU=\sup_{\alpha\in I} \UU_{\alpha}$.
+\end{proof}
+
+This theorem is useful because it allows us to assert the existence of the coarsest uniform space satisfying a particular property.
+
+\begin{corollary*}
+Let $X$ be a set and let $\{Y_{\alpha}\}_{\alpha\in I}$ be a family of uniform spaces.  Then for any family of functions $\{f_{\alpha}\colon X\to Y_{\alpha}\}$, there is a coarsest uniformity on $X$ making all the $f_{\alpha}$ uniformly continous.
+\end{corollary*}
+
+The coarsest uniformity making a family of functions uniformly continuous is called the \emph{initial uniformity} or \emph{weak uniformity}.
+
+\begin{thebibliography}{9}
+\bibitem{TG}
+Nicolas Bourbaki, {\it Elements of Mathematics: General Topology: Part 1}, Hermann, 1966.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

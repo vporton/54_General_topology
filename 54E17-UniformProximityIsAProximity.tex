@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformProximityIsAProximity}
+\pmcreated{2013-03-22 18:07:21}
+\pmmodified{2013-03-22 18:07:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{uniform proximity is a proximity}
+\pmrecord{7}{40671}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E17}
+\pmclassification{msc}{54E05}
+\pmclassification{msc}{54E15}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we want to show that a uniform proximity is, as expected, a proximity.
+
+First, the following equivalent characterizations of a uniform proximity is useful:
+
+\begin{lem} Let $X$ be a uniform space with uniformity $\mathcal{U}$, and $A,B$ are subsets of $X$.  Denote $U[A]$ the image of $A$ under $U\in \mathcal{U}$: $$\lbrace b\in X\mid (a,b)\in U \mbox{ for some } a \in A\rbrace.$$  The following are equivalent:
+\begin{enumerate}
+\item $(A\times B)\cap U\ne \varnothing$ for all $U\in \mathcal{U}$
+\item $U[A]\cap U[B]\ne \varnothing$ for all $U\in \mathcal{U}$
+\item $U[A]\cap B\ne \varnothing$ for all $U\in \mathcal{U}$
+\end{enumerate}
+\end{lem}
+
+If we define $A\delta B$ iff the pair $A,B$ satisfy any one of the above conditions for all $U\in \mathcal{U}$, we call $\delta$ the uniform proximity.
+
+\begin{proof}
+($1\Rightarrow 2$) Suppose $(a,b)\in (A\times B)\cap U$.  Then $b\in U[A]$.  Since $U$ is reflexive, $(b,b)\in U$, or $b\in U[B]$.  This means $b\in U[A]\cap U[B]$.
+
+($2\Rightarrow 3$) For any $U\in \mathcal{U}$, we can find $V\in \mathcal{U}$ such that $V\circ V\subseteq U$.  So $V = V\circ \Delta \subseteq V\circ V\subseteq W$, where $\Delta$ is the diagonal relation (since $V$ is reflexive).  Set $W=V\cap V^{-1}$.  By assumption, there is $c\in W[A]\cap W[B]$ (and hence $c\in U[A]\cap U[B]$ as well).  This means $(a,c), (b,c)\in W$ for some $a \in A$ and $b\in B$.  Since $W$ is symmetric, $(c,b)\in W\subseteq V$, so that $(a,b)=(a,c)\circ (c,b)\in V\subseteq U$.  This means that $b\in U[A]$.  As a result, $U[A]\cap B\ne \varnothing$.
+
+($3\Rightarrow 1$) If $b\in U[A]\cap B$, then there is $a\in A$ such that $(a,b)\in U$, or $(A\times B)\cap U\ne \varnothing$.
+\end{proof}
+
+We want to prove the following:
+
+\begin{prop}  The binary relation $\delta$ on $P(X)$ defined by $$A\delta B\quad\mbox{iff}\quad (A\times B)\cap U\ne \varnothing \mbox{ for all }U\in \mathcal{U}$$ is a proximity on $X$.
+\end{prop}
+
+
+\begin{proof}
+We verify each of the axioms of a proximity relation:
+\begin{enumerate}
+\item if $A\cap B\ne \varnothing$, then $A\delta B$:
+
+pick $c\in A\cap B$, then $(c,c)\in U$ since the diagonal relation $\Delta\subseteq U$ for all $U\in \mathcal{U}$.
+
+\item if $A\delta B$, then $A\ne \varnothing$ and $B\ne \varnothing$:
+
+If $A\delta B$, then $(A\times B)\cap U\ne \varnothing$ for every $U\in\mathcal{U}$, since no $U$ is empty, there is $(a,b)\in U$ such that $(a,b)\in A\times B$, or $A\ne \varnothing$ and $B\ne \varnothing$.
+
+\item (symmetry) if $A\delta B$, then $B\delta A$:
+
+If $A\delta B$, then there is $(a_U,b_U)\in (A\times B)\cap U^{-1}$ for every $U\in \mathcal{U}$, so $(b_U,a_U)\in U$, which implies $(B\times A)\cap U\ne \varnothing$, or $B\delta A$.
+
+\item $(A_1\cup A_2)\delta B$ iff $A_1\delta B$ or $A_2\delta B$:
+
+Since $(A_1\cup A_2)\times B=(A_1\times B)\cup (A_2\times B)$, 
+\begin{eqnarray*}
+&& (a,b)\in \big((A_1\cup A_2)\times B\big)\cap U \\ & \mbox{iff} & (a,b)\in \big((A_1\times B)\cup (A_2\times B)\big)\cap U  = \big((A_1\times B)\cap U\big)\cup \big((A_2\times B)\cap U\big) \\ & \mbox{iff} & (a,b)\in (A_1\times B)\cap U \mbox{ or } (a,b)\in (A_2\times B)\cap U.
+\end{eqnarray*}
+
+\item $A\delta'B$ implies the existence of $C\in P(X)$ with $A\delta'C$ and $(X-C)\delta'B$, where $A\delta'B$ means $(A,B)\notin \delta$.
+
+First note that $\delta'$ is symmetric because $\delta$ is.  By assumption, there is $U\in \mathcal{U}$ such that $U[A]\cap U[B]=\varnothing$ (second equivalent characterization of uniform proximity from lemma above).  Set $C=U[B]$.  Then $U[A]\cap C=\varnothing$.  By the third equivalent condition of uniform proximity, $A\delta'C$.  Likewise, $U[B]\cap (X-C) = U[B]\cap (X-U[B]) = \varnothing$, so $B\delta' (X-C)$, or $(X-C)\delta' B$.
+\end{enumerate}
+
+This shows that $\delta$ is a proximity on $X$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

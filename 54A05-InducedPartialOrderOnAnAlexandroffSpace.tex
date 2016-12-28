@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InducedPartialOrderOnAnAlexandroffSpace}
+\pmcreated{2013-03-22 18:45:55}
+\pmmodified{2013-03-22 18:45:55}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{induced partial order on an Alexandroff space}
+\pmrecord{4}{41546}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a $\mathrm{T}_{0}$, Alexandroff space. For $A\subseteq X$ denote by $A^{o}$ the intersection of all open neighbourhoods of $A$. Define a relation $\leq$ on $X$ as follows: for any $x,y\in X$ we have $x\leq y$ if and only if $x\in\{y\}^{o}$. This relation will be called the \textit{induced partial order on $X$}.
+
+\textbf{Proposition 1.} $(X,\leq)$ is a poset.
+
+\textit{Proof.} Of course $x\in\{x\}^{o}$ for any $x\in X$. Thus $\leq$ is reflexive.
+
+Assume now that $x\leq y$ and $y\leq x$ for some $x,y\in X$. Assume that $x\neq y$. Then, since $X$ is a $\mathrm{T}_{0}$ space, there is an open set $U$ such that $x\in U$ and $y\not\in U$ or there is an open set $V$ such that $y\in V$ and $x\not\in V$. Both cases lead to contradiction, because we assumed that $x\in\{y\}^{o}$ and $y\in\{x\}^{o}$. Thus every open neighbourhood of one element must also contain the other. Thus $\leq$ is antisymmetric.
+
+Finally assume that $x\leq y$ and $y\leq z$ for some $x,y,z\in X$. Since $y\in\{z\}^{o}$, then $\{z\}^{o}$ is an open neighbourhood of $y$ and thus $\{y\}^{o}\subseteq\{z\}^{o}$. Therefore $x\in\{z\}^{o}$, so $\leq$ is transitive, which completes the proof. $\square$
+
+\textbf{Proposition 2.} Let $X,Y$ be two, $\mathrm{T}_{0}$, Alexandroff spaces and $f:X\to Y$ be a function. Then $f$ is continuous if and only if $f$ preserves the induced partial order.
+
+\textit{Proof.} ,,$\Rightarrow$'' Assume that $f$ is continuous and suppose that $x,y\in X$ are such that $x\leq y$. We wish to show that $f(x)\leq f(y)$, so assume this is not the case. Let $A=\{f(y)\}^{o}$. Then $f(x)\not\in A$. But $A$ is open, so $f^{-1}(A)$ is also open (because we assumed that $f$ is continuous). Furthermore $y\in f^{-1}(A)$ and because $x\leq y$, then $x\in f^{-1}(A)$, but this implies that $f(x)\in A$. Contradiction.
+
+,,$\Leftarrow$'' Assume that $f$ preserves the induced partial order and let $U\subseteq Y$ be an open subset. Let $x\in U$. Then for any $y\leq x$ we have $f(y)\leq f(x)$ (because $f$ preserves the induced partial order) and since $\{f(x)\}^{o}\subseteq U$ (because $U$ is open and $\{f(x)\}^{o}$ is the smallest open neighbourhood of $f(x)$) we have that $f(y)\in U$. Thus $$\{x\}^{o}=\{y\in X\ |\ y\leq x\}\subseteq f^{-1}(U)$$
+which implies that $f^{-1}(U)$ is open because $f^{-1}(A)$ contains a small neighbourhood of each point. This completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

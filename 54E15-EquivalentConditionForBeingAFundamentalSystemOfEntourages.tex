@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentConditionForBeingAFundamentalSystemOfEntourages}
+\pmcreated{2013-03-22 16:30:02}
+\pmmodified{2013-03-22 16:30:02}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{equivalent condition for being a fundamental system of entourages}
+\pmrecord{5}{38676}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\BB}{\mathcal{B}}
+\newtheorem*{lemma*}{Lemma}
+\begin{document}
+\PMlinkescapeword{axioms}
+\PMlinkescapeword{axiom}
+\PMlinkescapeword{satisfies}
+
+\begin{lemma*}
+Let $X$ be a set and let $\BB$ be a nonempty family of subsets of $X\times X$.  Then $\BB$ is a fundamental system of entourages of a uniformity on $X$ if and only if it satisfies the following axioms.
+\begin{itemize}
+\item
+(B1) If $S$, $T\in\BB$, then $S\cap T$ contains an element of $\BB$.
+
+\item
+(B2) Each element of $\BB$ contains the diagonal $\Delta(X)$.
+
+\item
+(B3) For any $S\in\BB$, the inverse relation of $S$ contains an element of $\BB$.
+
+\item
+(B4) For any $S\in\BB$, there is an element $T\in\BB$ such that the relational composition $T\circ T$ is contained in $S$.
+\end{itemize}
+\end{lemma*}
+
+\begin{proof}
+Suppose $\BB$ is a fundamental system of entourages for a uniformity $\UU$.  Verification of axiom (B2) is immediate, since $\BB\subseteq\UU$ and each entourage is already required to contain the diagonal of $X$.  We will prove that $\BB$ satisfies (B1); the proofs that (B3) and (B4) hold are analogous.
+
+Let $S$, $T$ be entourages in $\BB\subseteq\UU$.  Since $\UU$ is closed under binary intersections, $S\cap T\in\UU$.  By the definition of fundamental system of entourages, since $S\cap T\in\UU$, there exists an entourage $B\in\BB$ such that $B\subseteq S\cap T$.  Thus $\BB$ satisfies axioms (B1) through (B4).
+
+To prove the converse, define a family of subsets of $X\times X$ by
+\[
+\UU = \{ S \subseteq X\times X \colon B\subseteq S \text{\ for some $B\in\BB$} \}.
+\]
+By construction, each element of $\UU$ contains an element of $\BB$, so all that remains is to show that $\UU$ is a uniformity.  Suppose $T$ is a subset of $X\times X$ that contains an element $S\in\UU$.  By the definition of $\UU$, there exists some $B\in\BB$ such that $B\subseteq S$.  Since $S\subseteq T$, it follows that $B\subseteq T$, so $T$ satisfies the requirement for membership in $\UU$.  Thus $\UU$ is closed under taking supersets.  The remaining axioms for a uniformity follow directly from the appropriate axioms for the fundamental system of entourages by applying the axiom we have just checked.  Hence $\BB$ is a fundamental system of entourages for a uniformity on $X$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

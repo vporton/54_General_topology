@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonemptyPerfectSubsetOfmathbbRThatContainsNoRationalNumberA}
+\pmcreated{2013-03-22 15:26:10}
+\pmmodified{2013-03-22 15:26:10}
+\pmowner{Gorkem}{3644}
+\pmmodifier{Gorkem}{3644}
+\pmtitle{nonempty perfect subset of $\mathbb{R}$ that contains no rational number, a}
+\pmrecord{18}{37283}
+\pmprivacy{1}
+\pmauthor{Gorkem}{3644}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\disp}{\displaystyle}
+\begin{document}
+We will construct a nonempty perfect set contained in $\mathbb{R}$ that
+contains no rational number.
+
+We will begin with a closed interval, and then, imitating the
+construction of Cantor set, we will inductively delete each
+rational number in it together with an open interval.  We will do
+it in such a way that the end points of the open intervals will
+never be deleted afterwards.
+
+Let $E_0 = [b_0, a_0]$ for some irrational numbers $a_0$ and $b_0$,
+ with $b_0<a_0$
+. Let $\{ q_1, q_2, q_3, \ldots \}$ be an enumeration of the
+rational numbers in $[b_0, a_0]$. For each $q_i$, we will define an
+open interval $(a_i,b_i)$ and delete it.
+
+Let $a_1$ and $b_1$ be two irrational numbers such that
+$b_0<a_1<q_1<b_1<a_0$. Define $E_1 = E_0\backslash (a_1,b_1)$.
+
+Having defined $ E_1,E_2,\ldots,E_n$, $ a_1,a_2,\ldots,a_n $ and $
+b_1,b_2,\ldots,b_n $, let's define $a_{n+1}$ and $b_{n+1}$:
+
+If  $\disp q_{n+1}\in \bigcup_{k=1}^n (a_k,b_k)$ then there exists
+an $i\leq n$ such that $q_{n+1}\in  (a_i,b_i)$.  Let $a_{n+1}=a_i$
+and $b_{n+1}=b_i$.
+
+Otherwise let $a_{n+1}$ and $b_{n+1}$ be two irrational numbers
+such that $b_0<a_{n+1}<q_{n+1}<b_{n+1}<a_0$, and which satisfy:
+$$
+\disp q_{n+1} - a_{n+1} < \min_{i=0,1,2,\ldots,n}\{|q_{n+1} -
+b_i|\}$$ and $$\disp b_{n+1} - q_{n+1} <
+\min_{i=0,1,2,\ldots,n}\{|a_i - q_{n+1}|\}.
+$$
+
+
+
+Now define $E_{n+1}=E_n\backslash (a_{n+1},b_{n+1})$.  Note that
+by our choice of $a_{n+1}$ and $b_{n+1}$ any of the previous end
+points are not removed from $E_n$.
+
+Let $\disp E = \bigcap_{n=1}^\infty E_n$.  $E$ is clearly
+nonempty, does not contain any rational number, and also it is
+compact, being an intersection of compact sets.
+
+Now let us see that $E$ does not have any isolated points. Let
+$x\in E$, and $\epsilon>0$ be given. If $x\neq a_j$ for any $j \in \{0,1,2,\ldots\}$, choose a rational number
+$q_k$ such that $x<q_k<x+\epsilon$.  Then $q_k\in(a_k,b_k)$ and
+since $x\in E$ we must have $x<a_k$, which means $a_k \in (x,
+x+\epsilon)$. Since we know that $a_k\in E $, this shows that $x$ is a limit point.  Otherwise, if $x = a_j$ for some $j$, then choose a $q_k$ such that $x-\epsilon < q_k < x$. Similarly, $q_k \in (a_k, b_k)$ and it follows that $b_k\in (x-\epsilon, x)$.    We have shown that
+any point of $E$ is a limit point, hence $E$ is perfect.
+%%%%%
+%%%%%
+\end{document}

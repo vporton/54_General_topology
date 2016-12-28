@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnotherProofOfTheNonexistenceOfAContinuousFunctionThatSwitchesTheRationalAndTheIrrationalNumbers}
+\pmcreated{2013-03-22 16:23:54}
+\pmmodified{2013-03-22 16:23:54}
+\pmowner{neapol1s}{9480}
+\pmmodifier{neapol1s}{9480}
+\pmtitle{another proof of the non-existence of a continuous function that switches the rational and the irrational numbers}
+\pmrecord{7}{38546}
+\pmprivacy{1}
+\pmauthor{neapol1s}{9480}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E52}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathbb{J}=\mathbb{R}\setminus\mathbb{Q}$ denote the irrationals.
+There is no continuous function $f\colon \mathbb{R} \to \mathbb{R}$
+such that $f(\mathbb{Q})\subseteq \mathbb{J}$ and $f(\mathbb{J})\subseteq\mathbb{Q}$.
+
+\textbf{Proof}
+
+Suppose $f$ is such a function. Since $\mathbb{Q}$ is countable, $f(\mathbb{Q})$ and $f(\mathbb{J})$ are also countable. Therefore the image of $f$ is countable. If $f$ is not a constant function, then by the intermediate value theorem the image of $f$ contains a nonempty interval, so the image of $f$ is uncountable. We have just shown that this isn't the case, so there must be some $c$ such that $f(x)=c$ for all $x\in\mathbb{R}$. Therefore $f(\mathbb{Q})=\{c\}\subset\mathbb{J}$ and $f(\mathbb{J})=\{c\}\subset\mathbb{Q}$. Obviously no number is both rational and irrational, so no such $f$ exists.
+%%%%%
+%%%%%
+\end{document}

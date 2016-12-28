@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologyInducedByUniformStructure}
+\pmcreated{2013-03-22 12:46:44}
+\pmmodified{2013-03-22 12:46:44}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{topology induced by uniform structure}
+\pmrecord{7}{33091}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E15}
+\pmrelated{UniformNeighborhood}
+\pmdefines{uniform topology}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\mathcal{U}$ be a uniform structure on a set $X$. We define a subset $A$ to be open if and only if for each $x \in A$ there exists an entourage $U \in \mathcal{U}$ such that whenever $(x,y) \in U$, then $y \in A$.
+
+Let us verify that this defines a topology on $X$.
+
+Clearly, the subsets $\emptyset$ and $X$ are open. If $A$ and $B$ are two open sets, then for each $x \in A \cap B$, there exist an entourage $U$ such that, whenever $(x,y) \in U$, then $y \in A$, and an entourage $V$ such that, whenever $(x,y) \in V$, then $y \in B$. Consider the entourage $U \cap V$: whenever $(x,y) \in U\cap V$, then $y \in A \cap B$, hence $A \cap B$ is open.
+
+Suppose $\mathcal{F}$ is an arbitrary family of open subsets. For each $x \in \bigcup \mathcal{F}$, there exists $A \in \mathcal{F}$ such that $x \in A$. Let $U$ be the entourage whose existence is granted by the definition of open set. We have that whenever $(x,y) \in U$, then $y \in A$; hence $y \in \bigcup \mathcal{F}$, which concludes the proof.
+%%%%%
+%%%%%
+\end{document}

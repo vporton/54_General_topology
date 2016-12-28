@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MetricSpacesAreHausdorff}
+\pmcreated{2013-03-22 14:21:29}
+\pmmodified{2013-03-22 14:21:29}
+\pmowner{waj}{4416}
+\pmmodifier{waj}{4416}
+\pmtitle{metric spaces are Hausdorff}
+\pmrecord{4}{35838}
+\pmprivacy{1}
+\pmauthor{waj}{4416}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D10}
+\pmclassification{msc}{54E35}
+%\pmkeywords{teaching proofs}
+\pmrelated{MetricSpace}
+\pmrelated{SeparationAxioms}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\co{\colon\thinspace}
+\theoremstyle{definition}
+\newtheorem*{thm}{Theorem}
+\begin{document}
+Suppose we have a space $X$ and a metric $d$ on $X$.  We'd like to show that the metric topology that $d$ gives $X$ is Hausdorff.
+
+Say we've got distinct $x,y\in X$.  Since $d$ is a metric, $d(x,y)\neq 0$.  Then the open balls $B_x = B(x,\frac{d(x,y)}{2})$ and $B_y = B(y, \frac{d(x,y)}{2})$ are open sets in the metric topology which contain $x$ and $y$ respectively.  If we could show $B_x$ and $B_y$ are disjoint, we'd have shown that $X$ is Hausdorff.
+
+We'd like to show that an arbitrary point $z$ can't be in both $B_x$ and $B_y$.  Suppose there is a $z$ in both, and we'll derive a contradiction.  Since $z$ is in these open balls, $d(z,x) < \frac{d(x,y)}{2}$ and $d(z,y) < \frac{d(x,y)}{2}$.  But then $d(z,x) + d(z,y) < d(x,y)$, contradicting the triangle inequality.
+
+So $B_x$ and $B_y$ are disjoint, and $X$ is Hausdorff.$\square$
+%%%%%
+%%%%%
+\end{document}

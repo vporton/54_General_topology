@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ASpaceIsT1IfAndOnlyIfEverySubsetAIsTheIntersectionOfAllOpenSetsContainingA}
+\pmcreated{2013-03-22 14:20:18}
+\pmmodified{2013-03-22 14:20:18}
+\pmowner{waj}{4416}
+\pmmodifier{waj}{4416}
+\pmtitle{a space is T1 if and only if every subset A is the intersection of all open sets containing A}
+\pmrecord{4}{35809}
+\pmprivacy{1}
+\pmauthor{waj}{4416}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D10}
+\pmrelated{T1Space}
+\pmrelated{ASpaceIsT1IfAndOnlyIfEverySingletonIsClosed}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Say we have $X$, a $T^1$-space, and $A$, a subset of $X$.  We aim to show that the intersection of all open sets containing $A$ equals $A$.  By de Morgan's laws, that would be true if the complement of $A$, $A^c$, equalled the union of all closed sets in $A^c$.  Let's call this union of closed sets $C$.
+
+Each set that makes up $C$ is contained by $A^c$, so $C\subset A^c$.  If we could show $A^c\subset C$, we'd be done.
+
+\PMlinkname{Since $X$ is $T^1$, each singleton in $A^c$ is closed}{ASpaceIsT1IfAndOnlyIfEverySingletonIsClosed}. Their union, a subset of $C$, contains $A^c$, so we're through.
+
+Now suppose we know that in some topological space $X$, any subset $A$ of $X$ is the intersection of all open sets containing $A$.  Given $x\neq y$, we're looking for an open set containing $x$ but not $y$, to show that $X$ is $T^1$.
+
+\[\{x\}=\bigcap_{\substack{U\text{ open}\\U\ni x}}U\]
+
+by hypothesis.  If all open sets containing $x$ contained $y$, $y$ would be in the intersection; since $y$ isn't in the intersection, $X$ must be $T^1$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompactSubspaceOfAHausdorffSpaceIsClosed}
+\pmcreated{2013-03-22 16:31:23}
+\pmmodified{2013-03-22 16:31:23}
+\pmowner{ehremo}{15714}
+\pmmodifier{ehremo}{15714}
+\pmtitle{compact subspace of a Hausdorff space is closed}
+\pmrecord{7}{38702}
+\pmprivacy{1}
+\pmauthor{ehremo}{15714}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D30}
+%\pmkeywords{compact subspace subset Hausdorff space closed}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a Hausdorff space, and $Y$ be a compact subspace of $X$. We prove that $X\setminus Y$ is open, by finding for every point $x \in X \setminus Y$ a neighborhood $U_x$ disjoint from $Y$.
+
+Let $y \in Y$. $x \neq y$, so by the definition of a Hausdorff space, there exist open neighborhoods $U_x^{(y)}$ of $x$ and $V_x^{(y)}$ of $y$ such that $U_x^{(y)} \cap V_x^{(y)} = \emptyset$. Clearly
+$$Y \subseteq \bigcup_{y \in Y} V_x^{(y)}$$
+but since $Y$ is compact, we can select from these a finite subcover of $Y$
+$$Y \subseteq V_x^{(y_1)} \cup \cdots \cup V_x^{(y_n)}$$
+Now for every $y \in Y$ there exists $k \in 1...n$ such that $y \in V_x^{(y_k)}$. Since $U_x^{(y_k)}$ and $V_x^{(y_k)}$ are disjoint, $y \not\in U_x^{(y_k)}$, therefore neither is it in the intersection
+$$U_x = \bigcap_{j=1}^n U_x^{(y_j)}$$
+A finite intersection of open sets is open, hence $U_x$ is a neighborhood of $x$ disjoint from $Y$.
+%%%%%
+%%%%%
+\end{document}

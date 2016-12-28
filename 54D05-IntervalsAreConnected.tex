@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntervalsAreConnected}
+\pmcreated{2013-03-22 18:32:49}
+\pmmodified{2013-03-22 18:32:49}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{intervals are connected}
+\pmrecord{5}{41267}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We wish to show that intervals (with standard topology) are connected. In order to this, we will prove that the space of real numbers $\mathbb{R}$ is connected. First we need a lemma.
+
+Let $(X,d)$ be a metric space. Recall that for $x\in X$ and $r\in\mathbb{R}^{+}$ we have $$B(x,r)=\{y\in X\ |\ d(x,y)<r\}.$$
+
+\textbf{Lemma}. Let $(X,d)$ be a metric space and $R\subset\mathbb{R}^{+}$ such that $R$ is nonempty and bounded. Then for any $x\in X$ we have
+$$\bigcup_{r\in R}B(x,r)=B(x,\mathrm{sup}(R)).$$
+
+\textit{Proof}. Assume that $y\in\bigcup_{r\in R}B(x,r)$. Then there is $r_0\in R$ such that $d(x,y)<r_0$ and thus $d(x,y)<\mathrm{sup}(R)$, so $y\in B(x,\mathrm{sup}(R))$.
+
+Now assume that $y\in B(x,\mathrm{sup}(R))$. Then $d(x,y)<\mathrm{sup}(R)$ and it follows (from the definition of supremum) that there is $r_0\in R$ such that $d(x,y)<r_0$ and therefore $y\in B(x,r_0)\subset\bigcup_{r\in R}B(x,r)$, which completes the proof. $\square$
+
+
+\textbf{Proposition}. The space of real numbers is connected.
+
+\textit{Proof}. Assume that $U,V \subseteq\mathbb{R}$ are open subsets of $\mathbb{R}$ such that $U\cap V = \emptyset$ and $U\cup V = \mathbb{R}$. Furthermore assume that $U \neq \emptyset$ and take any $x_{0} \in U$. Then (since $U$ is open) there is $r_{0}\in\mathbb{R}$ such that the open ball $$B(x_{0},r_{0})=\{ x\in \mathbb{R}\ |\ |x-x_{0}|<r_{0}\} $$
+is contained in $U$. Consider the set 
+$$R=\{ r\in\mathbb{R}^{+}\ |\ B(x_0,r)\subseteq U\} .$$
+Thus $R$ is nonempty.
+
+
+Assume that $R$ is bounded. Denote by $s=\mathrm{sup}(R)<\infty$. We can apply the lemma:
+$$\bigcup_{r\in R} B(x_0,r)=B(x_0,s).$$
+Thus (due to the definition of $R$) $B(x_0,s)$ is a maximal open ball (with the center in $x_0$) which is contained in $U$. Now $$B(x_0,s)=(a,b)$$
+for some $a,b\in\mathbb{R}$. Since $(a,b)$ is maximal then $a\not\in U$ or $b\not\in U$. Indeed, if both $a\in U$ and $b\in U$, then (since $U$ is open) small neighbourhoods of $a$ and $b$ are also contained in $U$, so $(a-\epsilon,b+\epsilon)$ is contained in $U$ (for some $\epsilon>0$), but $(a,b)$ was maximal. Contradiction.
+
+Without loss of generality we can assume that $b\not\in U$. Then $b\in V$, because $U\cup V=\mathbb{R}$. But then (since $V$ is open) there is $c\in\mathbb{R}$ such that $a<c<b$ and $c\in V$. Thus $U\cap V\neq\emptyset$. Contradiction. Therefore $R$ is unbounded. 
+
+
+Take any unbounded sequence $(a_n)_{n=1}^{\infty}$ from $R$. Then we have
+$$\mathbb{R}=\bigcup_{n=1}^{\infty} B(x_0,a_n)\subseteq U$$
+and thus $U=\mathbb{R}$, so $V=\emptyset$. This completes the proof. $\square$
+
+\textbf{Corollary}. For any $a,b\in\mathbb{R}$ such that $a<b$ intervals $(a,b)$, $[a,b)$, $(a,b]$ and $[a,b]$ are connected.
+
+\textit{Proof}. One can easily show that intervals are continous image of $\mathbb{R}$ and therefore intervals are connected.
+%%%%%
+%%%%%
+\end{document}

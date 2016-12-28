@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnotherProofOfDinisTheorem}
+\pmcreated{2013-03-22 14:04:37}
+\pmmodified{2013-03-22 14:04:37}
+\pmowner{gumau}{3545}
+\pmmodifier{gumau}{3545}
+\pmtitle{another proof of Dini's theorem}
+\pmrecord{11}{35437}
+\pmprivacy{1}
+\pmauthor{gumau}{3545}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This is the version of the \textbf{Dini's theorem} I will prove:
+Let $K$ be a compact metric space and $\left( {f_n }
+\right)_{n\in N} \subset C(K)$ which converges pointwise to $f\in
+C(K)$.
+
+Besides, $f_n (x)\ge f_{n+1} (x)\quad \forall x\in K,\forall n$.
+
+Then $\left( {f_n } \right)_{n\in N} $ converges uniformly in $K$.
+
+\textbf{Proof}
+
+Suppose that the sequence does not converge uniformly. Then, by definition,
+\[
+\exists \varepsilon >0\;\text{such that }\forall m\in N\;\exists \;n_m
+>m,\;x_m \in K\;\text{such that }\quad \left| {f_{n_m } (x_m )-f(x_m )}
+\right|\ge \varepsilon .
+\]
+So,
+\[
+\begin{array}{l}
+ \text{For } \;m=1\;\exists \;n_1 >1\;,\;x_1 \in K\;\text{such that }\;\left| {f_{n_1 } (x_1
+)-f(x_1 )} \right|\ge \varepsilon \\
+ \exists \;n_2 >n_1 \;,\;x_2 \in K\;\text{such that }\;\left| {f_{n_2 } (x_2
+)-f(x_2 )} \right|\ge \varepsilon \\
+ \vdots \\
+ \exists \;n_m >n_{m-1} \;,\;x_m \in K\;\text{such that }\;\left| {f_{n_m } (x_m
+)-f(x_m )} \right|\ge \varepsilon \\
+ \end{array}
+\]
+Then we have a sequence $\left( {x_m } \right)_m \subset K$ and $\left( {f_{n_{m}} } \right)_m \subset \left( {f_n } \right)_n$
+is a subsequence of the original sequence of functions. $K$ is compact, so there is a subsequence of $\left( {x_m } \right)_m$
+which converges in $K$, that is, $\left( {x_{m_{j}} } \right)_j $ such that
+\[
+x_{m_{j}}\longrightarrow x \in K
+\]
+I will prove that $f$ is not continuous in $x$ (A contradiction with one of the hypothesis).
+
+To do this, I will show that $f\left( {x_{m_{j}} } \right)_j $ does not converge to $f(x)$, using above's $\varepsilon$.
+
+
+Let $j_0 \;\text{such that }\;j\ge j_0 \Rightarrow \left| {f_{n_{m_j } } (x)-f(x)}
+\right|<\raise0.7ex\hbox{$\varepsilon $} \!\mathord{\left/ {\vphantom
+{\varepsilon 4}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$4$}$,
+which exists due to the punctual convergence of the sequence. Then,
+particularly, $\left| {f_{n_{m_{j_o } } } (x)-f(x)}
+\right|<\raise0.7ex\hbox{$\varepsilon $} \!\mathord{\left/ {\vphantom
+{\varepsilon 4}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$4$}$.
+
+Note that
+\[
+\left| {f_{n_{m_j } } (x_{m_j } )-f(x_{m_j } )} \right|=f_{n_{m_j } }
+(x_{m_j } )-f(x_{m_j } )
+\]
+because (using the hypothesis $f_n (y)\ge f_{n+1} (y)\quad \forall y\in K,\forall n$) it's easy to see that 
+\[
+f_n (y)\ge f(y)\quad \forall y\in K,\forall n
+\]
+
+Then, $f_{n_{m_j } } (x_{m_j } )-f(x_{m_j } )\ge \varepsilon \;\forall
+j$. And also the hypothesis implies
+\[
+f_{n_{m_j } } (y)\ge f_{n_{m_{j+1} } } (y)\;\;\forall y\in K,\forall j
+\]
+So, $j\ge j_0 \Rightarrow f_{n_{m_{j_0 } } } (x_{m_j } )\ge f_{n_{m_j } } (x_{m_j } ),$ which implies
+\[
+\left| {f_{n_{m_{j_0 } } } (x_{m_j } )-f(x_{m_j } )} \right|\ge \varepsilon
+\]
+
+Now,
+\[
+\left| {f_{n_{m_{j_0 } } } (x_{m_j } )-f(x)} \right|+\left| {f(x_{m_j }
+)-f(x)} \right|\ge \left| {f_{n_{m_{j_0 } } } (x_{m_j } )-f(x_{m_j } )}
+\right|\ge \varepsilon \;\;\forall j\ge j_0
+\]
+and so
+\[
+\left| {f(x_{m_j } )-f(x)} \right|\ge \varepsilon -\left| {f_{n_{m_{j_0 } }
+} (x_{m_j } )-f(x)} \right|\;\;\forall j\ge j_0 .
+\]
+
+On the other hand,
+\[
+\left| {f_{n_{m_{j_0 } } } (x_{m_j } )-f(x)} \right|\le \left|
+{f_{n_{m_{j_0 } } } (x_{m_j } )-f_{n_{m_{j_0 } } } (x)} \right|+\left|
+{f_{n_{m_{j_0 } } } (x)-f(x)} \right|
+\]
+
+And as $f_{n_{m_{j_0 } } } $ is continuous, there is a $j_1 $
+such that
+\[
+j\ge j_1 \Rightarrow \left| {f_{n_{m_{j_0 } } } (x_{m_j }
+)-f_{n_{m_{j_0 } } } (x)} \right|<\raise0.7ex\hbox{$\varepsilon $}
+\!\mathord{\left/ {\vphantom {\varepsilon
+4}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$4$}
+\]
+
+Then,
+\[
+j\ge j_1\Rightarrow \left|
+{f_{n_{m_{j_0 } } } (x_{m_j } )-f(x)} \right|\le \left| {f_{n_{m_{j_0 } } }
+(x_{m_j } )-f_{n_{m_{j_0 } } } (x)} \right|+\left| {f_{n_{m_{j_0 } } }
+(x)-f(x)} \right|<\raise0.7ex\hbox{$\varepsilon $} \!\mathord{\left/
+{\vphantom {\varepsilon
+2}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$2$},\]
+which implies
+\[
+\left| {f(x_{m_j } )-f(x)} \right|\ge \varepsilon -\left| {f_{n_{m_{j_0 } }
+} (x_{m_j } )-f(x)} \right|\ge \raise0.7ex\hbox{$\varepsilon $}
+\!\mathord{\left/ {\vphantom {\varepsilon
+2}}\right.\kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$2$}\;\;\forall j\ge
+\max \left( {j_0 ,j_1 } \right).
+\] Then, particularly, $f(x_{m_j } )_j $ does not converge to $f(x)$. QED.
+%%%%%
+%%%%%
+\end{document}

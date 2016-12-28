@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NoncommutativeTopology}
+\pmcreated{2013-03-22 17:40:18}
+\pmmodified{2013-03-22 17:40:18}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{noncommutative topology}
+\pmrecord{14}{40110}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A99}
+\pmclassification{msc}{46L85}
+\pmclassification{msc}{46L05}
+\pmrelated{GelfandTransform}
+\pmrelated{NoncommutativeGeometry}
+\pmdefines{noncommutative topology dictionary}
+\pmdefines{Noncommutative Geometry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{theory}
+
+\section{Noncommutative Topology}
+Noncommutative topology is basically the theory of \PMlinkname{$C^*$-algebras}{CAlgebra}. But why the name noncommutative topology then?
+
+It turns out that commutative $C^*$-algebras and 
+\PMlinkname{locally compact Hausdorff spaces}{LocallyCompactHausdorffSpace} are one and the same "thing" (this will be explained further ahead). Every commutative $C^*$-algebra corresponds to a locally compact Hausdorff space and vice-versa and there is a correspondence between topological properties of spaces and $C^*$-algebraic properties (see the noncommutative topology dictionary below).
+
+The $C^*$-algebraic properties and concepts are of course present in noncommutative $C^*$-algebras too. Thus, although noncommutative $C^*$-algebras cannot be associated with "standard" topological spaces, all the topological/$C^*$ concepts are present. For this reason, this \PMlinkescapetext{area} of mathematics was given the name "noncommutative topology".
+
+In this \PMlinkescapetext{way}, noncommutative topology can be seen as "topology, but without spaces".
+
+\section{The Commutative Case}
+Given a locally compact Hausdorff space $X$, all of its topological properties are encoded in $C_0(X)$, the algebra of complex-valued continuous functions in $X$ that vanish at \PMlinkescapetext{infinity}. Notice that $C_0(X)$ is a commutative $C^*$-algebra.
+
+Conversely, given a commutative $C^*$-algebra $\mathcal{A}$, the Gelfand transform provides an isomorphism between $\mathcal{A}$ and $C_0(X)$, for a suitable locally compact Hausdorff space $X$.
+
+Furthermore, there is an \PMlinkname{equivalence}{EquivalenceOfCategories} between the category of locally compact Hausdorff spaces and the category of commutative $C^*$-algebras. This is the content of the Gelfand-Naimark theorem.
+
+This equivalence of categories is one of the reasons for saying that locally compact Hausdorff spaces and commutative $C^*$-algebras are the same thing. The other reason is the correspondence between topological and $C^*$-algebraic properties, present in the following dictionary.
+
+\section{Noncommutative Topology Dictionary}
+
+We only provide a short list of easy-to-state concepts. Some correspondences of properties are technical and could not be easily stated here. Some of them originate new \PMlinkescapetext{branches} of "noncommutative mathematics", such as noncommutative measure theory.
+$\,$
+
+\begin{tabular}{|l|l|}
+{\bf Topological properties and concepts} & {\bf $C^*$-algebraic properties and concepts}\\
+topological space & $C^*$-algebra\\
+proper map & *-homomorphism\\
+homeomorphism & *-isomorphism\\
+open subset & ideal\\
+closed subset & \PMlinkname{quotient}{QuotientRing}\\
+compact space & algebra with unit\\
+compactification & unitization \\
+one-point compactification & \PMlinkname{minimal unitization}{Unitization}\\
+\PMlinkname{Stone-Cech compactification}{StoneVCechCompactification} & \PMlinkescapetext{maximal} unitization\\
+second countable & separable\\
+connected & projectionless\\
+connected components and topological sums & projections\\
+complement of singleton & maximal ideal\\
+Radon measure & \PMlinkescapetext{positive linear functional}\\
+\end{tabular}
+
+\subsection{Remarks:}
+
+1. Noncommutative topology can be considered as part of \PMlinkexternal{Nonabelian Algebraic Topology (NAAT)}{http://aux.planetphysics.us/files/books/167/Anatv1.pdf}.
+
+2.A specialized form of noncommutative topology is generally known as 
+\PMlinkname{\em Noncommutative Geometry}{NoncommutativeGeometry} and has been introduced and developed by Professor Alain Connes (Field Medialist in 1982 and Crafoord Prize in 2001).
+
+%%%%%
+%%%%%
+\end{document}

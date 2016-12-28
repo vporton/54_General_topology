@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBaireCategoryTheorem}
+\pmcreated{2013-03-22 13:06:55}
+\pmmodified{2013-03-22 13:06:55}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of Baire category theorem}
+\pmrecord{10}{33543}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E52}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+Let $(X,d)$ be a complete metric space, and $U_k$ a countable
+collection of dense, open subsets.  Let $x_0\in X$ and $\epsilon_0>0$ be
+given.  We must show that there exists a $x\in \bigcap_k U_k$ such that
+$$d(x_0,x)<\epsilon_0.$$
+Since $U_1$ is dense and open, we may choose an $\epsilon_1>0$ and an
+$x_1\in U_1$ such that
+$$d(x_0,x_1)<\frac{\epsilon_0}{2},\quad \epsilon_1<\frac{\epsilon_0}{2},$$
+and  such that the open ball of
+radius $\epsilon_1$ about $x_1$ lies entirely  
+in $U_1$.  We then choose an $\epsilon_2>0$ and a $x_2\in U_2$ such that
+$$d(x_1,x_2)<\frac{\epsilon_1}{2},\quad \epsilon_2<\frac{\epsilon_1}{2},$$
+and  such that the open ball
+of radius $\epsilon_2$ about $x_2$ lies 
+entirely in $U_2$.  We continue by induction, and construct a sequence
+of points $x_k\in U_k$ and positive $\epsilon_k$ such that
+$$d(x_{k-1},x_k)<\frac{\epsilon_{k-1}}{2},\quad \epsilon_k<\frac{\epsilon_{k-1}}{2},$$
+and such that the open
+ball of radius $\epsilon_k$ lies entirely in $U_k$. 
+
+By construction, for $0\leq j<k$ we have
+$$d(x_j,x_k) < \epsilon_j \left(\frac{1}{2} + \cdots +
+  \frac{1}{2^{k-j}}\right) < \epsilon_j \leq \frac{\epsilon_0}{2^j}.$$
+Hence the
+sequence $x_k, \; k=1,2,\ldots$ is Cauchy, and converges by hypothesis
+to some $x\in X$.  It is  clear that for every $k$ we have
+$$d(x,x_k) \leq \epsilon_k.$$
+Moreover it follows that
+$$d(x,x_k) \leq d(x,x_{k+1}) + d(x_{k},x_{k+1}) < \epsilon_{k+1} +
+\frac{\epsilon_{k}}{2},$$
+and hence a fortiori
+$$d(x,x_k)<\epsilon_k$$
+for every $k$.  By construction then, $x\in
+U_k$ for all $k=1,2,\ldots$, as well.  QED
+%%%%%
+%%%%%
+\end{document}

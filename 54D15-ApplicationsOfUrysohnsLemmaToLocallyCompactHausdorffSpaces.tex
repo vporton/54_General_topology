@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplicationsOfUrysohnsLemmaToLocallyCompactHausdorffSpaces}
+\pmcreated{2013-03-22 18:33:31}
+\pmmodified{2013-03-22 18:33:31}
+\pmowner{azdbacks4234}{14155}
+\pmmodifier{azdbacks4234}{14155}
+\pmtitle{applications of Urysohn's Lemma to locally compact Hausdorff spaces}
+\pmrecord{23}{41281}
+\pmprivacy{1}
+\pmauthor{azdbacks4234}{14155}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D15}
+%\pmkeywords{Urysohn}
+%\pmkeywords{Tietze}
+%\pmkeywords{continuous}
+%\pmkeywords{compact}
+%\pmkeywords{locally compact}
+%\pmkeywords{compacification}
+%\pmkeywords{support}
+\pmrelated{UrysohnsLemma}
+\pmrelated{TietzeExtensionTheorem}
+\pmrelated{VanishAtInfinity}
+\pmrelated{SupportOfFunction}
+\pmrelated{LocallyCompact}
+\pmrelated{T2Space}
+\pmrelated{NormalTopologicalSpace}
+
+%packages
+\usepackage{amsmath,mathrsfs,amsfonts,amsthm}
+%theorem environments
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{prop}{Proposition}
+%delimiters
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\medset}[1]{\big\{#1\big\}}
+\newcommand{\bigset}[1]{\bigg\{#1\bigg\}}
+\newcommand{\Bigset}[1]{\Bigg\{#1\Bigg\}}
+\newcommand{\abs}[1]{\vert#1\vert}
+\newcommand{\medabs}[1]{\big\vert#1\big\vert}
+\newcommand{\bigabs}[1]{\bigg\vert#1\bigg\vert}
+\newcommand{\Bigabs}[1]{\Bigg\vert#1\Bigg\vert}
+\newcommand{\norm}[1]{\Vert#1\Vert}
+\newcommand{\mednorm}[1]{\big\Vert#1\big\Vert}
+\newcommand{\bignorm}[1]{\bigg\Vert#1\bigg\Vert}
+\newcommand{\Bignorm}[1]{\Bigg\Vert#1\Bigg\Vert}
+\newcommand{\vbrack}[1]{\langle#1\rangle}
+\newcommand{\medvbrack}[1]{\big\langle#1\big\rangle}
+\newcommand{\bigvbrack}[1]{\bigg\langle#1\bigg\rangle}
+\newcommand{\Bigvbrack}[1]{\Bigg\langle#1\Bigg\rangle}
+\newcommand{\sbrack}[1]{[#1]}
+\newcommand{\medsbrack}[1]{\big[#1\big]}
+\newcommand{\bigsbrack}[1]{\bigg[#1\bigg]}
+\newcommand{\Bigsbrack}[1]{\Bigg[#1\Bigg]}
+%operators
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\vol}{vol}
+
+\begin{document}
+Let $X$ be a locally compact Hausdorff space (LCH space) and $X^*$ its one-point compactification. We employ the following notation:
+\begin{itemize}
+\item $C(X)$ denotes the set of continuous complex functions on $X$;
+\item $C_b(X)$ denotes the set of continuous and bounded complex functions on $X$;
+\item $C_0(X)$ denotes the set of continuous complex functions on $X$ which vanish at infinity;
+\item $C_c(X)$ denotes the set of continuous complex functions on $X$ with compact support
+\end{itemize}
+Note that we have $C_c(X)\subseteq C_0(X)\subseteq C_b(X)\subseteq C(X)$, and that when we replace $X$ with $X^*$ (in general, when $X$ is compact), these four classes of functions coincide.\\\\
+Now, while Urysohn's Lemma does not directly apply to $X$ (since $X$ need not in general be normal), it does apply to $X^*$, for being compact Hausdorff, $X^*$ \emph{is} necessarily normal. One may therefore indirectly apply Urysohn's Lemma to $X$ by way of $X^*$ to obtain various results asserting the existence of certain continuous functions on $X$ with prescribed properties. The following results and their proofs illustrate this technique and are frequently useful in analysis. 
+\begin{prop}
+If $K\subseteq U\subseteq X$ with $K$ compact and $U$ open, then there exists an open subset $V$ of $X$ with compact closure such that $K\subseteq V\subseteq\overline{V}\subseteq U$.
+\end{prop}
+\begin{proof}
+Since $K$ is a compact subset of the Hausdorff space $X^*$, it is closed, and because $X$ is open in $X^*$, $U$ is as well. Therefore, by normality, there exists an open subset $V$ of $X^*$ such that $K\subseteq V\subseteq\overline{V}\subseteq U$ (note that the closure of $V$ in $X^*$ coincides with that of $V$ in $X$, since the former set is contained in $X$ and the latter set is equal to the former intersected with $X$). As $\overline{V}$ is closed in $X^*$, it is compact, and because $V$ is open in $X^*$ and $V\subseteq X$, $V$ is open in $X$. Thus $V$ possesses the desired properties.
+\end{proof}
+\begin{cor}
+For each $x\in X$ and each open subset $U$ of $X$ containing $x$, there exists an open subset $V$ of $X$ with compact closure such that $x\in V$ and $\overline{V}\subseteq U$.
+\end{cor}
+\begin{proof}
+Take $K=\set{x}$ in the preceding proposition. 
+\end{proof}
+\begin{thm}
+(Urysohn's Lemma for LCH Spaces)
+If $K\subseteq U\subseteq X$ with $K$ compact and $U$ open, then there exists $f\in C_c(X)$ such that $0\leq f\leq 1$, $f\vert_K\equiv 1$, and $\supp f\subseteq U$.
+\end{thm}
+\begin{proof}
+By the first Proposition, there exists an open subset $V$ of $X$ with compact closure such that $K\subseteq V\subseteq\overline{V}\subseteq U$; since $K$ and $X^*-V$ are disjoint closed subsets of the normal space $X^*$, Urysohn's Lemma furnishes $g\in C(X^*)$ such that $0\leq g\leq 1$, $g\vert_K\equiv 1$, and $g\vert_{X^*-V}\equiv 0$. Put $f=g\vert_X$. Then $f\in C(X)$, $0\leq f\leq 1$, and $f\vert_K\equiv 1$. Moreover, $f$ vanishes outside $\overline{V}$ because $g$ does, so $\set{x\in X:f(x)\neq 0}\subseteq\overline{V}\subseteq U$; since $\overline{V}$ is compact, and consequently closed, the last inclusion gives $\supp f\subseteq\overline{V}\subseteq U$ and $f\in C_c(X)$.
+\end{proof}
+\begin{thm}
+(Tietze Extension Theorem for LCH Spaces)
+If $K\subseteq X$ is compact and $f\in C(K)$ is real, then there exists a real $g\in C_c(X)$ extending $f$.
+\end{thm}
+\begin{cor}
+$C_0(X)$ is the uniform closure of $C_c(X)$ in $C_b(X)$.
+\end{cor}
+\begin{proof}
+We first show that $C_0(X)$ is closed in $C_b(X)$. To this end, assume that $(f_n)_{n=1}^\infty$ is a uniformly convergent sequence of functions in $C_0(X)$ with limit $f$ and let $\epsilon>0$ be given. Select $N\in\mathbb{Z}^+$ such that $\norm{f-f_N}_\infty<\epsilon/2$, and select a compact subset $K$ of $X$ such that $\abs{f_N}<\epsilon/2$ for $x\in X-K$. We then have, for all such $x$,
+\begin{equation*}
+\abs{f(x)}=\abs{f(x)-f_N(x)+f_N(x)}\leq\abs{f(x)-f_N(x)}+\abs{f_N(x)}\leq\norm{f-f_N}_\infty+\abs{f_N(x)}<
+\epsilon\text{.}
+\end{equation*}
+Thus $f$ vanishes at infinity; since the uniform limit of continuous functions is continuous, we obtain $f\in C_0(X)$, whence $C_0(X)$ is closed. It remains to establish the density of $C_c(X)$ in $C_0(X)$. Given $f\in C_0(X)$ and $\epsilon>0$, select a compact subset $K$ of $X$ such that $\abs{f(x)}<\epsilon/2$ for $x\in X-K$. By Theorem 1, there exists $g\in C_c(X)$ with range in $[0,1]$ satisfying $g\vert_K\equiv 1$. The function $h=fg$ is continuous and supported inside $\supp g$, hence lies in $C_c(X)$; moreover, if $x\in K$, then we have $\abs{f(x)-h(x)}=\abs{f(x)-f(x)}=0$, while if $x\notin K$, then
+\begin{equation*}
+\abs{f(x)-h(x)}=\abs{f(x)-f(x)g(x)}=\abs{f(x)}\abs{1-g(x)}\leq\abs{f(x)}<\dfrac{\epsilon}{2}\text{.}
+\end{equation*}
+It follows that $\norm{f-h}_\infty<\epsilon$, hence that $f\in\overline{C_c(X)}$, completing the proof.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

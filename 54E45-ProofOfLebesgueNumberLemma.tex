@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLebesgueNumberLemma}
+\pmcreated{2013-03-22 13:09:20}
+\pmmodified{2013-03-22 13:09:20}
+\pmowner{scanez}{1021}
+\pmmodifier{scanez}{1021}
+\pmtitle{proof of Lebesgue number lemma}
+\pmrecord{7}{33596}
+\pmprivacy{1}
+\pmauthor{scanez}{1021}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54E45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+By way of contradiction, suppose that no Lebesgue number existed. Then there exists an open cover $\mathcal{U}$ of $X$ such that for all $\delta > 0$ there exists an $x \in X$ such that no $U \in \mathcal{U}$ contains $B_\delta(x)$ (the open ball of radius $\delta$ around $x$). Specifically, for each $n \in \mathbb{N}$, since $1/n > 0$ we can choose an $x_n \in X$ such that no $U \in \mathcal{U}$ contains $B_{1/n}(x_n)$. Now, $X$ is compact so there exists a subsequence $(x_{n_k})$ of the sequence of points $(x_n)$ that converges to
+some $y \in X$. Also, $\mathcal{U}$ being an open cover of $X$ implies that there exists $\lambda > 0$ and $U \in \mathcal{U}$ such that $B_\lambda(y) \subseteq U$. Since the sequence $(x_{n_k})$ converges to $y$, for $k$ large enough it is true that $d(x_{n_k},y) < \lambda/2$ ($d$ is the metric on $X$) and $1/n_k < \lambda/2$. Thus after an application of the triangle inequality, it follows that
+\begin{displaymath}
+	B_{1/n_k}(x_{n_k}) \subseteq B_\lambda(y) \subseteq U,
+\end{displaymath}
+contradicting the assumption that no $U \in \mathcal{U}$ contains $B_{1/n}(x_n)$. Hence a Lebesgue number for $\mathcal{U}$ does exist.
+%%%%%
+%%%%%
+\end{document}

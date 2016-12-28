@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BallsInUltrametricSpacesAreClopenSubsets}
+\pmcreated{2013-03-22 18:20:15}
+\pmmodified{2013-03-22 18:20:15}
+\pmowner{MFH}{21412}
+\pmmodifier{MFH}{21412}
+\pmtitle{balls in ultrametric spaces are clopen subsets}
+\pmrecord{5}{40970}
+\pmprivacy{1}
+\pmauthor{MFH}{21412}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D05}
+
+
+\begin{document}
+In an ultrametric space, both open and closed balls are clopen subsets.
+
+It is indeed straightforward (exercise!) to show that the set of all open balls of radius $r$, 
+centered in any of the points of a closed ball of radius $r$, forms a partition of the latter.
+
+Thus, in particular, any point of a closed ball is an interior point,
+and the same holds for the complement of an open ball.
+
+% Indeed, if $x$ is any point of a closed ball of radius $r$, 
+% then the open ball of radius $r$, centered in $x$, is contained in the closed ball.
+% PROOF:
+% Let x be in the closed ball with center c and radius r.
+% Let y be in the open ball with center x and radius r.
+% Then |cy| <= max(|cx|,|xy|) = |cx| = r, i.e. y is in the closed ball.
+% Thus, the whole open B(x,r) is in the closed ball B'(c,r)
+
+% Let |xy| >= r, assume there is z in B(x,r) and B(y,r).
+% Then |xz|<r,|yz|<r, impossible since r <= |xy| <= max(|xz|,|yz|) < r.
+% Thus, open balls with centers at distance >= r do not intersect.
+% This shows that each point of the complement of the open ball 
+% is an interior point of that complement (which in fact contains 
+% the whole open ball of radius r around the given point).
+
+% Assume z is in B(x,r) and in B(y,r).
+% Then |xy| <= max(xz,yz) < r. Thus x is in B(y,r) and y is in B(x,r).
+% Now any other point t which is in B(x,r) verifies yt <= max(yx,tx) < r
+% and is in B(y,r). So B(x,r) c B(y,r) and reciprocally, i.e. equality.
+% Thus 2 open balls of radius r either are the same (if their centers
+% are at distance < r), or are disjoint (if the centers are at dist. >= r).
+%%%%%
+%%%%%
+\end{document}

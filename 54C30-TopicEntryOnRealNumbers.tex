@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopicEntryOnRealNumbers}
+\pmcreated{2013-03-22 15:40:38}
+\pmmodified{2013-03-22 15:40:38}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{topic entry on real numbers}
+\pmrecord{22}{37618}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54C30}
+\pmclassification{msc}{26-00}
+\pmclassification{msc}{12D99}
+\pmrelated{GelfandTornheimTheorem}
+\pmrelated{PositivityInOrderedRing}
+\pmrelated{TopicEntryOnRationalNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\subsubsection*{Introduction}
+The real number system may be conceived as an attempt to fill in the
+gaps in the rational number system.  These gaps first became apparent
+in connection with the Pythagorean theorem, which requires one to extract
+a square root in order to find the third side of a right triangle two of
+whose sides are known.  Hypossos, a student of Pythagoras, showed that there
+is no rational number whose square is exactly 2.  In particular, this means
+that there is no rational number which may be used to describe the length
+of the diagonal of a square the length of whose sides is rational.  This
+result ruined the philosophical program of Pythagoras, which was to describe
+everything in terms of whole numbers (or ratios of whole numbers) and, 
+according to legend, resulted in Hypossos drowning himself.  Eventually,
+geometers reconciled themselves to the existence of irrational magnitudes
+and Eudoxos devised his method of exhaustion which allowed one to prove
+results about irrational magnitudes by considerations of rational magnitudes
+which are smaller and larger than the the irrational magnitude in question.
+
+Centuries later, Descartes showed how it is systematically possible to
+reduce questions of geometry to algebra.  This brought up the issue of
+irrational numbers again --- if one is going to reformulate everything
+in terms of algebra, then one cannot have recourse to defining magnitudes
+geometrically, but have to find some sort of number which can adequately 
+represent things like the hypotenuse of a square with rational sides.
+At first, such problems of logical consistency were swept under the rug,
+but eventually mathematicians realized that their subject needed to be
+put on a firm logical foundation.  In particular, Dedekind solved this 
+difficulty by defining the real numbers as a certain type of partition of
+the set of rational numbers which he termed a cut and defining operations
+on these numbers, such as addition, subtraction, multiplication, and division
+in terms of operations on these partitions.
+
+\subsubsection*{Index of entries on real numbers}
+The below list presents entries on real numbers in an order 
+suitable for studying the subject. 
+
+\begin{enumerate}
+\item Rational numbers
+\item Axiomatic definition of the real numbers. 
+\item Constructions of real numbers (advanced):
+   \begin{enumerate}
+   \item Dedekind cuts
+   \item \PMlinkname{Cauchy sequences}{RealNumber}
+   \item \PMlinkname{Characterization of real numbers}{EveryOrderedFieldWithTheLeastUpperBoundPropertyIsIsomorphicToTheRealNumbers}
+   \item \PMlinkname{Reals not isomorphic to $p$-adic numbers}{NonIsomorphicCompletionsOfMathbbQ}
+   \end{enumerate}
+\item commensurable numbers
+\item positive
+\item \PMlinkname{Inequalities for real numbers}{InequalityForRealNumbers}
+\item index of inequalities
+\item rational numbers are real numbers 
+\item interval
+\item nested interval theorem
+\item \PMlinkname{Real numbers are uncountable}{CantorsDiagonalArgument}
+
+\item Archimedean property
+\item Operations for real numbers
+   \begin{enumerate}
+   \item infimum and supremum for real numbers
+   \item minimal and maximal number
+   \item absolute value
+   \item square root
+   \item fraction power
+   \end{enumerate}
+\item \PMlinkname{Topic entry on algebraic and transcendental numbers}{TheoryOfAlgebraicNumbers}
+   \begin{enumerate}
+   \item \PMlinkname{Irrational number}{Irrational}
+   \item Transcendental number
+   \item \PMlinkname{Algebraic number}{AlgebraicNumber}
+   \end{enumerate}
+\item Particular real numbers
+ \begin{enumerate}
+ \item natural log base
+ \item pi
+ \item Mascheroni constant
+ \item golden ratio
+ \end{enumerate}
+
+\end{enumerate}
+
+\subsubsection*{Generalizations}
+There are many generalizations of real numbers. These include
+the complex numbers, quaternions, extended real numbers, 
+\PMlinkname{hyperreal numbers}{Hyperreal},
+and surreal numbers.\, Of course the field $\mathbb{R}$ has many other field extensions, e.g. the field $\mathbb{R}(x)$ of the rational functions.
+%%%%%
+%%%%%
+\end{document}

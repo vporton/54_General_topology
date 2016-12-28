@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ListOfCommonTopologies}
+\pmcreated{2013-03-22 14:38:27}
+\pmmodified{2013-03-22 14:38:27}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{list of common topologies}
+\pmrecord{5}{36227}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54-00}
+\pmclassification{msc}{55-00}
+\pmclassification{msc}{22-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+The aim of this entry is to give an overview of topologies
+commonly used in mathematics with links to the
+entries at Planetmath where these are discussed in greater detail. 
+
+\subsubsection*{Topologies on arbitrary sets}
+The below topologies show that any set can be endowed with a topology. 
+\begin{enumerate}
+\item discrete topology
+\item indiscrete topology
+\item cofinite topology
+\item cocountable topology
+\end{enumerate}
+
+\subsubsection*{New topologies from old ones}
+\begin{enumerate}
+\item subspace topology
+\item quotient topology
+\item box topology
+\item product topology
+\item inductive limit topology
+\end{enumerate}
+
+\subsubsection*{Topologies on sets with more structure}
+\begin{enumerate}
+\item order topology (standard topologies on $\sZ, \sN, \sR$)
+\item metric topology
+\item seminorm topology (topological vector spaces)
+\item graph topology (graph theory)
+\item Zariski topology (algebraic geometry)
+\end{enumerate}
+
+\subsubsection*{Topologies for functions spaces and mappings}
+An extensive list of \PMlinkescapetext{function spaces} can be 
+found \PMlinkname{here}{FunctionSpaces}.
+\begin{enumerate}
+\item Whitney topology (differential geometry)
+\item Compact-open topology
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

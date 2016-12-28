@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlexandroffSpaceIsT1IfAndOnlyIfItIsDiscrete}
+\pmcreated{2013-03-22 18:46:08}
+\pmmodified{2013-03-22 18:46:08}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{Alexandroff space is T1 if and only if it is discrete}
+\pmrecord{4}{41550}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition.} Let $X$ be an Alexandroff space. Then $X$ is $\mathrm{T}_{1}$ if and only if $X$ is discrete.
+
+\textit{Proof.} ,,$\Leftarrow$'' It is easy to see, that every discrete space is Alexandroff and $\mathrm{T}_{1}$.
+
+,,$\Rightarrow$'' Recall that topological space is $\mathrm{T}_1$ if and only if every subset is equal to the intersection of all its open neighbourhoods. So let $x\in X$. Then the intersection of all open neighbourhoods $\{x\}^{o}$ of $x$ is equal to $\{x\}$. But since $X$ is Alexandroff, then $\{x\}^{o}=\{x\}$ is open and thus points are open. Therefore $X$ is discrete. $\square$
+%%%%%
+%%%%%
+\end{document}

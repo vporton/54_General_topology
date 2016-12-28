@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomeomorphismsPreserveConnectedComponents}
+\pmcreated{2013-03-22 18:45:32}
+\pmmodified{2013-03-22 18:45:32}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{homeomorphisms preserve connected components}
+\pmrecord{5}{41538}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54D05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X,Y$ be topological spaces and $X=\bigcup\, X_i$, $Y=\bigcup\, Y_j$ be decompositions into connected components.
+
+\textbf{Proposition.} Assume that $f:X\to Y$ is a homeomorphism. Then for any $i$ there exists $j$ such that $f(X_i)=Y_j$.
+
+\textit{Proof.} Take any $i$. Because $f$ is continuous $f(X_i)$ is connected, then there exists $j$ such that $f(X_i)\subseteq Y_j$ (because $Y_j$ is a connected component). Now $f$ is a homeomorphism, $f^{-1}(Y_j)\cap X_i\neq\emptyset$, $Y_j$ is connected and $X_i$ is a connected component, so $f^{-1}(Y_j)\subseteq X_i$. Thus $Y_j\subseteq f(X_i)$, which completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

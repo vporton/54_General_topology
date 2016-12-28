@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SequenceAccumulatingEverywhereIn11}
+\pmcreated{2013-03-22 19:13:39}
+\pmmodified{2013-03-22 19:13:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sequence accumulating everywhere in $[-1,\,1]$}
+\pmrecord{7}{42150}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A05}
+\pmrelated{LissajousCurves}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We want to show that if $k$ is an irrational number, then any real number of the interval \,$[-1,\,1]$\, is an accumulation point of the sequence
+\begin{align}
+\sin2k\pi,\,\sin4k\pi,\,\sin6k\pi,\,\ldots
+\end{align}
+In other words, the real numbers (1) come arbitrarily close to every number of the interval.\\
+
+
+\emph{Proof.}\, Set on the perimeter of the unit circle, starting e.g. from the point \,$(1,\,0)$,\, anticlockwise the points 
+\begin{align}
+P_0,\,P_1,\,P_2,\,\ldots
+\end{align}
+with successive arc-distances $2k\pi$.\, Since $k$ is irrational, $2k\pi$ and the length $2\pi$ of the perimeter are incommensurable.\, Therefore no two of the points $P_i$ coincide, whence we have an infinite sequence (2) of distinct points.\, We can see that these points form an everywhere dense set on the perimeter, i.e. that an arbitrarily short arc contains always points of (2).
+
+Let then $\varepsilon$ be an arbitrary positive number.\, Choose an integer $n$ such that 
+$$\frac{2\pi}{n} \;<\; \varepsilon$$
+and \PMlinkescapetext{divide} the perimeter of the unit circle, starting from the point \,$(1,\,0)$,\, into $n$ equal arcs.\, Each of the points $P_1,\,P_2,\,\ldots$ falls into one of these arcs, because the arcs $2\pi/n$ and $P_0P_1$ are incommensurable.\, Thus, among the $n\!+\!1$ first points $P_1,\,P_2,\,\ldots,\,P_{n+1}$ there must be at least two ones belonging to a same arc.\, Let $P_\mu$ and $P_\nu$ ($\mu < \nu$) belong to the same arc.\, Then the length $l$ of the arc $P_\mu P_\nu$ is less than $\varepsilon$.\, Starting from $P_\mu$ one comes to $P_\nu$ by moving on the perimeter $\nu\!-\!\mu$ times in succession arcs with length $2k\pi$ (when one has possibly to go around the perimeter several times).\, Repeating that procedure, starting from the point $P_\nu$, one comes to the point\, 
+$P_{\nu+(\nu-\mu)} = P_{2\nu-\mu}$, and furthermore to $P_{3\nu-2\mu}$, to $P_{4\nu-3\mu}$, and so on.\, 
+
+The points
+\begin{align}
+P_\mu,\, P_\nu,\, P_{2\nu-\mu},\, P_{3\nu-2\mu},\,\ldots
+\end{align}
+form on the perimeter a sequence of equidistant points, a subsequence of (2).\, Since the arc-distance of successive points of (3) equals to\, $l < \varepsilon$, whence it is evident that any arc with length at least $\varepsilon$ contains at least one of the points (3).\, Consequently, the points (2) are everywhere dense on the perimeter of the unit circle.\, Thus the same concerns their \PMlinkname{projections}{ProjectionOfPoint} on the $y$-axis, i.e. the sines (1) on the interval 
+\,$[-1,\,1]$.
+
+
+
+%%%%%
+%%%%%
+\end{document}

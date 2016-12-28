@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEveryFilterIsContainedInAnUltrafilteralternateProof}
+\pmcreated{2013-03-22 17:52:54}
+\pmmodified{2013-03-22 17:52:54}
+\pmowner{brunoloff}{19748}
+\pmmodifier{brunoloff}{19748}
+\pmtitle{proof of every filter is contained in an ultrafilter (alternate proof)}
+\pmrecord{8}{40363}
+\pmprivacy{1}
+\pmauthor{brunoloff}{19748}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{54A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathfrak U$ be the family of filters over $X$ which are finer than $\mathcal F$, under the partial order of inclusion.
+
+\textbf{Claim 1.} \textit{Every chain in $\mathfrak U$ has an upper bound also in $\mathfrak U$.} 
+\begin{proof}
+Take any chain $\mathfrak C$ in $\mathfrak U$, and consider the set $\mathcal C = \cup \mathfrak C$. Then $\mathcal C$ is also a filter: it cannot contain the empty set, since no filter in the chain does; the intersection of two sets in $\mathcal C$ must be present in the filters of $\mathfrak C$; and $\mathcal C$ is closed under supersets because every 
+filter in $\mathfrak C$ is. Obviously $\mathcal C$ is finer than $\mathcal F$.
+\end{proof}
+
+So we conclude, by Zorn's lemma, that $\mathfrak U$ must have a maximal filter say $\mathcal U$, which must contain $\mathcal F$. All we need to show is that $\mathcal U$ is an ultrafilter. Now, for any filter $\mathcal U$, and any set $Y \subseteq X$, we must have:
+
+\textbf{Claim 2.} \textit{Either $\mathcal U_1 = \{ Z \cap Y : Z \in \mathcal U \}$ or $\mathcal U_2 = \{ Z \cap (X \backslash Y) : Z \in \mathcal U \}$ (or both) are a filter subbasis.} 
+\begin{proof}
+We prove by contradiction that at least one of $\mathcal U_1$ or $\mathcal U_2$ must have the finite intersection property. If neither has the finite intersection property, then for some $Z_1, \ldots Z_k$ we must have
+\[
+\varnothing = \bigcap_{1\le i \le k} Z_i \cap Y = \bigcap_{1\le i \le k} Z_i \cap (X \backslash Y).
+\]
+But then
+\[
+\varnothing = \left(\bigcap_{1\le i \le k} Z_i \cap Y\right) \cup \left(\bigcap_{1\le i \le k} Z_i \cap (X \backslash Y)\right) = \bigcap_{1\le i \le k} Z_i,
+\]
+and so $\mathcal U$ does not have the finite intersection property either. This cannot be, since $\mathcal U$ is a filter.
+\end{proof}
+
+Now, by Claim 2, if $\mathcal U$ were not an ultrafilter, i.e., if for some $Y$ subset of $X$ we would have neither $Y$ nor $X \backslash Y$ in $\mathcal U$, then the filter generated $\mathcal U_1$ or $\mathcal U_2$ would be finer than $\mathcal U$, and then $\mathcal U$ would not be maximal.
+
+So $\mathcal U$ is an ultrafilter containing $\mathcal F$, as intended.
+%%%%%
+%%%%%
+\end{document}
