@@ -1,0 +1,267 @@
+<!DOCTYPE html><html>
+<head>
+<title>ordered space</title>
+<!--Generated on Sat Feb 10 11:30:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">ordered space</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. A set <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> that is both a topological space and a poset is variously called a <em class="ltx_emph ltx_font_italic">topological ordered space</em>, <em class="ltx_emph ltx_font_italic">ordered topological space</em>, or simply an <em class="ltx_emph ltx_font_italic">ordered space</em>. Note that there is no compatibility conditions imposed on <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. In other words, the topology <math id="p1.m3" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math> and the partial ordering <math id="p1.m4" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> on <math id="p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> operate independently of one another.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">If the partial order is a total order, then <math id="p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is called a <em class="ltx_emph ltx_font_italic">totally ordered space</em>. In some literature, a totally ordered space is called an ordered space. In this entry, however, an ordered space is always a <em class="ltx_emph ltx_font_italic">partially</em> ordered space.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">One can construct an ordered space from a set with fewer structures.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For example, any topological space is trivially an ordered space, with the partial order defined by <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a\leq b" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>b</mi></mrow></math> iff <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>. But this is not so interesting. A more interesting example is to take a <math id="I1.i1.p1.m3" class="ltx_Math" alttext="T_{0}" display="inline"><msub><mi>T</mi><mn>0</mn></msub></math> space <math id="I1.i1.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and define <math id="I1.i1.p1.m5" class="ltx_Math" alttext="a\leq b" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>b</mi></mrow></math> iff <math id="I1.i1.p1.m6" class="ltx_Math" alttext="a\in\overline{\{b\}}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mover accent="true"><mrow><mo stretchy="false">{</mo><mi>b</mi><mo stretchy="false">}</mo></mrow><mo>¯</mo></mover></mrow></math>. The relation so defined turns out to be a partial order on <math id="I1.i1.p1.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, called the specialization order, making <math id="I1.i1.p1.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> an ordered space.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">On the other hand, given any poset <math id="I1.i2.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, we can arbitrarily assign a topology on it, making it an ordered space, so that every poset is trivially an ordered space. Again this is not very interesting.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">A slightly more useful example is to take a poset <math id="I1.i3.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, and take</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathcal{L}(P):=\{P-\uparrow\!\!x\mid x\in P\}," display="block"><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mi>P</mi><mo>-</mo></mrow><mo rspace="0pt">↑</mo><mi>x</mi></mrow><mo>∣</mo><mrow><mi>x</mi><mo>∈</mo><mi>P</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the family of all set complements of principal upper sets of <math id="I1.i3.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, as the subbasis for the topology <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\omega(P)" display="inline"><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="I1.i3.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. The topology <math id="I1.i3.p1.m5" class="ltx_Math" alttext="\omega(P)" display="inline"><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> so generated is called the <em class="ltx_emph ltx_font_italic">lower topology</em> on <math id="I1.i3.p1.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Dually, if we take</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathcal{U}(P):=\{P-\downarrow\!\!x\mid x\in P\}," display="block"><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mi>P</mi><mo>-</mo></mrow><mo rspace="0pt">↓</mo><mi>x</mi></mrow><mo>∣</mo><mrow><mi>x</mi><mo>∈</mo><mi>P</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as the subbasis, we get the <em class="ltx_emph ltx_font_italic">upper topology</em> on <math id="I1.i4.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, denoted by <math id="I1.i4.p1.m2" class="ltx_Math" alttext="\nu(P)" display="inline"><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">In the lower topology <math id="I1.i5.p1.m1" class="ltx_Math" alttext="\omega(P)" display="inline"><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="I1.i5.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, if <math id="I1.i5.p1.m3" class="ltx_Math" alttext="y\in P-\uparrow\!\!x" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>P</mi><mo>-</mo></mrow><mo rspace="0pt">↑</mo><mi>x</mi></mrow></math>, then either <math id="I1.i5.p1.m4" class="ltx_Math" alttext="y&lt;x" display="inline"><mrow><mi>y</mi><mo>&lt;</mo><mi>x</mi></mrow></math> (strict inequality) or <math id="I1.i5.p1.m5" class="ltx_Math" alttext="x\shortparallel y" display="inline"><mrow><mi>x</mi><mo>∥</mo><mi>y</mi></mrow></math> (incomparable with <math id="I1.i5.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>). If <math id="I1.i5.p1.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is an isolated element, then <math id="I1.i5.p1.m8" class="ltx_Math" alttext="P-\uparrow\!\!x=P-\{x\}" display="inline"><mrow><mrow><mi>P</mi><mo>-</mo></mrow><mo rspace="0pt">↑</mo><mi>x</mi><mo>=</mo><mrow><mi>P</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>. This means that <math id="I1.i5.p1.m9" class="ltx_Math" alttext="\{x\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></math> is a closed set. Similarly, <math id="I1.i5.p1.m10" class="ltx_Math" alttext="\{x\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></math> is closed in the upper topology <math id="I1.i5.p1.m11" class="ltx_Math" alttext="\nu(P)" display="inline"><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+</p>
+</div>
+<div id="I1.i5.p2" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i5.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is the top element of <math id="I1.i5.p2.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, then <math id="I1.i5.p2.m3" class="ltx_Math" alttext="\{x\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></math> is a closed set in <math id="I1.i5.p2.m4" class="ltx_Math" alttext="\omega(P)" display="inline"><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math>, since <math id="I1.i5.p2.m5" class="ltx_Math" alttext="P-\uparrow\!\!x=P-\{x\}" display="inline"><mrow><mrow><mi>P</mi><mo>-</mo></mrow><mo rspace="0pt">↑</mo><mi>x</mi><mo>=</mo><mrow><mi>P</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math> is open. Similarly <math id="I1.i5.p2.m6" class="ltx_Math" alttext="\{x\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></math> is closed in <math id="I1.i5.p2.m7" class="ltx_Math" alttext="\nu(P)" display="inline"><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> if <math id="I1.i5.p2.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is the bottom element in <math id="I1.i5.p2.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+<div id="I1.i5.p3" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i5.p3.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is totally ordered, there are no isolated elements. As a result, we may write <math id="I1.i5.p3.m2" class="ltx_Math" alttext="P-\uparrow\!\!x" display="inline"><mrow><mrow><mi>P</mi><mo>-</mo></mrow><mo rspace="0pt">↑</mo><mi>x</mi></mrow></math> in a more familiar fashion: <math id="I1.i5.p3.m3" class="ltx_Math" alttext="(-\infty,x)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>. Similarly, <math id="I1.i5.p3.m4" class="ltx_Math" alttext="P-\downarrow\!\!x" display="inline"><mrow><mrow><mi>P</mi><mo>-</mo></mrow><mo rspace="0pt">↓</mo><mi>x</mi></mrow></math> may be written as <math id="I1.i5.p3.m5" class="ltx_Math" alttext="(x,\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Things get more interesting when we take the common refinement of <math id="I1.i6.p1.m1" class="ltx_Math" alttext="\omega(P)" display="inline"><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I1.i6.p1.m2" class="ltx_Math" alttext="\nu(P)" display="inline"><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math>. What we end up with is called the <em class="ltx_emph ltx_font_italic">interval topology</em> of <math id="I1.i6.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+<div id="I1.i6.p2" class="ltx_para">
+<p class="ltx_p">When <math id="I1.i6.p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is totally ordered, the interval topology on <math id="I1.i6.p2.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> has</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathcal{I}(P):=\{(x,y)\mid x,y\in P\}" display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>P</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as a subbasis, where <math id="I1.i6.p2.m3" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> denotes the <em class="ltx_emph ltx_font_italic">open</em> poset interval, consisting of elements <math id="I1.i6.p2.m4" class="ltx_Math" alttext="a\in P" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>P</mi></mrow></math> such that <math id="I1.i6.p2.m5" class="ltx_Math" alttext="x&lt;a&lt;y" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mi>y</mi></mrow></math>. Since finite intersections of open poset intervals is a poset interval, an open set in <math id="I1.i6.p2.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> can be written as an (arbitrary) union of open poset intervals.</p>
+</div>
+<div id="I1.i6.p3" class="ltx_para">
+<p class="ltx_p">As an example, the usual topology on <math id="I1.i6.p3.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> is precisely the interval topology generated by the linear order on <math id="I1.i6.p3.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. It is a common practice in mathematics to impose special compatibility conditions on a structure having two inherent substructures so the substructures inter-relate, so that one can derive more interesting fruitful results. This is true also in the case of an ordered space. Let <math id="p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be an ordered space. Below are some of the common conditions that can be imposed on <math id="p4.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is said to be <em class="ltx_emph ltx_font_italic">upper semiclosed</em> if <math id="I2.i1.p1.m2" class="ltx_Math" alttext="\uparrow\!\!x" display="inline"><mrow><mi></mi><mo rspace="0pt">↑</mo><mi>x</mi></mrow></math> is a closed set for every <math id="I2.i1.p1.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Similarly, <math id="I2.i2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is <em class="ltx_emph ltx_font_italic">lower semiclosed</em> if <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\downarrow\!\!x" display="inline"><mrow><mi></mi><mo rspace="0pt">↓</mo><mi>x</mi></mrow></math> is closed in <math id="I2.i2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is <em class="ltx_emph ltx_font_italic">semiclosed</em> if it is both upper and lower semiclosed.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I2.i4.p1.m1" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math>, as a subset of <math id="I2.i4.p1.m2" class="ltx_Math" alttext="X\times X" display="inline"><mrow><mi>X</mi><mo>×</mo><mi>X</mi></mrow></math>, is closed in the product topology, then <math id="I2.i4.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is called a <em class="ltx_emph ltx_font_italic">pospace</em>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Other structures, such as ordered topological vector spaces, topological lattices (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TopologicalLattice</span>), and topological vector lattices (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TopologicalVectorLattice</span>) are ordered spaces with algebraic structures satisfying certain additional compatibility conditions. Please click on the links for details.
+</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, <span class="ltx_text ltx_font_italic">Continuous Lattices and Domains</span>, Cambridge University Press, Cambridge (2003).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">ordered space</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrderedSpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:05:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:05:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54E99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06F20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06F30</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ordered topological space</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">topological ordered space</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">partially ordered space</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">partially ordered topological space</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrderTopology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">upper topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">lower topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">interval topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">upper semiclosed</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">lower semiclosed</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">semiclosed</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pospace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">totally ordered space</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:30:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

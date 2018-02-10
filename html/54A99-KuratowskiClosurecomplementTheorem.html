@@ -1,0 +1,220 @@
+<!DOCTYPE html><html>
+<head>
+<title>Kuratowski closure-complement theorem</title>
+<!--Generated on Sat Feb 10 11:15:53 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Kuratowski closure-complement theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Problem</span>. Let <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a topological space and <math id="p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> a subset of <math id="p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. How many (distinct) sets can be obtained by iteratively applying the closure and complement operations to <math id="p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>?</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Kuratowski studied this problem, and showed that at most <math id="p2.m1" class="ltx_Math" alttext="14" display="inline"><mn>14</mn></math> sets that can be generated from a given set in an arbitrary topological space. This is known as the <em class="ltx_emph ltx_font_italic">Kuratowski closure-complement theorem</em>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let us examine this problem more closely. For convenience, let us denote <math id="p3.m1" class="ltx_Math" alttext="{}^{-}:X\to X" display="inline"><mrow><mmultiscripts><mo>:</mo><mprescripts></mprescripts><none></none><mo>-</mo></mmultiscripts><mi>X</mi><mo>→</mo><mi>X</mi></mrow></math> be the closure operator:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="A\mapsto A^{-}," display="block"><mrow><mrow><mi>A</mi><mo>↦</mo><msup><mi>A</mi><mo>-</mo></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and <math id="p3.m2" class="ltx_Math" alttext="{}^{c}:X\to X" display="inline"><mrow><mmultiscripts><mo>:</mo><mprescripts></mprescripts><none></none><mi>c</mi></mmultiscripts><mi>X</mi><mo>→</mo><mi>X</mi></mrow></math> the complementation operator:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="A\mapsto A^{c}." display="block"><mrow><mrow><mi>A</mi><mo>↦</mo><msup><mi>A</mi><mi>c</mi></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">A set that can be obtained from <math id="p3.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> by iteratively applying <math id="p3.m4" class="ltx_Math" alttext="{}^{-}" display="inline"><msup><mi></mi><mo>-</mo></msup></math> and <math id="p3.m5" class="ltx_Math" alttext="{}^{c}" display="inline"><msup><mi></mi><mi>c</mi></msup></math> has the form <math id="p3.m6" class="ltx_Math" alttext="A^{\sigma}" display="inline"><msup><mi>A</mi><mi>σ</mi></msup></math>, where <math id="p3.m7" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> is an operator on <math id="p3.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> that is the composition of finitely many <math id="p3.m9" class="ltx_Math" alttext="{}^{-}" display="inline"><msup><mi></mi><mo>-</mo></msup></math> and <math id="p3.m10" class="ltx_Math" alttext="{}^{c}" display="inline"><msup><mi></mi><mi>c</mi></msup></math>. In other words, <math id="p3.m11" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> is a word on the alphabet <math id="p3.m12" class="ltx_Math" alttext="\{^{-},^{c}\}" display="inline"><mrow><msup><mo stretchy="false">{</mo><mo>-</mo></msup><msup><mo>,</mo><mi>c</mi></msup><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">First, notice that <math id="p4.m1" class="ltx_Math" alttext="A^{--}=A^{-}" display="inline"><mrow><msup><mi>A</mi><mrow><mi></mi><mo>-</mo><mo>-</mo></mrow></msup><mo>=</mo><msup><mi>A</mi><mo>-</mo></msup></mrow></math> and <math id="p4.m2" class="ltx_Math" alttext="A^{cc}=A" display="inline"><mrow><msup><mi>A</mi><mrow><mi>c</mi><mo>⁢</mo><mi>c</mi></mrow></msup><mo>=</mo><mi>A</mi></mrow></math>. This means that <math id="p4.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> can be reduced (or simplified) to a form such that <math id="p4.m4" class="ltx_Math" alttext="{}^{-}" display="inline"><msup><mi></mi><mo>-</mo></msup></math> and <math id="p4.m5" class="ltx_Math" alttext="{}^{c}" display="inline"><msup><mi></mi><mi>c</mi></msup></math> occurs alternately.
+</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">In addition, we have the following:</p>
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmprop1.p1.m1" class="ltx_Math" alttext="A^{-c-c-c-}=A^{-c-}" display="inline"><mrow><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo><mi>c</mi><mo>-</mo><mrow><mi>c</mi><mo>-</mo></mrow></mrow></msup><mo>=</mo><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo></mrow></msup></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">For any set <math id="p6.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in a topological space <math id="p6.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, <math id="p6.m3" class="ltx_Math" alttext="A^{-}" display="inline"><msup><mi>A</mi><mo>-</mo></msup></math> is closed, so that <math id="p6.m4" class="ltx_Math" alttext="A^{-c-}" display="inline"><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo></mrow></msup></math> is regular closed. This means that <math id="p6.m5" class="ltx_Math" alttext="A^{-c-}=A^{-c-c-c-}" display="inline"><mrow><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo></mrow></msup><mo>=</mo><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo><mi>c</mi><mo>-</mo><mrow><mi>c</mi><mo>-</mo></mrow></mrow></msup></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">This means that <math id="p7.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> can be reduced to one of the following cases:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="1,^{-},^{-c},^{-c-},^{-c-c},^{-c-c-},^{-c-c-c},^{c},^{c-},^{c-c},^{c-c-},^{c-c%
+-c},^{c-c-c-},^{c-c-c-c}," display="block"><mrow><mn>1</mn><msup><mo>,</mo><mo>-</mo></msup><msup><mo>,</mo><mrow><mo>-</mo><mi>c</mi></mrow></msup><msup><mo>,</mo><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo></mrow></msup><msup><mo>,</mo><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo><mi>c</mi></mrow></msup><msup><mo>,</mo><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo><mrow><mi>c</mi><mo>-</mo></mrow></mrow></msup><msup><mo>,</mo><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo><mi>c</mi><mo>-</mo><mi>c</mi></mrow></msup><msup><mo>,</mo><mi>c</mi></msup><msup><mo>,</mo><mrow><mi>c</mi><mo>-</mo></mrow></msup><msup><mo>,</mo><mrow><mi>c</mi><mo>-</mo><mi>c</mi></mrow></msup><msup><mo>,</mo><mrow><mi>c</mi><mo>-</mo><mrow><mi>c</mi><mo>-</mo></mrow></mrow></msup><msup><mo>,</mo><mrow><mi>c</mi><mo>-</mo><mi>c</mi><mo>-</mo><mi>c</mi></mrow></msup><msup><mo>,</mo><mrow><mi>c</mi><mo>-</mo><mi>c</mi><mo>-</mo><mrow><mi>c</mi><mo>-</mo></mrow></mrow></msup><msup><mo>,</mo><mrow><mi>c</mi><mo>-</mo><mi>c</mi><mo>-</mo><mi>c</mi><mo>-</mo><mi>c</mi></mrow></msup><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p7.m2" class="ltx_Math" alttext="1=\,^{cc}" display="inline"><mrow><mn>1</mn><msup><mo rspace="4.2pt">=</mo><mrow><mi>c</mi><mo>⁢</mo><mi>c</mi></mrow></msup><mi></mi></mrow></math> is the identity operator. As there are a total of 14 combinations, proving the closure-complement theorem is to exhibit an example. To do this, pick <math id="p7.m3" class="ltx_Math" alttext="X=\mathbb{R}" display="inline"><mrow><mi>X</mi><mo>=</mo><mi>ℝ</mi></mrow></math>, the real line. Let <math id="p7.m4" class="ltx_Math" alttext="A=(0,1)\cup\{2\}\cup((3,4)\cap\mathbb{Q})\cup((5,7)-\{6\})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>∩</mo><mi>ℚ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow><mo>-</mo><mrow><mo stretchy="false">{</mo><mn>6</mn><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In other words, <math id="p7.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the union of a real interval, a point, a rational interval, and a real interval with a point deleted. Then</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="A^{-}=[0,1]\cup\{2\}\cup[3,4]\cup[5,7]" display="inline"><mrow><msup><mi>A</mi><mo>-</mo></msup><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>5</mn><mo>,</mo><mn>7</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="A^{-c}=(-\infty,0)\cup(1,2)\cup(2,3)\cup(4,5)\cup(7,\infty)" display="inline"><mrow><msup><mi>A</mi><mrow><mo>-</mo><mi>c</mi></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="A^{-c-}=(-\infty,0]\cup[1,3]\cup[4,5]\cup[7,\infty)" display="inline"><mrow><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>7</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="A^{-c-c}=(0,1)\cup(3,4)\cup(5,7)" display="inline"><mrow><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo><mi>c</mi></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i5.p1.m1" class="ltx_Math" alttext="A^{-c-c-}=[0,1]\cup[3,4]\cup[5,7]" display="inline"><mrow><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo><mrow><mi>c</mi><mo>-</mo></mrow></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>5</mn><mo>,</mo><mn>7</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i6.p1.m1" class="ltx_Math" alttext="A^{-c-c-c}=(-\infty,0)\cup(1,3)\cup(4,5)\cup(7,\infty)" display="inline"><mrow><msup><mi>A</mi><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>-</mo><mi>c</mi><mo>-</mo><mi>c</mi></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">7.</span> 
+<div id="I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i7.p1.m1" class="ltx_Math" alttext="A^{c}=(-\infty,0]\cup[1,2)\cup(2,3]\cup((3,4)-\mathbb{Q})\cup[4,5]\cup\{6\}%
+\cup[7,\infty)" display="inline"><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>-</mo><mi>ℚ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mn>6</mn><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>7</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">8.</span> 
+<div id="I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i8.p1.m1" class="ltx_Math" alttext="A^{c-}=(-\infty,0]\cup[1,5]\cup\{6\}\cup[7,\infty)" display="inline"><mrow><msup><mi>A</mi><mrow><mi>c</mi><mo>-</mo></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mn>5</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mn>6</mn><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>7</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">9.</span> 
+<div id="I1.i9.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i9.p1.m1" class="ltx_Math" alttext="A^{c-c}=(0,1)\cup(5,6)\cup(6,7)" display="inline"><mrow><msup><mi>A</mi><mrow><mi>c</mi><mo>-</mo><mi>c</mi></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">10.</span> 
+<div id="I1.i10.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i10.p1.m1" class="ltx_Math" alttext="A^{c-c-}=[0,1]\cup[5,7]" display="inline"><mrow><msup><mi>A</mi><mrow><mi>c</mi><mo>-</mo><mrow><mi>c</mi><mo>-</mo></mrow></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>5</mn><mo>,</mo><mn>7</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">11.</span> 
+<div id="I1.i11.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i11.p1.m1" class="ltx_Math" alttext="A^{c-c-c}=(-\infty,0)\cup(1,5)\cup(7,\infty)" display="inline"><mrow><msup><mi>A</mi><mrow><mi>c</mi><mo>-</mo><mi>c</mi><mo>-</mo><mi>c</mi></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">12.</span> 
+<div id="I1.i12.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i12.p1.m1" class="ltx_Math" alttext="A^{c-c-c-}=(-\infty,0]\cup[1,5]\cup[7,\infty)" display="inline"><mrow><msup><mi>A</mi><mrow><mi>c</mi><mo>-</mo><mi>c</mi><mo>-</mo><mrow><mi>c</mi><mo>-</mo></mrow></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mn>5</mn><mo stretchy="false">]</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">[</mo><mn>7</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">13.</span> 
+<div id="I1.i13.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i13.p1.m1" class="ltx_Math" alttext="A^{c-c-c-c}=(0,1)\cup(5,7)" display="inline"><mrow><msup><mi>A</mi><mrow><mi>c</mi><mo>-</mo><mi>c</mi><mo>-</mo><mi>c</mi><mo>-</mo><mi>c</mi></mrow></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">together with <math id="p7.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, are <math id="p7.m7" class="ltx_Math" alttext="14" display="inline"><mn>14</mn></math> pairwise distinct sets that can be generated by <math id="p7.m8" class="ltx_Math" alttext="{}^{-}" display="inline"><msup><mi></mi><mo>-</mo></msup></math> and <math id="p7.m9" class="ltx_Math" alttext="{}^{c}" display="inline"><msup><mi></mi><mi>c</mi></msup></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Kuratowski closure-complement theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">KuratowskiClosurecomplementTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:59:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:59:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54A99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 54A05</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:15:53 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

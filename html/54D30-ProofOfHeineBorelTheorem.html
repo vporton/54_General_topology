@@ -1,0 +1,177 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Heine-Borel theorem</title>
+<!--Generated on Sat Feb 10 11:22:45 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Heine-Borel theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">To shorten the proofs, we will be using certain concepts and facts from general
+point-set topology, such as the very first assertion below.
+Even if you are not familiar with them,
+these assertions are all easily proven from the definitions (left as an exercise).</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Compact implies closed and bounded.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Since <math id="p2.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is a Hausdorff space, any compact subset <math id="p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has to be closed as well.
+That <math id="p2.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is also bounded is very easily seen by taking
+the open cover <math id="p2.m4" class="ltx_Math" alttext="\{(-k,k)^{n}\}_{k\in\mathbb{N}}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>k</mi></mrow><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo stretchy="false">}</mo></mrow><mrow><mi>k</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub></math>.
+Passing to a finite cover, we see that <math id="p2.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is contained
+in a bounded set.
+∎</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Reduction for closed and bounded implies compact.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">To prove that if <math id="p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is closed and bounded implies it is compact,
+it is only necessary to prove that the rectangle <math id="p3.m2" class="ltx_Math" alttext="[a,b]^{n}" display="inline"><msup><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msup></math> is compact.
+For general <math id="p3.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, since <math id="p3.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is bounded, it is contained in some such compact
+rectangle <math id="p3.m5" class="ltx_Math" alttext="[a,b]^{n}" display="inline"><msup><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mi>n</mi></msup></math>.
+Since <math id="p3.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is closed and contained in a compact set, <math id="p3.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is also compact.
+∎</p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">The case <math id="m1" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow></math>: the closed interval is compact..</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let <math id="p4.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be an arbitrary cover of <math id="p4.m2" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> by open sets in <math id="p4.m3" class="ltx_Math" alttext="\mathbb{R}^{1}" display="inline"><msup><mi>ℝ</mi><mn>1</mn></msup></math>.
+Define</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="S=\{x\in[a,b]:\textrm{some finite subcollection of $\mathcal{C}$ covers $[a,x]%
+$}\}\,." display="block"><mrow><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>:</mo><mrow><mtext>some finite subcollection of </mtext><mi class="ltx_font_mathcaligraphic">𝒞</mi><mtext> covers </mtext><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo rspace="4.2pt" stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Set <math id="p4.m4" class="ltx_Math" alttext="t=\sup S" display="inline"><mrow><mi>t</mi><mo>=</mo><mrow><mo>sup</mo><mo>⁡</mo><mi>S</mi></mrow></mrow></math>; then <math id="p4.m5" class="ltx_Math" alttext="a\leq t\leq b&lt;\infty" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>t</mi><mo>≤</mo><mi>b</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We first note that the supremum <math id="p5.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is attained:
+that is, there is a finite subcollection of <math id="p5.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> that covers <math id="p5.m3" class="ltx_Math" alttext="[a,t]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>t</mi><mo stretchy="false">]</mo></mrow></math>.
+Obviously we can choose one open set <math id="p5.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> from <math id="p5.m5" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> that covers the point <math id="p5.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.
+This <math id="p5.m7" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> must also cover the open interval <math id="p5.m8" class="ltx_Math" alttext="(t-\epsilon,t+\epsilon)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mi>ϵ</mi></mrow><mo>,</mo><mrow><mi>t</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></math> for some <math id="p5.m9" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.
+But by the definition of <math id="p5.m10" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, the interval <math id="p5.m11" class="ltx_Math" alttext="[a,t-\epsilon]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mrow><mi>t</mi><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">]</mo></mrow></math> has a finite subcover.
+When this finite subcover is put together with <math id="p5.m12" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>, we obtain a finite subcover for <math id="p5.m13" class="ltx_Math" alttext="[a,t]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>t</mi><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">It is easy to see that <math id="p6.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> cannot be less than <math id="p6.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>.
+For the same open set <math id="p6.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> above covers the interval <math id="p6.m4" class="ltx_Math" alttext="(t,t+\epsilon)" display="inline"><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>t</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></math>,
+so we have a finite subcover for <math id="p6.m5" class="ltx_Math" alttext="[a,t+\epsilon/2]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi>ϵ</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">]</mo></mrow></math>.
+If <math id="p6.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is the supremum then it has go to be at the right endpoint of the interval <math id="p6.m7" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>, i.e.
+<math id="p6.m8" class="ltx_Math" alttext="t=b" display="inline"><mrow><mi>t</mi><mo>=</mo><mi>b</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">For the case <math id="p7.m1" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, apply
+Tychonoff’s Theorem, in the finite case (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProofOfTychonoffsTheoremInFiniteCase</span>), which states:</p>
+<blockquote class="ltx_quote">
+<p class="ltx_p">If <math id="p7.m2" class="ltx_Math" alttext="X_{1},\ldots,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> are each compact,
+then <math id="p7.m3" class="ltx_Math" alttext="X_{1}\times\cdots\times X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi><mo>×</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> in the product topology is compact.
+</p>
+</blockquote>
+<p class="ltx_p">Here we set <math id="p7.m4" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math> to be the closed intervals; then the general closed rectangle in <math id="p7.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+is compact. It is not hard to see that the product topology for the closed rectangle is the same
+as its subspace topology in the product topology <math id="p7.m6" class="ltx_Math" alttext="\mathbb{R}^{n}=\mathbb{R}\times\cdots\times\mathbb{R}" display="inline"><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>=</mo><mrow><mi>ℝ</mi><mo>×</mo><mi mathvariant="normal">⋯</mi><mo>×</mo><mi>ℝ</mi></mrow></mrow></math>.
+And it is again a standard exercise to show that the product topology on <math id="p7.m7" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is the
+same as the norm topology on <math id="p7.m8" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> as a vector space.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">This completes the proof of the Heine-Borel theorem.</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Proof by a bisection argument</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">There is another proof of the Heine-Borel theorem for <math id="Sx1.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> without
+resorting to Tychonoff’s Theorem. It goes by bisecting the rectangle along each of its sides.
+At the first stage, we divide up the rectangle <math id="Sx1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> into <math id="Sx1.p1.m3" class="ltx_Math" alttext="2^{n}" display="inline"><msup><mn>2</mn><mi>n</mi></msup></math> subrectangles.
+Suppose the open cover <math id="Sx1.p1.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> of <math id="Sx1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has no finite subcover.
+Then one of the subrectangles — call it <math id="Sx1.p1.m6" class="ltx_Math" alttext="A_{1}" display="inline"><msub><mi>A</mi><mn>1</mn></msub></math> —
+must have no finite subcover by <math id="Sx1.p1.m7" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. We can subdivide <math id="Sx1.p1.m8" class="ltx_Math" alttext="A_{1}" display="inline"><msub><mi>A</mi><mn>1</mn></msub></math> into <math id="Sx1.p1.m9" class="ltx_Math" alttext="2^{n}" display="inline"><msup><mn>2</mn><mi>n</mi></msup></math> pieces; since <math id="Sx1.p1.m10" class="ltx_Math" alttext="A_{1}" display="inline"><msub><mi>A</mi><mn>1</mn></msub></math>
+has no finite subcover, one of the new subrectangles of <math id="Sx1.p1.m11" class="ltx_Math" alttext="A_{1}" display="inline"><msub><mi>A</mi><mn>1</mn></msub></math> also has no finite subcover. And continue
+dividing to get a nested sequence of rectangles <math id="Sx1.p1.m12" class="ltx_Math" alttext="A\supset A_{1}\supset A_{2}\supset\cdots" display="inline"><mrow><mi>A</mi><mo>⊃</mo><msub><mi>A</mi><mn>1</mn></msub><mo>⊃</mo><msub><mi>A</mi><mn>2</mn></msub><mo>⊃</mo><mi mathvariant="normal">⋯</mi></mrow></math>
+whose side lengths approach zero, and possessing no finite subcover.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">By the nested interval theorem, the “limit rectangle”
+<math id="Sx1.p2.m1" class="ltx_Math" alttext="\bigcap_{i=1}^{\infty}A_{i}" display="inline"><mrow><msubsup><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>A</mi><mi>i</mi></msub></mrow></math> must consist of a sole point <math id="Sx1.p2.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,
+and this obviously has a finite subcover by an open set <math id="Sx1.p2.m3" class="ltx_Math" alttext="U\in\mathcal{C}" display="inline"><mrow><mi>U</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math>.
+But <math id="Sx1.p2.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> must contain a small rectangle with centre <math id="Sx1.p2.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, which
+for <math id="Sx1.p2.m6" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> large enough, contradicts <math id="Sx1.p2.m7" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math> having no finite subcover.
+</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">Of course, in both proofs of the Heine-Borel theorem, the completeness of the reals (the least upper bound property)
+enters in an essential way.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Heine-Borel theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfHeineBorelTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:57:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:57:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 54D30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:22:45 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

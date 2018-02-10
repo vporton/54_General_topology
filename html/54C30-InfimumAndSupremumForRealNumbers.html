@@ -1,0 +1,237 @@
+<!DOCTYPE html><html>
+<head>
+<title>infimum and supremum for real numbers</title>
+<!--Generated on Sat Feb 10 11:19:07 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">infimum and supremum for real numbers</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Suppose <math id="p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a non-empty subset of <math id="p1.m2" class="ltx_Math" alttext="\mathbbmss{R}" display="inline"><mi>ℝ</mi></math>.  If <math id="p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is bounded from above, then
+the axioms of the real numbers imply that there exists
+a <em class="ltx_emph ltx_font_italic">least upper bound</em> for <math id="p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+That is, there exists an <math id="p1.m5" class="ltx_Math" alttext="m\in\mathbbmss{R}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is an upper bound for <math id="I1.i1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, that is, <math id="I1.i1.p1.m3" class="ltx_Math" alttext="a\leq m" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>m</mi></mrow></math> for all <math id="I1.i1.p1.m4" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I1.i2.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is another upper bound for <math id="I1.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then <math id="I1.i2.p1.m3" class="ltx_Math" alttext="m\leq M" display="inline"><mrow><mi>m</mi><mo>≤</mo><mi>M</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Such a number <math id="p1.m6" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is called the <em class="ltx_emph ltx_font_italic">supremum</em> of <math id="p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>,
+and it is denoted by <math id="p1.m8" class="ltx_Math" alttext="\sup A" display="inline"><mrow><mo>sup</mo><mo>⁡</mo><mi>A</mi></mrow></math>. It is easy to see that
+there can be only one least upper bound. If <math id="p1.m9" class="ltx_Math" alttext="m_{1}" display="inline"><msub><mi>m</mi><mn>1</mn></msub></math> and <math id="p1.m10" class="ltx_Math" alttext="m_{2}" display="inline"><msub><mi>m</mi><mn>2</mn></msub></math> are
+two least upper bounds for <math id="p1.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Then <math id="p1.m12" class="ltx_Math" alttext="m_{1}\leq m_{2}" display="inline"><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>≤</mo><msub><mi>m</mi><mn>2</mn></msub></mrow></math> and <math id="p1.m13" class="ltx_Math" alttext="m_{2}\leq m_{1}" display="inline"><mrow><msub><mi>m</mi><mn>2</mn></msub><mo>≤</mo><msub><mi>m</mi><mn>1</mn></msub></mrow></math>,
+and <math id="p1.m14" class="ltx_Math" alttext="m_{1}=m_{2}" display="inline"><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>=</mo><msub><mi>m</mi><mn>2</mn></msub></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Next, let us consider a set <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> that is bounded from below. That is, for
+some <math id="p2.m2" class="ltx_Math" alttext="m\in\mathbbmss{R}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> we have <math id="p2.m3" class="ltx_Math" alttext="m\leq a" display="inline"><mrow><mi>m</mi><mo>≤</mo><mi>a</mi></mrow></math> for all <math id="p2.m4" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>.  Then we say that
+<math id="p2.m5" class="ltx_Math" alttext="M\in\mathbbmss{R}" display="inline"><mrow><mi>M</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> is a
+a <em class="ltx_emph ltx_font_italic">greatest lower bound</em> for <math id="p2.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> if</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is an lower bound for <math id="I2.i1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, that is, <math id="I2.i1.p1.m3" class="ltx_Math" alttext="M\leq a" display="inline"><mrow><mi>M</mi><mo>≤</mo><mi>a</mi></mrow></math> for all <math id="I2.i1.p1.m4" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I2.i2.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is another lower bound for <math id="I2.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then <math id="I2.i2.p1.m3" class="ltx_Math" alttext="m\leq M" display="inline"><mrow><mi>m</mi><mo>≤</mo><mi>M</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Such a number <math id="p2.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is called the <em class="ltx_emph ltx_font_italic">infimum</em> of <math id="p2.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>,
+and it is denoted by <math id="p2.m9" class="ltx_Math" alttext="\inf A" display="inline"><mrow><mo>inf</mo><mo>⁡</mo><mi>A</mi></mrow></math>. Just as we proved that the supremum
+is unique, one can also show that the infimum is unique.
+The next lemma shows that the infimum exists.</p>
+</div>
+<div id="Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 1</span>.</h6>
+<div id="Thmlemma1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Every non-empty set bounded from below has a greatest lower bound.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let <math id="p3.m1" class="ltx_Math" alttext="m\in\mathbbmss{R}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> be a lower bound for non-empty set <math id="p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+In other words, <math id="p3.m3" class="ltx_Math" alttext="m\leq a" display="inline"><mrow><mi>m</mi><mo>≤</mo><mi>a</mi></mrow></math> for all <math id="p3.m4" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>. Let</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="-A=\{-a\in\mathbbmss{R}:a\in A\}." display="block"><mrow><mrow><mrow><mo>-</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo>-</mo><mi>a</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>:</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us recall the following result from this page (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/InequalityForRealNumbers</span>);
+if <math id="p3.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is an upper(lower) bound for <math id="p3.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then <math id="p3.m7" class="ltx_Math" alttext="-m" display="inline"><mrow><mo>-</mo><mi>m</mi></mrow></math> is a lower(upper)
+bound for <math id="p3.m8" class="ltx_Math" alttext="-A" display="inline"><mrow><mo>-</mo><mi>A</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Thus <math id="p4.m1" class="ltx_Math" alttext="-A" display="inline"><mrow><mo>-</mo><mi>A</mi></mrow></math> is bounded from above by <math id="p4.m2" class="ltx_Math" alttext="-m" display="inline"><mrow><mo>-</mo><mi>m</mi></mrow></math>.
+It follows that <math id="p4.m3" class="ltx_Math" alttext="-A" display="inline"><mrow><mo>-</mo><mi>A</mi></mrow></math> has a least upper bound <math id="p4.m4" class="ltx_Math" alttext="\sup(-A)" display="inline"><mrow><mo>sup</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.
+Now <math id="p4.m5" class="ltx_Math" alttext="-\sup(-A)" display="inline"><mrow><mo>-</mo><mrow><mo>sup</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is a greatest lower bound for <math id="p4.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+First, by the result, it is a lower bound for <math id="p4.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+Second, if <math id="p4.m8" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a lower bound for <math id="p4.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>,
+then <math id="p4.m10" class="ltx_Math" alttext="-m" display="inline"><mrow><mo>-</mo><mi>m</mi></mrow></math> is a upper bound for <math id="p4.m11" class="ltx_Math" alttext="-A" display="inline"><mrow><mo>-</mo><mi>A</mi></mrow></math>, and
+<math id="p4.m12" class="ltx_Math" alttext="\sup(-A)\leq-m" display="inline"><mrow><mrow><mo>sup</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mo>-</mo><mi>m</mi></mrow></mrow></math>, or <math id="p4.m13" class="ltx_Math" alttext="m\geq-\sup(-A)" display="inline"><mrow><mi>m</mi><mo>≥</mo><mrow><mo>-</mo><mrow><mo>sup</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The proof shows that if <math id="p5.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is non-empty and bounded from below,
+then
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\inf A=-\sup(-A)." display="block"><mrow><mrow><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo movablelimits="false">sup</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In consequence, if <math id="p5.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is bounded from above,
+then</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\sup A=-\inf(-A)." display="block"><mrow><mrow><mrow><mo movablelimits="false">sup</mo><mo>⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">In many respects, the supremum and infimum are similar to the maximum
+and minimum, or the largest and smallest element in a set.
+However, it is important to notice that the <math id="p6.m1" class="ltx_Math" alttext="\inf A" display="inline"><mrow><mo>inf</mo><mo>⁡</mo><mi>A</mi></mrow></math> and <math id="p6.m2" class="ltx_Math" alttext="\sup A" display="inline"><mrow><mo>sup</mo><mo>⁡</mo><mi>A</mi></mrow></math>
+do not need to belong to <math id="p6.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. (See examples below.)</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Examples</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">For example, consider the set of negative real numbers</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="A=\{x\in\mathbbmss{R}:\,\,x&lt;0\}." display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo rspace="5.8pt">:</mo><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then  <math id="I3.i1.p1.m1" class="ltx_Math" alttext="\sup A=0" display="inline"><mrow><mrow><mo>sup</mo><mo>⁡</mo><mi>A</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. Indeed. First, <math id="I3.i1.p1.m2" class="ltx_Math" alttext="a&lt;0" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math> for all <math id="I3.i1.p1.m3" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>,
+and if <math id="I3.i1.p1.m4" class="ltx_Math" alttext="a&lt;b" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi></mrow></math> for all <math id="I3.i1.p1.m5" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>, then <math id="I3.i1.p1.m6" class="ltx_Math" alttext="0\leq b" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">The sequence   
+<math id="I3.i2.p1.m1" class="ltx_Math" alttext="-(1\!-\!\frac{1}{1}),\,1\!-\!\frac{1}{2},\,-(1\!-\!\frac{1}{3}),\,1\!-\!\frac{%
+1}{4},\,-(1\!-\!\frac{1}{5}),\,..." display="inline"><mrow><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mfrac><mn>1</mn><mn>1</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mpadded width="-1.7pt"><mn> 1</mn></mpadded><mo rspace="0.8pt">-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo rspace="4.2pt">,</mo><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mpadded width="-1.7pt"><mn> 1</mn></mpadded><mo rspace="0.8pt">-</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow><mo rspace="4.2pt">,</mo><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi></mrow></math>  
+is not convergent.  The set  <math id="I3.i2.p1.m2" class="ltx_Math" alttext="A=\{(-1)^{n}(1-\frac{1}{n}):\,\,n\in\mathbb{Z}_{+}\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.8pt">:</mo><mrow><mi>n</mi><mo>∈</mo><msub><mi>ℤ</mi><mo>+</mo></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></math>  formed by its members has the infimum <math id="I3.i2.p1.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> and the supremum 1.</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">infimum and supremum for real numbers</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">InfimumAndSupremumForRealNumbers</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:41:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:41:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54C30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12D99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SetsThatDoNotHaveAnInfimum</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Infimum</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Supremum</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:19:07 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

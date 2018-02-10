@@ -1,0 +1,126 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of every filter is contained in an ultrafilter (alternate proof)</title>
+<!--Generated on Sat Feb 10 11:14:24 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of every filter is contained in an ultrafilter (alternate proof)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathfrak{U}" display="inline"><mi>𝔘</mi></math> be the family of filters over <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> which are finer than <math id="p1.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>, under the partial order of inclusion.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 1.</span> <span class="ltx_text ltx_font_italic">Every chain in <math id="p2.m1" class="ltx_Math" alttext="\mathfrak{U}" display="inline"><mi mathvariant="normal">U</mi></math> has an upper bound also in <math id="p2.m2" class="ltx_Math" alttext="\mathfrak{U}" display="inline"><mi mathvariant="normal">U</mi></math>.</span></p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Take any chain <math id="p3.m1" class="ltx_Math" alttext="\mathfrak{C}" display="inline"><mi>ℭ</mi></math> in <math id="p3.m2" class="ltx_Math" alttext="\mathfrak{U}" display="inline"><mi>𝔘</mi></math>, and consider the set <math id="p3.m3" class="ltx_Math" alttext="\mathcal{C}=\cup\mathfrak{C}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>=</mo><mrow><mo>∪</mo><mi>ℭ</mi></mrow></mrow></math>. Then <math id="p3.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is also a filter: it cannot contain the empty set, since no filter in the chain does; the intersection of two sets in <math id="p3.m5" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> must be present in the filters of <math id="p3.m6" class="ltx_Math" alttext="\mathfrak{C}" display="inline"><mi>ℭ</mi></math>; and <math id="p3.m7" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is closed under supersets because every
+filter in <math id="p3.m8" class="ltx_Math" alttext="\mathfrak{C}" display="inline"><mi>ℭ</mi></math> is. Obviously <math id="p3.m9" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> is finer than <math id="p3.m10" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>.
+∎</p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">So we conclude, by Zorn’s lemma, that <math id="p4.m1" class="ltx_Math" alttext="\mathfrak{U}" display="inline"><mi>𝔘</mi></math> must have a maximal filter say <math id="p4.m2" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>, which must contain <math id="p4.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>. All we need to show is that <math id="p4.m4" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> is an ultrafilter. Now, for any filter <math id="p4.m5" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>, and any set <math id="p4.m6" class="ltx_Math" alttext="Y\subseteq X" display="inline"><mrow><mi>Y</mi><mo>⊆</mo><mi>X</mi></mrow></math>, we must have:
+</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 2.</span> <span class="ltx_text ltx_font_italic">Either <math id="p5.m1" class="ltx_Math" alttext="\mathcal{U}_{1}=\{Z\cap Y:Z\in\mathcal{U}\}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">U</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><mi>Z</mi><mo mathvariant="normal">∩</mo><mi>Y</mi></mrow><mo mathvariant="normal">:</mo><mrow><mi>Z</mi><mo mathvariant="normal">∈</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">U</mi></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math> or <math id="p5.m2" class="ltx_Math" alttext="\mathcal{U}_{2}=\{Z\cap(X\backslash Y):Z\in\mathcal{U}\}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">U</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><mi>Z</mi><mo mathvariant="normal">∩</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>X</mi><mo mathvariant="normal">\</mo><mi>Y</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">:</mo><mrow><mi>Z</mi><mo mathvariant="normal">∈</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">U</mi></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math> (or both) are a filter subbasis.</span></p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We prove by contradiction that at least one of <math id="p6.m1" class="ltx_Math" alttext="\mathcal{U}_{1}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒰</mi><mn>1</mn></msub></math> or <math id="p6.m2" class="ltx_Math" alttext="\mathcal{U}_{2}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒰</mi><mn>2</mn></msub></math> must have the finite intersection property. If neither has the finite intersection property, then for some <math id="p6.m3" class="ltx_Math" alttext="Z_{1},\ldots Z_{k}" display="inline"><mrow><msub><mi>Z</mi><mn>1</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>Z</mi><mi>k</mi></msub></mrow></mrow></math> we must have</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\varnothing=\bigcap_{1\leq i\leq k}Z_{i}\cap Y=\bigcap_{1\leq i\leq k}Z_{i}%
+\cap(X\backslash Y)." display="block"><mrow><mrow><mi mathvariant="normal">∅</mi><mo>=</mo><mrow><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>k</mi></mrow></munder><msub><mi>Z</mi><mi>i</mi></msub></mrow><mo>∩</mo><mi>Y</mi></mrow><mo>=</mo><mrow><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>k</mi></mrow></munder><msub><mi>Z</mi><mi>i</mi></msub></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>\</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But then</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\varnothing=\left(\bigcap_{1\leq i\leq k}Z_{i}\cap Y\right)\cup\left(\bigcap_{%
+1\leq i\leq k}Z_{i}\cap(X\backslash Y)\right)=\bigcap_{1\leq i\leq k}Z_{i}," display="block"><mrow><mrow><mi mathvariant="normal">∅</mi><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>k</mi></mrow></munder><msub><mi>Z</mi><mi>i</mi></msub></mrow><mo>∩</mo><mi>Y</mi></mrow><mo>)</mo></mrow><mo>∪</mo><mrow><mo>(</mo><mrow><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>k</mi></mrow></munder><msub><mi>Z</mi><mi>i</mi></msub></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>\</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>k</mi></mrow></munder><msub><mi>Z</mi><mi>i</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so <math id="p6.m4" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> does not have the finite intersection property either. This cannot be, since <math id="p6.m5" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> is a filter.
+∎</p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Now, by Claim 2, if <math id="p7.m1" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> were not an ultrafilter, i.e., if for some <math id="p7.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> subset of <math id="p7.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> we would have neither <math id="p7.m4" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> nor <math id="p7.m5" class="ltx_Math" alttext="X\backslash Y" display="inline"><mrow><mi>X</mi><mo>\</mo><mi>Y</mi></mrow></math> in <math id="p7.m6" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>, then the filter generated <math id="p7.m7" class="ltx_Math" alttext="\mathcal{U}_{1}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒰</mi><mn>1</mn></msub></math> or <math id="p7.m8" class="ltx_Math" alttext="\mathcal{U}_{2}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒰</mi><mn>2</mn></msub></math> would be finer than <math id="p7.m9" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>, and then <math id="p7.m10" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> would not be maximal.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">So <math id="p8.m1" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> is an ultrafilter containing <math id="p8.m2" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>, as intended.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of every filter is contained in an ultrafilter (alternate proof)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfEveryFilterIsContainedInAnUltrafilteralternateProof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:52:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:52:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">brunoloff (19748)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">brunoloff (19748)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">brunoloff (19748)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 54A20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:14:24 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

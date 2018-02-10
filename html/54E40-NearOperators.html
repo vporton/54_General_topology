@@ -1,0 +1,762 @@
+<!DOCTYPE html><html>
+<head>
+<title>near operators</title>
+<!--Generated on Sat Feb 10 11:28:18 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">near operators</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">plus 2pt minus 2pt
+plus 2pt minus 2pt</p>
+</div>
+<div class="ltx_TOC ltx_role_contents">
+<h6>Contents:</h6>
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Perturbations and small perturbations: definitions and
+some results</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="#S2" title="2 Near operators ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Near operators</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#S2.SS1" title="2.1 Basic definitions and properties ‣ 2 Near operators ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>Basic definitions and properties</span></a>
+<ul class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S2.SS1.SSS1" title="2.1.1 A topology based on nearness ‣ 2.1 Basic definitions and properties ‣ 2 Near operators ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1.1 </span>A topology based on nearness</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S2.SS2" title="2.2 Some applications ‣ 2 Near operators ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Some applications</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Perturbations and small perturbations: definitions and
+some results</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">We start our discussion on the Campanato theory of near operators
+with some preliminary tools.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p2.m1" class="ltx_Math" alttext="X,Y" display="inline"><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow></math> be two sets and let a metric <math id="S1.p2.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> be defined on <math id="S1.p2.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. If
+<math id="S1.p2.m4" class="ltx_Math" alttext="F\colon X\to Y" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> is an injective map, we can define a metric on <math id="S1.p2.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> by
+putting</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="d_{F}(x^{\prime},x^{\prime\prime})=d(F(x^{\prime}),F(x^{\prime\prime}))." display="block"><mrow><mrow><mrow><msub><mi>d</mi><mi>F</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo>,</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Indeed, <math id="S1.p3.m1" class="ltx_Math" alttext="d_{F}" display="inline"><msub><mi>d</mi><mi>F</mi></msub></math> is zero if and only if <math id="S1.p3.m2" class="ltx_Math" alttext="x^{\prime}=x^{\prime\prime}" display="inline"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><msup><mi>x</mi><mo>′′</mo></msup></mrow></math> (since <math id="S1.p3.m3" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is
+injective); <math id="S1.p3.m4" class="ltx_Math" alttext="d_{F}" display="inline"><msub><mi>d</mi><mi>F</mi></msub></math> is obviously symmetric and the triangle
+inequality follows from the triangle inequality of <math id="S1.p3.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Moreover, if <math id="S1.p4.m1" class="ltx_Math" alttext="F(X)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a complete subspace of <math id="S1.p4.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, then <math id="S1.p4.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is
+complete with respect to the metric <math id="S1.p4.m4" class="ltx_Math" alttext="d_{F}" display="inline"><msub><mi>d</mi><mi>F</mi></msub></math>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">Indeed, let <math id="S1.p5.m1" class="ltx_Math" alttext="(u_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> be a Cauchy sequence in <math id="S1.p5.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. By definition of
+<math id="S1.p5.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>, then <math id="S1.p5.m4" class="ltx_Math" alttext="(F(u_{n}))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is a Cauchy sequence in <math id="S1.p5.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, and in
+particular in <math id="S1.p5.m6" class="ltx_Math" alttext="F(X)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>, which is complete. Thus, there exists <math id="S1.p5.m7" class="ltx_Math" alttext="y_{0}=F(x_{0})\in F(X)" display="inline"><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> which is limit of the sequence <math id="S1.p5.m8" class="ltx_Math" alttext="(F(u_{n}))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.
+<math id="S1.p5.m9" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> is the limit of <math id="S1.p5.m10" class="ltx_Math" alttext="(x_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> in <math id="S1.p5.m11" class="ltx_Math" alttext="(X,d_{F})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>d</mi><mi>F</mi></msub><mo stretchy="false">)</mo></mrow></math>, which completes the
+proof.
+</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">A particular case of the previous statement is when <math id="S1.p6.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is onto
+(and thus a bijection) and <math id="S1.p6.m2" class="ltx_Math" alttext="(Y,d)" display="inline"><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></math> is complete.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Similarly, if <math id="S1.p7.m1" class="ltx_Math" alttext="F(X)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is compact in <math id="S1.p7.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, then <math id="S1.p7.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is compact with
+the metric <math id="S1.p7.m4" class="ltx_Math" alttext="d_{F}" display="inline"><msub><mi>d</mi><mi>F</mi></msub></math>.</p>
+</div>
+<div id="S1.Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 1.1</span></h6>
+<div id="S1.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.Thmtheorem1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a set and <math id="S1.Thmtheorem1.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> be a metric space. Let <math id="S1.Thmtheorem1.p1.m3" class="ltx_Math" alttext="F,G" display="inline"><mrow><mi>F</mi><mo>,</mo><mi>G</mi></mrow></math> be two maps
+from <math id="S1.Thmtheorem1.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S1.Thmtheorem1.p1.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. We say that <math id="S1.Thmtheorem1.p1.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a perturbation of <math id="S1.Thmtheorem1.p1.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> if there
+exist a constant <math id="S1.Thmtheorem1.p1.m8" class="ltx_Math" alttext="k&gt;0" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mn>0</mn></mrow></math> such that for each <math id="S1.Thmtheorem1.p1.m9" class="ltx_Math" alttext="x^{\prime},x^{\prime\prime}\in X" display="inline"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>,</mo><msup><mi>x</mi><mo>′′</mo></msup></mrow><mo>∈</mo><mi>X</mi></mrow></math> one has:</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="d(G(x^{\prime}),G(x^{\prime\prime}))\leq kd(F(x^{\prime}),F(x^{\prime\prime}))" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>k</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S1.Thmtheorem2" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Remark 1.2</span></h6>
+<div id="S1.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">In particular, if <math id="S1.Thmtheorem2.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is injective then <math id="S1.Thmtheorem2.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a perturbation of
+<math id="S1.Thmtheorem2.p1.m3" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> if <math id="S1.Thmtheorem2.p1.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is uniformly continuous with respect to the metric induced on
+<math id="S1.Thmtheorem2.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> by <math id="S1.Thmtheorem2.p1.m6" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>.</p>
+</div>
+</div>
+<div id="S1.Thmtheorem3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 1.3</span></h6>
+<div id="S1.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">In the same hypothesis as in the previous definition, we say that
+<math id="S1.Thmtheorem3.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a small perturbation of <math id="S1.Thmtheorem3.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> if it is a perturbation of
+constant <math id="S1.Thmtheorem3.p1.m3" class="ltx_Math" alttext="k&lt;1" display="inline"><mrow><mi>k</mi><mo>&lt;</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">We can now prove this generalization of the Banach-Caccioppoli
+fixed point theorem:</p>
+</div>
+<div id="S1.Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Theorem 1.4</span></h6>
+<div id="S1.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">Let <math id="S1.Thmtheorem4.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a set and <math id="S1.Thmtheorem4.p1.m2" class="ltx_Math" alttext="(Y,d)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>Y</mi><mo mathvariant="normal">,</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> be a complete metric space. Let <math id="S1.Thmtheorem4.p1.m3" class="ltx_Math" alttext="F,G" display="inline"><mrow><mi>F</mi><mo mathvariant="normal">,</mo><mi>G</mi></mrow></math> be two mappings from <math id="S1.Thmtheorem4.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S1.Thmtheorem4.p1.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> such that:</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_slanted">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math><span class="ltx_text ltx_font_slanted"> is bijective;</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_slanted">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math><span class="ltx_text ltx_font_slanted"> is a small perturbation of </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math><span class="ltx_text ltx_font_slanted">.</span></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S1.Thmtheorem4.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">Then, there exists a unique <math id="S1.Thmtheorem4.p2.m1" class="ltx_Math" alttext="u\in X" display="inline"><mrow><mi>u</mi><mo mathvariant="normal">∈</mo><mi>X</mi></mrow></math> such that <math id="S1.Thmtheorem4.p2.m2" class="ltx_Math" alttext="G(u)=F(u)" display="inline"><mrow><mrow><mi>G</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>u</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi>F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>u</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math></span></p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.Thmtheorem4.p3" class="ltx_para">
+<p class="ltx_p">The hypothesis (<a href="#I1.i1" title="1. ‣ Theorem 1.4 ‣ 1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) ensures that the metric space <math id="S1.Thmtheorem4.p3.m1" class="ltx_Math" alttext="(X,d_{F})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>d</mi><mi>F</mi></msub><mo stretchy="false">)</mo></mrow></math> is complete. If we now consider the function <math id="S1.Thmtheorem4.p3.m2" class="ltx_Math" alttext="T:X\to X" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>X</mi></mrow></mrow></math>
+defined by</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="T(x)=F^{-1}(G(x))" display="block"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we note that, by (<a href="#I1.i2" title="2. ‣ Theorem 1.4 ‣ 1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), we have</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="d(G(x^{\prime}),G(x^{\prime\prime}))\leq kd(F(x^{\prime}),F(x^{\prime\prime}))" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>k</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.Thmtheorem4.p3.m3" class="ltx_Math" alttext="k\in(0,1)" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> is the constant of the small perturbation;
+note that, by the definition of <math id="S1.Thmtheorem4.p3.m4" class="ltx_Math" alttext="d_{F}" display="inline"><msub><mi>d</mi><mi>F</mi></msub></math> and applying <math id="S1.Thmtheorem4.p3.m5" class="ltx_Math" alttext="F\circ F^{-1}" display="inline"><mrow><mi>F</mi><mo>∘</mo><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> to the first side, the last equation can be rewritten as</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="d_{F}(T(x^{\prime}),T(x^{\prime\prime}))\leq kd_{F}(x^{\prime},x^{\prime\prime%
+});" display="block"><mrow><mrow><mrow><msub><mi>d</mi><mi>F</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>k</mi><mo>⁢</mo><msub><mi>d</mi><mi>F</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo>,</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in other words, since <math id="S1.Thmtheorem4.p3.m6" class="ltx_Math" alttext="k&lt;1" display="inline"><mrow><mi>k</mi><mo>&lt;</mo><mn>1</mn></mrow></math>, <math id="S1.Thmtheorem4.p3.m7" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is a contraction in the
+complete metric space <math id="S1.Thmtheorem4.p3.m8" class="ltx_Math" alttext="(X,d_{F})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>d</mi><mi>F</mi></msub><mo stretchy="false">)</mo></mrow></math>; therefore (by the classical
+Banach-Caccioppoli fixed point theorem) <math id="S1.Thmtheorem4.p3.m9" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> has a unique fixed
+point: there exist <math id="S1.Thmtheorem4.p3.m10" class="ltx_Math" alttext="u\in X" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S1.Thmtheorem4.p3.m11" class="ltx_Math" alttext="T(u)=u" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>u</mi></mrow></math>; by definition
+of <math id="S1.Thmtheorem4.p3.m12" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> this is equivalent to <math id="S1.Thmtheorem4.p3.m13" class="ltx_Math" alttext="G(u)=F(u)" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and the proof is hence
+complete.
+∎</p>
+</div>
+</div>
+</div>
+<div id="S1.Thmtheorem5" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Remark 1.5</span></h6>
+<div id="S1.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">The hypothesis of the theorem can be generalized as such: let <math id="S1.Thmtheorem5.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>
+be a set and <math id="S1.Thmtheorem5.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> a metric space (not necessarily complete); let
+<math id="S1.Thmtheorem5.p1.m3" class="ltx_Math" alttext="F,G" display="inline"><mrow><mi>F</mi><mo>,</mo><mi>G</mi></mrow></math> be two mappings from <math id="S1.Thmtheorem5.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S1.Thmtheorem5.p1.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> such that <math id="S1.Thmtheorem5.p1.m6" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is injective,
+<math id="S1.Thmtheorem5.p1.m7" class="ltx_Math" alttext="F(X)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is complete and <math id="S1.Thmtheorem5.p1.m8" class="ltx_Math" alttext="G(X)\subseteq F(X)" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>; then there exists <math id="S1.Thmtheorem5.p1.m9" class="ltx_Math" alttext="u\in X" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S1.Thmtheorem5.p1.m10" class="ltx_Math" alttext="G(u)=F(u)" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S1.Thmtheorem5.p2" class="ltx_para">
+<p class="ltx_p">(Apply the theorem using <math id="S1.Thmtheorem5.p2.m1" class="ltx_Math" alttext="F(X)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> instead of <math id="S1.Thmtheorem5.p2.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> as target space.)</p>
+</div>
+</div>
+<div id="S1.Thmtheorem6" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Remark 1.6</span></h6>
+<div id="S1.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">The Banach-Caccioppoli fixed point theorem is obtained when
+<math id="S1.Thmtheorem6.p1.m1" class="ltx_Math" alttext="X=Y" display="inline"><mrow><mi>X</mi><mo>=</mo><mi>Y</mi></mrow></math> and <math id="S1.Thmtheorem6.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is the identity.</p>
+</div>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">We can use theorem <a href="#S1.Thmtheorem4" title="Theorem 1.4 ‣ 1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a> to prove a result that applies
+to perturbations which are not necessarily small (i.e. for which
+the constant <math id="S1.p9.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> can be greater than one). To prove it, we must
+assume some supplemental structure on the metric of <math id="S1.p9.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>: in
+particular, we have to assume that the metric <math id="S1.p9.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> is invariant by
+dilations, that is that <math id="S1.p9.m4" class="ltx_Math" alttext="d(\alpha y^{\prime},\alpha y^{\prime\prime})=\alpha d(y^{\prime},y^{\prime%
+\prime})" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup></mrow><mo>,</mo><mrow><mi>α</mi><mo>⁢</mo><msup><mi>y</mi><mo>′′</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>α</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>y</mi><mo>′</mo></msup><mo>,</mo><msup><mi>y</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for each <math id="S1.p9.m5" class="ltx_Math" alttext="y^{\prime},y^{\prime\prime}\in Y" display="inline"><mrow><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>,</mo><msup><mi>y</mi><mo>′′</mo></msup></mrow><mo>∈</mo><mi>Y</mi></mrow></math>. The most common case of such
+a metric is when the metric is deduced from a norm (i.e. when <math id="S1.p9.m6" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>
+is a normed space, and in particular a Banach space). The result
+follows immediately:</p>
+</div>
+<div id="S1.Thmtheorem7" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Corollary 1.7</span></h6>
+<div id="S1.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">Let <math id="S1.Thmtheorem7.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a set and <math id="S1.Thmtheorem7.p1.m2" class="ltx_Math" alttext="(Y,d)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>Y</mi><mo mathvariant="normal">,</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> be a complete metric space with
+a metric <math id="S1.Thmtheorem7.p1.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> invariant by dilations. Let <math id="S1.Thmtheorem7.p1.m4" class="ltx_Math" alttext="F,G" display="inline"><mrow><mi>F</mi><mo mathvariant="normal">,</mo><mi>G</mi></mrow></math> be two mappings
+from <math id="S1.Thmtheorem7.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S1.Thmtheorem7.p1.m6" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> such that <math id="S1.Thmtheorem7.p1.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is bijective and <math id="S1.Thmtheorem7.p1.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is
+a perturbation of <math id="S1.Thmtheorem7.p1.m9" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>, with constant <math id="S1.Thmtheorem7.p1.m10" class="ltx_Math" alttext="K&gt;0" display="inline"><mrow><mi>K</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>.</span></p>
+</div>
+<div id="S1.Thmtheorem7.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">Then, for each <math id="S1.Thmtheorem7.p2.m1" class="ltx_Math" alttext="M&gt;K" display="inline"><mrow><mi>M</mi><mo mathvariant="normal">&gt;</mo><mi>K</mi></mrow></math> there exists a unique <math id="S1.Thmtheorem7.p2.m2" class="ltx_Math" alttext="u_{M}\in X" display="inline"><mrow><msub><mi>u</mi><mi>M</mi></msub><mo mathvariant="normal">∈</mo><mi>X</mi></mrow></math> such that
+<math id="S1.Thmtheorem7.p2.m3" class="ltx_Math" alttext="G(u)=MF(u)" display="inline"><mrow><mrow><mi>G</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>u</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi>M</mi><mo mathvariant="italic">⁢</mo><mi>F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>u</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>
+</span></p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.Thmtheorem7.p3" class="ltx_para">
+<p class="ltx_p">The proof is an immediate consequence of theorem <a href="#S1.Thmtheorem4" title="Theorem 1.4 ‣ 1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>
+given that the map <math id="S1.Thmtheorem7.p3.m1" class="ltx_Math" alttext="\tilde{G}(u)=G(u)/M" display="inline"><mrow><mrow><mover accent="true"><mi>G</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>M</mi></mrow></mrow></math> is a small perturbation
+of <math id="S1.Thmtheorem7.p3.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> (a property which is ensured by the dilation invariance of
+the metric <math id="S1.Thmtheorem7.p3.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>).
+∎</p>
+</div>
+</div>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">We also have the following</p>
+</div>
+<div id="S1.Thmtheorem8" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Corollary 1.8</span></h6>
+<div id="S1.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">Let <math id="S1.Thmtheorem8.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a set and <math id="S1.Thmtheorem8.p1.m2" class="ltx_Math" alttext="(Y,d)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>Y</mi><mo mathvariant="normal">,</mo><mi>d</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> be a complete, compact metric space
+with a metric <math id="S1.Thmtheorem8.p1.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> invariant by dilations. Let <math id="S1.Thmtheorem8.p1.m4" class="ltx_Math" alttext="F,G" display="inline"><mrow><mi>F</mi><mo mathvariant="normal">,</mo><mi>G</mi></mrow></math> be two
+mappings from <math id="S1.Thmtheorem8.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S1.Thmtheorem8.p1.m6" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> such that <math id="S1.Thmtheorem8.p1.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is bijective and <math id="S1.Thmtheorem8.p1.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is
+a perturbation of <math id="S1.Thmtheorem8.p1.m9" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>, with constant <math id="S1.Thmtheorem8.p1.m10" class="ltx_Math" alttext="K&gt;0" display="inline"><mrow><mi>K</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>.</span></p>
+</div>
+<div id="S1.Thmtheorem8.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">Then there exists at least one <math id="S1.Thmtheorem8.p2.m1" class="ltx_Math" alttext="u_{K}\in X" display="inline"><mrow><msub><mi>u</mi><mi>K</mi></msub><mo mathvariant="normal">∈</mo><mi>X</mi></mrow></math> such that
+<math id="S1.Thmtheorem8.p2.m2" class="ltx_Math" alttext="G(u_{\infty})=KF(u_{\infty})" display="inline"><mrow><mrow><mi>G</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>u</mi><mi mathvariant="normal">∞</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi>K</mi><mo mathvariant="italic">⁢</mo><mi>F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>u</mi><mi mathvariant="normal">∞</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math></span></p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.Thmtheorem8.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.Thmtheorem8.p3.m1" class="ltx_Math" alttext="(a_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> be a decreasing sequence of real numbers greater than
+one, converging to one (<math id="S1.Thmtheorem8.p3.m2" class="ltx_Math" alttext="a_{n}\downarrow 1" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>↓</mo><mn>1</mn></mrow></math>) and let <math id="S1.Thmtheorem8.p3.m3" class="ltx_Math" alttext="M_{n}=a_{n}K" display="inline"><mrow><msub><mi>M</mi><mi>n</mi></msub><mo>=</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi>K</mi></mrow></mrow></math>
+for each <math id="S1.Thmtheorem8.p3.m4" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. We can apply corollary <a href="#S1.Thmtheorem7" title="Corollary 1.7 ‣ 1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.7</span></a> to
+each <math id="S1.Thmtheorem8.p3.m5" class="ltx_Math" alttext="M_{n}" display="inline"><msub><mi>M</mi><mi>n</mi></msub></math>, obtaining a sequence <math id="S1.Thmtheorem8.p3.m6" class="ltx_Math" alttext="u_{n}" display="inline"><msub><mi>u</mi><mi>n</mi></msub></math> of elements of <math id="S1.Thmtheorem8.p3.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> for
+which one has</p>
+<table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="G(u_{n})=M_{n}F(u_{n})." display="block"><mrow><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>M</mi><mi>n</mi></msub><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.Thmtheorem8.p4" class="ltx_para">
+<p class="ltx_p">Since <math id="S1.Thmtheorem8.p4.m1" class="ltx_Math" alttext="(X,d_{F})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>d</mi><mi>F</mi></msub><mo stretchy="false">)</mo></mrow></math> is compact, there exist a subsequence of <math id="S1.Thmtheorem8.p4.m2" class="ltx_Math" alttext="u_{n}" display="inline"><msub><mi>u</mi><mi>n</mi></msub></math>
+which converges to some <math id="S1.Thmtheorem8.p4.m3" class="ltx_Math" alttext="u_{\infty}" display="inline"><msub><mi>u</mi><mi mathvariant="normal">∞</mi></msub></math>; by continuity of <math id="S1.Thmtheorem8.p4.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and <math id="S1.Thmtheorem8.p4.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>
+we can pass to the limit in (<a href="#S1.E1" title="(1) ‣ Corollary 1.8 ‣ 1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>), obtaining</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="G(u_{\infty})=KF(u_{\infty})" display="block"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi mathvariant="normal">∞</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>K</mi><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi mathvariant="normal">∞</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which completes the proof.
+∎</p>
+</div>
+</div>
+</div>
+<div id="S1.Thmtheorem9" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Remark 1.9</span></h6>
+<div id="S1.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">For theorem <a href="#S1.Thmtheorem8" title="Corollary 1.8 ‣ 1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.8</span></a> we cannot ensure uniqueness of <math id="S1.Thmtheorem9.p1.m1" class="ltx_Math" alttext="u_{\infty}" display="inline"><msub><mi>u</mi><mi mathvariant="normal">∞</mi></msub></math>,
+since in general the sequence <math id="S1.Thmtheorem9.p1.m2" class="ltx_Math" alttext="u_{n}" display="inline"><msub><mi>u</mi><mi>n</mi></msub></math> may change with the choice of
+<math id="S1.Thmtheorem9.p1.m3" class="ltx_Math" alttext="a_{n}" display="inline"><msub><mi>a</mi><mi>n</mi></msub></math>, and the limit might be different. So the corollary can only
+be applied as an existence theorem.</p>
+</div>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Near operators</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">We can now introduce the concept of near operators and discuss
+some of their properties.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">A historical remark: Campanato initially introduced the concept in
+Hilbert spaces; subsequently, it was remarked that most of the
+theory could more generally be applied to Banach spaces; indeed,
+it was also proven that the basic definition can be generalized to
+make part of the theory available in the more general environment
+of metric vector spaces.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">We will here discuss the theory in the case of Banach spaces,
+with only a couple of exceptions: to see some of the extra
+properties that are available in Hilbert spaces and to discuss
+a generalization of the Lax-Milgram theorem to metric vector spaces.</p>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Basic definitions and properties</h3>
+
+<div id="S2.Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 2.1</span></h6>
+<div id="S2.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.Thmtheorem1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a set and <math id="S2.Thmtheorem1.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> a Banach space. Let <math id="S2.Thmtheorem1.p1.m3" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> be two
+operators from <math id="S2.Thmtheorem1.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S2.Thmtheorem1.p1.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. We say that <math id="S2.Thmtheorem1.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is near <math id="S2.Thmtheorem1.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> if and only
+if there exist two constants <math id="S2.Thmtheorem1.p1.m8" class="ltx_Math" alttext="\alpha&gt;0" display="inline"><mrow><mi>α</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S2.Thmtheorem1.p1.m9" class="ltx_Math" alttext="k\in(0,1)" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> such
+that, for each <math id="S2.Thmtheorem1.p1.m10" class="ltx_Math" alttext="x^{\prime},x^{\prime\prime}\in X" display="inline"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>,</mo><msup><mi>x</mi><mo>′′</mo></msup></mrow><mo>∈</mo><mi>X</mi></mrow></math> one has</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="\lVert B(x^{\prime})-B(x^{\prime\prime})-\alpha(A(x^{\prime})-A(x^{\prime%
+\prime}))\rVert\leq k\lVert B(x^{\prime})-B(x^{\prime\prime})\rVert" display="block"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">In other words, <math id="S2.SS1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is near <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> if <math id="S2.SS1.p1.m3" class="ltx_Math" alttext="B-\alpha A" display="inline"><mrow><mi>B</mi><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>A</mi></mrow></mrow></math> is a small
+perturbation of <math id="S2.SS1.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> for an appropriate value of <math id="S2.SS1.p1.m5" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">Observe that in general the property is not symmetric: if <math id="S2.SS1.p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is
+near <math id="S2.SS1.p2.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, it is not necessarily true that <math id="S2.SS1.p2.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is near <math id="S2.SS1.p2.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>; as we
+will briefly see, this can only be proven if <math id="S2.SS1.p2.m5" class="ltx_Math" alttext="\alpha&lt;1/2" display="inline"><mrow><mi>α</mi><mo>&lt;</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></math>, or in
+the case that <math id="S2.SS1.p2.m6" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is a Hilbert space, by using an equivalent
+condition that will be discussed later on. Yet it is possible to
+define a topology with some interesting properties on the space of
+operators, by using the concept of nearness to form a base.</p>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">The core point of the nearness between operators is that it allows
+us to “transfer” many important properties from <math id="S2.SS1.p3.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to <math id="S2.SS1.p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>; in
+other words, if <math id="S2.SS1.p3.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> satisfies certain properties, and <math id="S2.SS1.p3.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is near
+<math id="S2.SS1.p3.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, then <math id="S2.SS1.p3.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> satisfies the same properties. To prove this, and to
+enumerate some of these “nearness-invariant” properties, we will
+emerge a few important facts.</p>
+</div>
+<div id="S2.SS1.p4" class="ltx_para">
+<p class="ltx_p">In what follows, unless differently specified, we will always
+assume that <math id="S2.SS1.p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a set, <math id="S2.SS1.p4.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is a Banach space and <math id="S2.SS1.p4.m3" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> are two
+operators from <math id="S2.SS1.p4.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S2.SS1.p4.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.</p>
+</div>
+<div id="S2.Thmtheorem2" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Lemma 2.2</span></h6>
+<div id="S2.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">If <math id="S2.Thmtheorem2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is near <math id="S2.Thmtheorem2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> then there exist two positive constants <math id="S2.Thmtheorem2.p1.m3" class="ltx_Math" alttext="M_{1},M_{2}" display="inline"><mrow><msub><mi>M</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><msub><mi>M</mi><mn mathvariant="normal">2</mn></msub></mrow></math> such that</span></p>
+<table id="S2.EGx1" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tr id="S2.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="\displaystyle\lVert B(x^{\prime})-B(x^{\prime\prime})\rVert\leq M_{1}\lVert A(%
+x^{\prime})-A(x^{\prime\prime})\rVert" display="block"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><msub><mi>M</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S2.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="\displaystyle\lVert A(x^{\prime})-A(x^{\prime\prime})\rVert\leq M_{2}\lVert B(%
+x^{\prime})-B(x^{\prime\prime})\rVert" display="block"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><msub><mi>M</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.Thmtheorem2.p2" class="ltx_para">
+<p class="ltx_p">We have:</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Thmtheorem2.p2.m1" class="ltx_Math" alttext="\displaystyle\lVert B(x^{\prime})-B(x^{\prime\prime})\rVert\leq\\
+\displaystyle\leq\lVert B(x^{\prime})-B(x^{\prime\prime})-\alpha(A(x^{\prime})%
+-A(x^{\prime\prime}))\rVert+\alpha\lVert A(x^{\prime})-A(x^{\prime\prime})%
+\rVert\leq\\
+\displaystyle\leq k\lVert B(x^{\prime})-B(x^{\prime\prime})\rVert+\alpha\lVert
+A%
+(x^{\prime})-A(x^{\prime\prime})\rVert" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>+</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow><mo>≤</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow><mo>+</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="\lVert B(x^{\prime})-B(x^{\prime\prime})\rVert\leq\frac{\alpha}{1-k}\lVert A(x%
+^{\prime})-A(x^{\prime\prime})\rVert" display="block"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><mfrac><mi>α</mi><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow></mfrac><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is the first inequality with <math id="S2.Thmtheorem2.p2.m2" class="ltx_Math" alttext="M_{1}=\alpha/(1-k)" display="inline"><mrow><msub><mi>M</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>α</mi><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> (which is
+positive since <math id="S2.Thmtheorem2.p2.m3" class="ltx_Math" alttext="k&lt;1" display="inline"><mrow><mi>k</mi><mo>&lt;</mo><mn>1</mn></mrow></math>).</p>
+</div>
+<div id="S2.Thmtheorem2.p3" class="ltx_para">
+<p class="ltx_p">But also</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Thmtheorem2.p3.m1" class="ltx_Math" alttext="\displaystyle\lVert A(x^{\prime})-A(x^{\prime\prime})\rVert\leq\\
+\displaystyle\leq\frac{1}{\alpha}\lVert B(x^{\prime})-B(x^{\prime\prime})-%
+\alpha(A(x^{\prime})-A(x^{\prime\prime}))\rVert+\frac{1}{\alpha}\lVert B(x^{%
+\prime})-B(x^{\prime\prime})\rVert\leq\\
+\displaystyle\leq\frac{k}{\alpha}\lVert B(x^{\prime})-B(x^{\prime\prime})%
+\rVert+\frac{1}{\alpha}\lVert B(x^{\prime})-B(x^{\prime\prime})\rVert" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mfrac><mn>1</mn><mi>α</mi></mfrac><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mi>α</mi></mfrac><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow><mo>≤</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mfrac><mi>k</mi><mi>α</mi></mfrac><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mi>α</mi></mfrac><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence</p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="\lVert A(x^{\prime})-A(x^{\prime\prime})\rVert\leq\frac{1+k}{\alpha}\lVert B(x%
+^{\prime})-B(x^{\prime\prime})\rVert" display="block"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mi>k</mi></mrow><mi>α</mi></mfrac><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is the second inequality with <math id="S2.Thmtheorem2.p3.m2" class="ltx_Math" alttext="M_{2}=(1+k)/\alpha" display="inline"><mrow><msub><mi>M</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mi>α</mi></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+</div>
+<div id="S2.SS1.p5" class="ltx_para">
+<p class="ltx_p">The most important corollary of the previous lemma is the
+following</p>
+</div>
+<div id="S2.Thmtheorem3" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Corollary 2.3</span></h6>
+<div id="S2.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">If <math id="S2.Thmtheorem3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is near <math id="S2.Thmtheorem3.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> then two points of <math id="S2.Thmtheorem3.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> have the same image
+under <math id="S2.Thmtheorem3.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> if and only if the have the same image under <math id="S2.Thmtheorem3.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</span></p>
+</div>
+</div>
+<div id="S2.SS1.p6" class="ltx_para">
+<p class="ltx_p">We can express the previous concept in the following formal way:
+for each <math id="S2.SS1.p6.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in <math id="S2.SS1.p6.m2" class="ltx_Math" alttext="B(X)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> there exist <math id="S2.SS1.p6.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> in <math id="S2.SS1.p6.m4" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> such that
+<math id="S2.SS1.p6.m5" class="ltx_Math" alttext="A(B^{-1}(y))=\{z\}" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>z</mi><mo stretchy="false">}</mo></mrow></mrow></math> and conversely. In yet other words: each
+fiber of <math id="S2.SS1.p6.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a fiber (for a different point) of <math id="S2.SS1.p6.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, and
+conversely.</p>
+</div>
+<div id="S2.SS1.p7" class="ltx_para">
+<p class="ltx_p">It is therefore possible to define a map <math id="S2.SS1.p7.m1" class="ltx_Math" alttext="T_{A}:B(X)\to Y" display="inline"><mrow><msub><mi>T</mi><mi>A</mi></msub><mo>:</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>Y</mi></mrow></mrow></math> by
+putting <math id="S2.SS1.p7.m2" class="ltx_Math" alttext="T_{A}(y)=z" display="inline"><mrow><mrow><msub><mi>T</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>z</mi></mrow></math>; the range of <math id="S2.SS1.p7.m3" class="ltx_Math" alttext="T_{A}" display="inline"><msub><mi>T</mi><mi>A</mi></msub></math> is <math id="S2.SS1.p7.m4" class="ltx_Math" alttext="A(X)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Conversely, it
+is possible to define <math id="S2.SS1.p7.m5" class="ltx_Math" alttext="T_{B}:A(X)\to Y" display="inline"><mrow><msub><mi>T</mi><mi>B</mi></msub><mo>:</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>Y</mi></mrow></mrow></math>, by putting <math id="S2.SS1.p7.m6" class="ltx_Math" alttext="T_{B}(z)=y" display="inline"><mrow><mrow><msub><mi>T</mi><mi>B</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>;
+the range of <math id="S2.SS1.p7.m7" class="ltx_Math" alttext="T_{B}" display="inline"><msub><mi>T</mi><mi>B</mi></msub></math> is <math id="S2.SS1.p7.m8" class="ltx_Math" alttext="B(X)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Both maps are injective and, if
+restricted to their respective ranges, one is the inverse of the
+other.</p>
+</div>
+<div id="S2.SS1.p8" class="ltx_para">
+<p class="ltx_p">Also observe that <math id="S2.SS1.p8.m1" class="ltx_Math" alttext="T_{B}" display="inline"><msub><mi>T</mi><mi>B</mi></msub></math> and <math id="S2.SS1.p8.m2" class="ltx_Math" alttext="T_{A}" display="inline"><msub><mi>T</mi><mi>A</mi></msub></math> are continuous. This follows
+from the fact that for each <math id="S2.SS1.p8.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> one has</p>
+<table id="S2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex13.m1" class="ltx_Math" alttext="T_{A}(B(x))=A(x),\qquad T_{B}(A(x))=B(x)" display="block"><mrow><mrow><mrow><msub><mi>T</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msub><mi>T</mi><mi>B</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and that the lemma ensures that given a sequence <math id="S2.SS1.p8.m4" class="ltx_Math" alttext="(x_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> in <math id="S2.SS1.p8.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>,
+the sequence <math id="S2.SS1.p8.m6" class="ltx_Math" alttext="(B(x_{n}))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> converges to <math id="S2.SS1.p8.m7" class="ltx_Math" alttext="B(x_{0})" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> if and only if
+<math id="S2.SS1.p8.m8" class="ltx_Math" alttext="(A(x_{n}))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> converges to <math id="S2.SS1.p8.m9" class="ltx_Math" alttext="A(x_{0})" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S2.SS1.p9" class="ltx_para">
+<p class="ltx_p">We can now list some invariant properties of operators with
+respect to nearness. The properties are given in the form “if
+and only if” because each operator is near itself (therefore
+ensuring the “only if” part).</p>
+</div>
+<div id="S2.SS1.p10" class="ltx_para">
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">a map is injective if and only if it is near an
+injective operator;</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">a map is surjective if and only if it is near a surjective
+operator;</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">a map is open if and only if it is near an open map;</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">a map has dense range if and only if it is near a map with
+dense range.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S2.SS1.p11" class="ltx_para">
+<p class="ltx_p">To prove (<a href="#I2.i2" title="2. ‣ 2.1 Basic definitions and properties ‣ 2 Near operators ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) it is necessary to use
+theorem <a href="#S1.Thmtheorem4" title="Theorem 1.4 ‣ 1 Perturbations and small perturbations: definitions and some results ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>.</p>
+</div>
+<div id="S2.SS1.p12" class="ltx_para">
+<p class="ltx_p">Another important property that follows from the lemma is that if
+there exist <math id="S2.SS1.p12.m1" class="ltx_Math" alttext="y\in Y" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></math> such that <math id="S2.SS1.p12.m2" class="ltx_Math" alttext="A^{-1}(y)\cap B^{-1}(y)\neq\varnothing" display="inline"><mrow><mrow><mrow><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, then it is <math id="S2.SS1.p12.m3" class="ltx_Math" alttext="A^{-1}(y)=B^{-1}(y)" display="inline"><mrow><mrow><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>: intersecting
+fibers are equal. (Campanato only stated this property for the
+case <math id="S2.SS1.p12.m4" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math> and called it “‘the kernel property”; I prefer to
+call it the “fiber persistence” property.)</p>
+</div>
+<section id="S2.SS1.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.1.1 </span>A topology based on nearness</h4>
+
+<div id="S2.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">In this section we will show that the concept of nearness between
+operator can indeed be connected to a topological understanding of
+the set of maps from <math id="S2.SS1.SSS1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S2.SS1.SSS1.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.</p>
+</div>
+<div id="S2.SS1.SSS1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.SS1.SSS1.p2.m1" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> be the set of maps between <math id="S2.SS1.SSS1.p2.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S2.SS1.SSS1.p2.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. For each
+<math id="S2.SS1.SSS1.p2.m4" class="ltx_Math" alttext="F\in\mathcal{M}" display="inline"><mrow><mi>F</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math> and for each <math id="S2.SS1.SSS1.p2.m5" class="ltx_Math" alttext="k\in(0,1)" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> we let <math id="S2.SS1.SSS1.p2.m6" class="ltx_Math" alttext="U_{k}(F)" display="inline"><mrow><msub><mi>U</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> the set of
+all maps <math id="S2.SS1.SSS1.p2.m7" class="ltx_Math" alttext="G\in\mathcal{M}" display="inline"><mrow><mi>G</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math> such that <math id="S2.SS1.SSS1.p2.m8" class="ltx_Math" alttext="F-G" display="inline"><mrow><mi>F</mi><mo>-</mo><mi>G</mi></mrow></math> is a small perturbation of <math id="S2.SS1.SSS1.p2.m9" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>
+with constant <math id="S2.SS1.SSS1.p2.m10" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. In other words, <math id="S2.SS1.SSS1.p2.m11" class="ltx_Math" alttext="G\in U_{k}(F)" display="inline"><mrow><mi>G</mi><mo>∈</mo><mrow><msub><mi>U</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if and only if <math id="S2.SS1.SSS1.p2.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is near
+<math id="S2.SS1.SSS1.p2.m13" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> with constants <math id="S2.SS1.SSS1.p2.m14" class="ltx_Math" alttext="1,k" display="inline"><mrow><mn>1</mn><mo>,</mo><mi>k</mi></mrow></math>.</p>
+</div>
+<div id="S2.SS1.SSS1.p3" class="ltx_para">
+<p class="ltx_p">The set <math id="S2.SS1.SSS1.p3.m1" class="ltx_Math" alttext="\mathcal{U}(F)=\{U_{k}(F)\mid 0&lt;k&lt;1\}" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><msub><mi>U</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mn>0</mn><mo>&lt;</mo><mi>k</mi><mo>&lt;</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math> satisfies the axioms of
+the set of fundamental neighbourhoods. Indeed:</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> belongs to each <math id="I3.i1.p1.m2" class="ltx_Math" alttext="U_{k}(F)" display="inline"><mrow><msub><mi>U</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="U_{k}(F)\subset U_{h}(F)" display="inline"><mrow><mrow><msub><mi>U</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mrow><msub><mi>U</mi><mi>h</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if and only if <math id="I3.i2.p1.m2" class="ltx_Math" alttext="k&lt;h" display="inline"><mrow><mi>k</mi><mo>&lt;</mo><mi>h</mi></mrow></math>, and thus the
+intersection property of neighbourhoods is trivial;</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">for each <math id="I3.i3.p1.m1" class="ltx_Math" alttext="U_{k}(F)" display="inline"><mrow><msub><mi>U</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> there exist <math id="I3.i3.p1.m2" class="ltx_Math" alttext="U_{h}(F)" display="inline"><mrow><msub><mi>U</mi><mi>h</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that for each <math id="I3.i3.p1.m3" class="ltx_Math" alttext="G\in U_{h}(F)" display="inline"><mrow><mi>G</mi><mo>∈</mo><mrow><msub><mi>U</mi><mi>h</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> there exist <math id="I3.i3.p1.m4" class="ltx_Math" alttext="U_{j}(G)\subseteq U_{k}(F)" display="inline"><mrow><mrow><msub><mi>U</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>U</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S2.SS1.SSS1.p4" class="ltx_para">
+<p class="ltx_p">This last property (permanence of neighbourhoods) is somewhat less
+trivial, so we shall now prove it.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.SS1.SSS1.p5" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.SS1.SSS1.p5.m1" class="ltx_Math" alttext="U_{k}(F)" display="inline"><mrow><msub><mi>U</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> be given.</p>
+</div>
+<div id="S2.SS1.SSS1.p6" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.SS1.SSS1.p6.m1" class="ltx_Math" alttext="U_{h}(F)" display="inline"><mrow><msub><mi>U</mi><mi>h</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> be another arbitrary neighbourhood of <math id="S2.SS1.SSS1.p6.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and let
+<math id="S2.SS1.SSS1.p6.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be an arbitrary element in it. We then have:</p>
+<table id="S2.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E2.m1" class="ltx_Math" alttext="\lVert F(x^{\prime})-F(x^{\prime\prime})-(G(x^{\prime})-G(x^{\prime\prime}))%
+\rVert\leq h\lVert F(x^{\prime})-F(x^{\prime\prime})\rVert." display="block"><mrow><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">but also (lemma <a href="#S2.Thmtheorem2" title="Lemma 2.2 ‣ 2.1 Basic definitions and properties ‣ 2 Near operators ‣ near operators" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.2</span></a>)
+</p>
+<table id="S2.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E3.m1" class="ltx_Math" alttext="\lVert(G(x^{\prime})-G(x^{\prime\prime}))\rVert\leq(1+h)\lVert F(x^{\prime})-F%
+(x^{\prime\prime})\rVert." display="block"><mrow><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS1.SSS1.p7" class="ltx_para">
+<p class="ltx_p">Let also <math id="S2.SS1.SSS1.p7.m1" class="ltx_Math" alttext="U_{j}(G)" display="inline"><mrow><msub><mi>U</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> be an arbitrary neighbourhood of <math id="S2.SS1.SSS1.p7.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and <math id="S2.SS1.SSS1.p7.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> an
+arbitrary element in it. We then have:</p>
+<table id="S2.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E4.m1" class="ltx_Math" alttext="\lVert G(x^{\prime})-G(x^{\prime\prime})-(H(x^{\prime})-H(x^{\prime\prime}))%
+\rVert\leq j\lVert G(x^{\prime})-G(x^{\prime\prime})\rVert." display="block"><mrow><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS1.SSS1.p8" class="ltx_para">
+<p class="ltx_p">The nearness between <math id="S2.SS1.SSS1.p8.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and <math id="S2.SS1.SSS1.p8.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is calculated as such:</p>
+<table id="S2.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E5.m1" class="ltx_Math" alttext="\displaystyle\lVert F(x^{\prime})-F(x^{\prime\prime})-(H(x^{\prime})-H(x^{%
+\prime\prime}))\rVert\leq\\
+\displaystyle\lVert F(x^{\prime})-F(x^{\prime\prime})-(G(x^{\prime})-G(x^{%
+\prime\prime}))\rVert+\lVert G(x^{\prime})-G(x^{\prime\prime})-(H(x^{\prime})-%
+H(x^{\prime\prime}))\rVert\leq\\
+\displaystyle h\lVert F(x^{\prime})-F(x^{\prime\prime})\rVert+j\lVert G(x^{%
+\prime})-G(x^{\prime\prime})\rVert\leq(h+j(1+h))\lVert F(x^{\prime})-F(x^{%
+\prime\prime})\rVert." display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>+</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow><mo>≤</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow><mo>+</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow><mo>≤</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>+</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">We then want <math id="S2.SS1.SSS1.p8.m3" class="ltx_Math" alttext="h+j(1+h)\leq k" display="inline"><mrow><mrow><mi>h</mi><mo>+</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mi>k</mi></mrow></math>, that is <math id="S2.SS1.SSS1.p8.m4" class="ltx_Math" alttext="j\leq(k-h)/(1+h)" display="inline"><mrow><mi>j</mi><mo>≤</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>-</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>;
+the condition <math id="S2.SS1.SSS1.p8.m5" class="ltx_Math" alttext="0&lt;j&lt;1" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>j</mi><mo>&lt;</mo><mn>1</mn></mrow></math> is always satisfied on the right side, and
+the left side gives us <math id="S2.SS1.SSS1.p8.m6" class="ltx_Math" alttext="h&lt;k" display="inline"><mrow><mi>h</mi><mo>&lt;</mo><mi>k</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S2.SS1.SSS1.p9" class="ltx_para">
+<p class="ltx_p">It is important to observe that the topology generated this way is
+not a Hausdorff topology: indeed, it is not possible to separate
+<math id="S2.SS1.SSS1.p9.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and <math id="S2.SS1.SSS1.p9.m2" class="ltx_Math" alttext="F+y" display="inline"><mrow><mi>F</mi><mo>+</mo><mi>y</mi></mrow></math> (where <math id="S2.SS1.SSS1.p9.m3" class="ltx_Math" alttext="F\in\mathcal{M}" display="inline"><mrow><mi>F</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math> and <math id="S2.SS1.SSS1.p9.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is a constant element of <math id="S2.SS1.SSS1.p9.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>).
+On the other hand, the subset of all maps with with a fixed valued
+at a fixed point (<math id="S2.SS1.SSS1.p9.m6" class="ltx_Math" alttext="F(x_{0})=y_{0}" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>y</mi><mn>0</mn></msub></mrow></math>) is a Hausdorff subspace.</p>
+</div>
+<div id="S2.SS1.SSS1.p10" class="ltx_para">
+<p class="ltx_p">Another important characteristic of the topology is that the set
+<math id="S2.SS1.SSS1.p10.m1" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> of invertible operators from <math id="S2.SS1.SSS1.p10.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to <math id="S2.SS1.SSS1.p10.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is open in <math id="S2.SS1.SSS1.p10.m4" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math>
+(because a map is invertible if and only if it is near an invertible map).
+This is not true in the topology of uniform convergence, as is
+easily seen by choosing <math id="S2.SS1.SSS1.p10.m5" class="ltx_Math" alttext="X=Y=\mathbb{R}" display="inline"><mrow><mi>X</mi><mo>=</mo><mi>Y</mi><mo>=</mo><mi>ℝ</mi></mrow></math> and the sequence with
+generic element <math id="S2.SS1.SSS1.p10.m6" class="ltx_Math" alttext="F_{n}(x)=x^{3}-x/n" display="inline"><mrow><mrow><msub><mi>F</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>-</mo><mrow><mi>x</mi><mo>/</mo><mi>n</mi></mrow></mrow></mrow></math>: the sequence converges (in
+the uniform convergence topology) to <math id="S2.SS1.SSS1.p10.m7" class="ltx_Math" alttext="F(x)=x^{3}" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>, which is
+invertible, but none of the <math id="S2.SS1.SSS1.p10.m8" class="ltx_Math" alttext="F_{n}" display="inline"><msub><mi>F</mi><mi>n</mi></msub></math> is invertible. Hence <math id="S2.SS1.SSS1.p10.m9" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is an
+element of <math id="S2.SS1.SSS1.p10.m10" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> which is not inside <math id="S2.SS1.SSS1.p10.m11" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>, and <math id="S2.SS1.SSS1.p10.m12" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> is not open.</p>
+</div>
+</section>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span>Some applications</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">As we mentioned in the introduction, the Campanato theory of near
+operators allows us to generalize some important theorems; we will
+now present some generalizations of the Lax-Milgram theorem, and
+a generalization of the Riesz representation theorem.</p>
+</div>
+<div id="S2.SS2.p2" class="ltx_para">
+<p class="ltx_p">[TODO]
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">near operators</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">NearOperators</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:03:21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:03:21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54E40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Campanato theory of near operators</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perturbation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">small perturbation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">near operator</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:28:18 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

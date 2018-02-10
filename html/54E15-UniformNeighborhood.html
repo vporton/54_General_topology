@@ -1,0 +1,161 @@
+<!DOCTYPE html><html>
+<head>
+<title>uniform neighborhood</title>
+<!--Generated on Sat Feb 10 11:25:44 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">uniform neighborhood</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a uniform space with uniformity <math id="p1.m2" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>. For each <math id="p1.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> and <math id="p1.m4" class="ltx_Math" alttext="U\in\mathcal{U}" display="inline"><mrow><mi>U</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math>, define the following items</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="U[x]:=\{y\mid(x,y)\in U\}" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>U</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathfrak{N}_{x}:=\{(x,U[x])\mid U\in\mathcal{U}\}" display="inline"><mrow><msub><mi>𝔑</mi><mi>x</mi></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mi>U</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\mathfrak{N}=\bigcup_{x\in X}\mathfrak{N}_{x}" display="inline"><mrow><mi>𝔑</mi><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></msub><msub><mi>𝔑</mi><mi>x</mi></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. <math id="p1.m5" class="ltx_Math" alttext="\mathfrak{N}_{x}" display="inline"><msub><mi>𝔑</mi><mi>x</mi></msub></math> is the abstract neighborhood system around <math id="p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, hence <math id="p1.m7" class="ltx_Math" alttext="\mathfrak{N}" display="inline"><mi>𝔑</mi></math> is the abstract neighborhood system of <math id="p1.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We show that all five defining conditions of a neighborhood system on a set are met:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="I2.i1.p1.m1" class="ltx_Math" alttext="(x,U[x])\in\mathfrak{N}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math>, <math id="I2.i1.p1.m2" class="ltx_Math" alttext="x\in U[x]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, since every entourage contains the diagonal relation.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Every <math id="I2.i2.p1.m1" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> and every entourage <math id="I2.i2.p1.m2" class="ltx_Math" alttext="U\in\mathcal{U}" display="inline"><mrow><mi>U</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math>, <math id="I2.i2.p1.m3" class="ltx_Math" alttext="U[x]\subseteq X" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mi>X</mi></mrow></math> with <math id="I2.i2.p1.m4" class="ltx_Math" alttext="(x,U[x])\in\mathfrak{N}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math>
+</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="I2.i3.p1.m1" class="ltx_Math" alttext="(x,U[x])\in\mathfrak{N}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math> and <math id="I2.i3.p1.m2" class="ltx_Math" alttext="U[x]\subseteq Y\subseteq X" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mi>Y</mi><mo>⊆</mo><mi>X</mi></mrow></math>. Showing that <math id="I2.i3.p1.m3" class="ltx_Math" alttext="(x,Y)\in\mathfrak{N}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math> amounts to showing <math id="I2.i3.p1.m4" class="ltx_Math" alttext="Y=V[x]" display="inline"><mrow><mi>Y</mi><mo>=</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> for some <math id="I2.i3.p1.m5" class="ltx_Math" alttext="V\in\mathcal{U}" display="inline"><mrow><mi>V</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math>. First, note that each entourage <math id="I2.i3.p1.m6" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> can be decomposed into disjoint union of sets “slices” of the form <math id="I2.i3.p1.m7" class="ltx_Math" alttext="\{a\}\times U[a]" display="inline"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>a</mi><mo stretchy="false">}</mo></mrow><mo>×</mo><mi>U</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>. We replace the “slice” <math id="I2.i3.p1.m8" class="ltx_Math" alttext="\{x\}\times U[x]" display="inline"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow><mo>×</mo><mi>U</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></math> by <math id="I2.i3.p1.m9" class="ltx_Math" alttext="\{x\}\times Y" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow><mo>×</mo><mi>Y</mi></mrow></math>. The resulting disjoint union is a set <math id="I2.i3.p1.m10" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, which is a superset of <math id="I2.i3.p1.m11" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>. Since <math id="I2.i3.p1.m12" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> is a filter, <math id="I2.i3.p1.m13" class="ltx_Math" alttext="V\in\mathcal{U}" display="inline"><mrow><mi>V</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math>. Furthermore, <math id="I2.i3.p1.m14" class="ltx_Math" alttext="V[x]=Y" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi>Y</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i4.p1.m1" class="ltx_Math" alttext="a\in U[x]\cap V[x]" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>∩</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></math> iff <math id="I2.i4.p1.m2" class="ltx_Math" alttext="(x,a)\in U\cap V" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow></mrow></math> iff <math id="I2.i4.p1.m3" class="ltx_Math" alttext="a\in(U\cap V)[x]" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. This implies that if <math id="I2.i4.p1.m4" class="ltx_Math" alttext="(x,U[x]),(x,V[x])\in\mathfrak{N}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math>, then <math id="I2.i4.p1.m5" class="ltx_Math" alttext="(x,U[x]\cap V[x])=(x,(U\cap V)[x])\in\mathfrak{N}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>∩</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="I2.i5.p1.m1" class="ltx_Math" alttext="(x,U[x])\in\mathfrak{N}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math>. There is <math id="I2.i5.p1.m2" class="ltx_Math" alttext="V\in\mathcal{U}" display="inline"><mrow><mi>V</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math> such that <math id="I2.i5.p1.m3" class="ltx_Math" alttext="(V\circ V)[x]\subseteq U[x]" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>V</mi><mo>∘</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. We show that <math id="I2.i5.p1.m4" class="ltx_Math" alttext="V[x]\subseteq X" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mi>X</mi></mrow></math> is what we want. Clearly, <math id="I2.i5.p1.m5" class="ltx_Math" alttext="x\in V[x]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. For any <math id="I2.i5.p1.m6" class="ltx_Math" alttext="y\in V[x]" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and any <math id="I2.i5.p1.m7" class="ltx_Math" alttext="a\in V[y]" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, we have <math id="I2.i5.p1.m8" class="ltx_Math" alttext="(x,a)=(x,y)\circ(y,a)\in V\circ V" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>V</mi><mo>∘</mo><mi>V</mi></mrow></mrow></math>, or <math id="I2.i5.p1.m9" class="ltx_Math" alttext="a\in(V\circ V)[x]\subseteq U[x]" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>V</mi><mo>∘</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. So <math id="I2.i5.p1.m10" class="ltx_Math" alttext="V[y]\subseteq U[x]" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> for any <math id="I2.i5.p1.m11" class="ltx_Math" alttext="y\in V[x]" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. In order to show that <math id="I2.i5.p1.m12" class="ltx_Math" alttext="(y,U[x])\in\mathfrak{N}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math>, we must find <math id="I2.i5.p1.m13" class="ltx_Math" alttext="W\in\mathcal{U}" display="inline"><mrow><mi>W</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math> such that <math id="I2.i5.p1.m14" class="ltx_Math" alttext="U[x]=W[y]" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. By the third step above, since <math id="I2.i5.p1.m15" class="ltx_Math" alttext="V[y]\subseteq U[x]" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, there is <math id="I2.i5.p1.m16" class="ltx_Math" alttext="W\in\mathcal{U}" display="inline"><mrow><mi>W</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math> with <math id="I2.i5.p1.m17" class="ltx_Math" alttext="W[y]=U[x]" display="inline"><mrow><mrow><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. Thus <math id="I2.i5.p1.m18" class="ltx_Math" alttext="(y,U[x])=(y,W[y])\in\mathfrak{N}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mrow><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝔑</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. For each <math id="p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in a uniform space <math id="p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> with uniformity <math id="p3.m3" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>, a <em class="ltx_emph ltx_font_italic">uniform neighborhood</em> of <math id="p3.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a set <math id="p3.m5" class="ltx_Math" alttext="U[x]" display="inline"><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></math> for some entourage <math id="p3.m6" class="ltx_Math" alttext="U\in\mathcal{U}" display="inline"><mrow><mi>U</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math>. In general, for any <math id="p3.m7" class="ltx_Math" alttext="A\subseteq X" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>X</mi></mrow></math>, the set</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="U[A]:=\{y\in X\mid(x,y)\in U\mbox{ for some }x\in A\}" display="block"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow><mo>∣</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>U</mi><mo>⁢</mo><mtext> for some </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is called a <em class="ltx_emph ltx_font_italic">uniform neighborhood</em> of <math id="p3.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Two immediate properties that we have already seen in the proof above are: (1). for each <math id="p4.m1" class="ltx_Math" alttext="U\in\mathcal{U}" display="inline"><mrow><mi>U</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math>, <math id="p4.m2" class="ltx_Math" alttext="x\in U[x]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>; and (2). <math id="p4.m3" class="ltx_Math" alttext="U[x]\cap V[x]=(U\cap V)[x]" display="inline"><mrow><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>∩</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. More generally, <math id="p4.m4" class="ltx_Math" alttext="\bigcap U_{i}[x]=(\bigcap U_{i})[x]" display="inline"><mrow><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mrow><msub><mi>U</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><msub><mi>U</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. If we define <math id="p5.m1" class="ltx_Math" alttext="T_{\mathcal{U}}:=\{A\subseteq X\mid\forall x\in A,\exists U\in\mathcal{U}\mbox%
+{ such that }U[x]\subseteq A\}" display="inline"><mrow><msub><mi>T</mi><mi class="ltx_font_mathcaligraphic">𝒰</mi></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>A</mi><mo>⊆</mo><mi>X</mi></mrow><mo>∣</mo><mrow><mrow><mrow><mo>∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mrow><mo>∃</mo><mi>U</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>⁢</mo><mtext> such that </mtext><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⊆</mo><mi>A</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, then <math id="p5.m2" class="ltx_Math" alttext="T_{\mathcal{U}}" display="inline"><msub><mi>T</mi><mi class="ltx_font_mathcaligraphic">𝒰</mi></msub></math> is a topology induced by the uniform structure (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TopologyInducedByAUniformStructure</span>) <math id="p5.m3" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>. Under this topology, uniform neighborhoods are synonymous with neighborhoods.</p>
+</div>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">uniform neighborhood</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">UniformNeighborhood</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:42:31</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:42:31</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54E15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">TopologyInducedByAUniformStructure</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:25:44 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

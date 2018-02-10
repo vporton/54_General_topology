@@ -1,0 +1,212 @@
+<!DOCTYPE html><html>
+<head>
+<title>probabilistic metric space</title>
+<!--Generated on Sat Feb 10 11:29:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">probabilistic metric space</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Recall that a metric space is a set <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> equipped with a <em class="ltx_emph ltx_font_italic">distance function</em> <math id="p1.m2" class="ltx_Math" alttext="d:X\times X\to[0,\infty)" display="inline"><mrow><mi>d</mi><mo>:</mo><mrow><mrow><mi>X</mi><mo>×</mo><mi>X</mi></mrow><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, such that</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="d(a,b)=0" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> iff <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="d(a,b)=d(b,a)" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="d(a,c)\leq d(a,b)+d(b,c)" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">In some real life situations, distance between two points may not be definite. When this happens, the distance function <math id="p1.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> may be replaced by a more general function <math id="p1.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> which takes any pair of points <math id="p1.m5" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> to a distribution function <math id="p1.m6" class="ltx_Math" alttext="F_{(a,b)}" display="inline"><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub></math>. Before precisely describing how this works, we first look at the properties of these <math id="p1.m7" class="ltx_Math" alttext="F_{(a,b)}" display="inline"><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub></math> should have, and how one translates the triangle inequality in this more general setting.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">distance distribution functions</span>. Since we are dealing with the distance between <math id="p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p2.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, the distribution function <math id="p2.m3" class="ltx_Math" alttext="F_{(a,b)}" display="inline"><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub></math> must have the property that <math id="p2.m4" class="ltx_Math" alttext="F_{(a,b)}(0)=0" display="inline"><mrow><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. Any distribution function <math id="p2.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> such that <math id="p2.m6" class="ltx_Math" alttext="F(0)=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> is called a <em class="ltx_emph ltx_font_italic">distance distribution function</em>. The set of all distance distribution functions is denoted by <math id="p2.m7" class="ltx_Math" alttext="\Delta^{+}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></math>. For example, for any <math id="p2.m8" class="ltx_Math" alttext="r\geq 0" display="inline"><mrow><mi>r</mi><mo>≥</mo><mn>0</mn></mrow></math>, the step functions defined by
+</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle e_{r}(x)" display="inline"><mrow><msub><mi>e</mi><mi>r</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle\left\{\begin{array}[]{ll}0&amp;\mbox{when}\,\,x\leq r,\\
+1&amp;\mbox{otherwise}\\
+\end{array}\right." display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mrow><mpadded width="+3.3pt"><mtext>when</mtext></mpadded><mo>⁢</mo><mi>x</mi></mrow><mo>≤</mo><mi>r</mi></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mtext>otherwise</mtext></mtd></mtr></mtable><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are distance distribution functions.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In addition to <math id="p3.m1" class="ltx_Math" alttext="F_{(a,b)}" display="inline"><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub></math> being a distance distribution function, we need that <math id="p3.m2" class="ltx_Math" alttext="F_{(a,b)}=e_{0}" display="inline"><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><msub><mi>e</mi><mn>0</mn></msub></mrow></math> iff <math id="p3.m3" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math> and <math id="p3.m4" class="ltx_Math" alttext="F_{(a,b)}=F_{(b,a)}" display="inline"><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></msub></mrow></math>. These two conditions correspond to the first two conditions on <math id="p3.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">triangle functions</span>. Finally, we need to generalize the binary operation <math id="p4.m1" class="ltx_Math" alttext="+" display="inline"><mo>+</mo></math> so it works on the set of distance distribution functions. Clearly, ordinary addition won’t work as the sum of two distribution functions is no longer a distribution function. Šerstnev developed what is called a <em class="ltx_emph ltx_font_italic">triangle function</em> that will do the trick.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">First, partial order <math id="p5.m1" class="ltx_Math" alttext="\Delta^{+}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></math> by <math id="p5.m2" class="ltx_Math" alttext="F\leq G" display="inline"><mrow><mi>F</mi><mo>≤</mo><mi>G</mi></mrow></math> iff <math id="p5.m3" class="ltx_Math" alttext="F(x)\leq G(x)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="p5.m4" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. It is not hard to see that <math id="p5.m5" class="ltx_Math" alttext="e_{x}\leq e_{y}" display="inline"><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>≤</mo><msub><mi>e</mi><mi>y</mi></msub></mrow></math> iff <math id="p5.m6" class="ltx_Math" alttext="y\leq x" display="inline"><mrow><mi>y</mi><mo>≤</mo><mi>x</mi></mrow></math> and that <math id="p5.m7" class="ltx_Math" alttext="e_{0}" display="inline"><msub><mi>e</mi><mn>0</mn></msub></math> is the top element of <math id="p5.m8" class="ltx_Math" alttext="\Delta^{+}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></math>. From the poset <math id="p5.m9" class="ltx_Math" alttext="\Delta^{+}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></math>, call a binary operator <math id="p5.m10" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> on <math id="p5.m11" class="ltx_Math" alttext="\Delta^{+}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></math> a <em class="ltx_emph ltx_font_italic">triangle function</em> if <math id="p5.m12" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> turns <math id="p5.m13" class="ltx_Math" alttext="\Delta^{+}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></math> into a partially ordered (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PartiallyOrderedGroup</span>) commutative monoid with <math id="p5.m14" class="ltx_Math" alttext="e_{0}" display="inline"><msub><mi>e</mi><mn>0</mn></msub></math> serving as the identity element. Spelling this out, for any <math id="p5.m15" class="ltx_Math" alttext="F,G,H\in\Delta^{+}" display="inline"><mrow><mrow><mi>F</mi><mo>,</mo><mi>G</mi><mo>,</mo><mi>H</mi></mrow><mo>∈</mo><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></mrow></math>, we have</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="F\tau G=G\tau F" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow><mo>=</mo><mrow><mi>G</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>F</mi></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="(F\tau G)\tau H=F\tau(G\tau H)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>H</mi></mrow><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>G</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="F\tau e_{0}=e_{0}\tau F=F" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><msub><mi>e</mi><mn>0</mn></msub></mrow><mo>=</mo><mrow><msub><mi>e</mi><mn>0</mn></msub><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>F</mi></mrow><mo>=</mo><mi>F</mi></mrow></math>, and</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I2.i4.p1.m1" class="ltx_Math" alttext="G\leq H" display="inline"><mrow><mi>G</mi><mo>≤</mo><mi>H</mi></mrow></math>, then <math id="I2.i4.p1.m2" class="ltx_Math" alttext="F\tau G\leq F\tau H" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow><mo>≤</mo><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>H</mi></mrow></mrow></math>,</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">where <math id="p5.m16" class="ltx_Math" alttext="F\tau G" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow></math> means <math id="p5.m17" class="ltx_Math" alttext="\tau(F,G)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math>. For example, <math id="p5.m18" class="ltx_Math" alttext="F\tau G=F\cdot G" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow><mo>=</mo><mrow><mi>F</mi><mo>⋅</mo><mi>G</mi></mrow></mrow></math>, <math id="p5.m19" class="ltx_Math" alttext="F\tau G=\min(F,G)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow><mo>=</mo><mrow><mi>min</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> are two triangle functions. In fact, since <math id="p5.m20" class="ltx_Math" alttext="F\tau G\leq F\tau e_{0}=F" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow><mo>≤</mo><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><msub><mi>e</mi><mn>0</mn></msub></mrow><mo>=</mo><mi>F</mi></mrow></math> and <math id="p5.m21" class="ltx_Math" alttext="F\tau G\leq G" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow><mo>≤</mo><mi>G</mi></mrow></math> similarly, we have <math id="p5.m22" class="ltx_Math" alttext="F\tau G\leq\min(F,G)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mi>G</mi></mrow><mo>≤</mo><mrow><mi>min</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for any triangle function <math id="p5.m23" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">With this, we are ready for our main definition:</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. A <em class="ltx_emph ltx_font_italic">probabilistic metric space</em> is a (non-empty) set <math id="p7.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, equipped with a function <math id="p7.m2" class="ltx_Math" alttext="F:X\times X\to\Delta^{+}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mrow><mi>X</mi><mo>×</mo><mi>X</mi></mrow><mo>→</mo><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></mrow></mrow></math>, where <math id="p7.m3" class="ltx_Math" alttext="\Delta^{+}" display="inline"><msup><mi mathvariant="normal">Δ</mi><mo>+</mo></msup></math> is the set of distance distribution functions on which a triangle function <math id="p7.m4" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is defined, such that</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="F_{(a,b)}=e_{0}" display="inline"><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><msub><mi>e</mi><mn>0</mn></msub></mrow></math> iff <math id="I3.i1.p1.m2" class="ltx_Math" alttext="a=b" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>, where <math id="I3.i1.p1.m3" class="ltx_Math" alttext="F_{(a,b)}:=F(a,b)" display="inline"><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub><mo>:=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="F_{(a,b)}=F_{(b,a)}" display="inline"><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></msub></mrow></math>, and</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i3.p1.m1" class="ltx_Math" alttext="F_{(a,c)}\geq F_{(a,b)}\tau F_{(b,c)}" display="inline"><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></msub><mo>≥</mo><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Given a metric space <math id="p8.m1" class="ltx_Math" alttext="(X,d)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></math>, if we can find a triangle function <math id="p8.m2" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> such that <math id="p8.m3" class="ltx_Math" alttext="e_{x}\tau e_{y}=e_{x+y}" display="inline"><mrow><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><msub><mi>e</mi><mi>y</mi></msub></mrow><mo>=</mo><msub><mi>e</mi><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></msub></mrow></math>, then <math id="p8.m4" class="ltx_Math" alttext="(X,F)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></math> with <math id="p8.m5" class="ltx_Math" alttext="F_{(a,b)}:=e_{d(a,b)}" display="inline"><mrow><msub><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></msub><mo>:=</mo><msub><mi>e</mi><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow></math> is a probabilistic metric space.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> B. Schweizer, A. Sklar, <em class="ltx_emph ltx_font_italic">Probabilistic Metric Spaces</em>, Elsevier Science Publishing Company, (1983).
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> A. N. Šerstnev, <em class="ltx_emph ltx_font_italic">Random normed spaces: problems of completeness</em>, Kazan. Gos. Univ. Učen. Zap. 122, 3-20, (1962).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p9" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">probabilistic metric space</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProbabilisticMetricSpace</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:49:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:49:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54E70</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">distance distribution function</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">triangle function</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:29:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
